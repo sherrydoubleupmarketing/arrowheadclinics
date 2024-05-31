@@ -8,6 +8,49 @@
   --background-end-rgb: 255, 255, 255;
 }
 
+@font-face {
+  font-family: "Work sans light";
+  src: url("./fonts/work-sans.light.ttf");
+}
+.work-sans-light {
+  font-family: "Work sans light";
+}
+
+/* Bold */
+@font-face {
+  font-family: "Work sans bold";
+  src: url("./fonts/work-sans.bold.ttf");
+}
+.work-sans-bold {
+  font-family: "Work sans bold";
+}
+/* Medium*/
+@font-face {
+  font-family: "Work sans medium";
+  src: url("./fonts/work-sans.medium.ttf");
+}
+.work-sans-medium {
+  font-family: "Work sans medium";
+}
+
+/* Regular*/
+@font-face {
+  font-family: "Work sans regular";
+  src: url("./fonts/work-sans.regular.ttf");
+}
+.work-sans-regular {
+  font-family: "Work sans regular";
+}
+
+/* DK Dirrrty */
+@font-face {
+  font-family: "DK Dirrrty";
+  src: url("./fonts/DK\ Dirrrty.ttf");
+}
+.dk-dirrrty {
+  font-family: "DK Dirrrty";
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
@@ -17,17 +60,19 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: black;
+  background: white;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.cardshadow {
+  box-shadow: 0 0 40px rgba(195, 50, 45, 0.9);
+}
+.boxshadow {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
