@@ -1,13 +1,13 @@
 import Image from "next/image";
 import React from "react";
 // import "./global.css";
-
+import logoimaage from "../../../public/Logo.png";
 const Navbar = () => {
   return (
     <div className="w-full px-12 mt-4">
       <div className="w-[90%] flex flex-wrap justify-center md:justify-between m-auto items-center">
         <div className="mb-1">
-          <Image src="/logo.png" width={170} height={170} alt="Hero Image" />
+          <Image src={logoimaage} width={170} height={170} alt="Hero Image" />
         </div>
         <div className="flex items-center gap-5">
           <h3 className="font-bold work-sans-bold text-2xl text-black flex-col md:flex hidden">
