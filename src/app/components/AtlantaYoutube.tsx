@@ -14,10 +14,10 @@ const AtlantaYoutube = () => {
             ATLANTA HAPPENS ON YOUTUBE
           </p>
         </div>
-        <h3 className="text-xl md:text-3xl font-bold text-primary-red w-[100%] md:w-[50%] leading-normal work-sans-bold">
+        <h2 className="text-xl md:text-3xl font-bold text-primary-red w-[100%] md:w-[50%] leading-normal work-sans-bold">
           Need help? Contact our team of experienced car accident lawyers today
           (470) 300-1797
-        </h3>
+        </h2>
       </div>
       <div className="mt-10 flex justify-center items-center m-auto w-[90%]">
         {showVideo ? (

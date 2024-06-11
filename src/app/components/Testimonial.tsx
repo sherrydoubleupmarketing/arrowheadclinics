@@ -62,9 +62,9 @@ const Testimonial = () => {
                     sit amet, consectetur adipiscing elit. Feugiat purus sed
                     fames cursus. Est scelerisque nibh vivamus sed viverra.
                   </p>
-                  <h3 className="font-bold text-md work-sans-medium mt-6">
+                  <h2 className="font-bold text-md work-sans-medium mt-6">
                     Violet obsedoeo
-                  </h3>
+                  </h2>
                   <div className="flex gap-1">
                     {[0, 1, 2, 3, 4].map((index) => {
                       return <StarIcon key={index} />;

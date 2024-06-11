@@ -92,13 +92,17 @@ const Contact = () => {
             {({ isSubmitting }) => (
               <Form className="w-full px-5 flex m-auto flex-col">
                 {/* Full Name Field */}
-                <div className="relative z-0 group w-[100%] md:w-[80%] mt-5">
+                <div
+                  className="relative z-0 group w-[100%] md:w-[80%] mt-5"
+                  id="Full Name"
+                >
                   <Field
                     type="text"
                     name="fullName"
                     className="block py-2.5 px-0 w-full text-sm text-[#999999] bg-transparent border-0 border-b-0.5 border-[#999999] appearance-none focus:outline-none focus:ring-0 peer"
                     placeholder=" "
                     required
+                    aria-label="Full Name"
                   />
                   <label
                     htmlFor="fullName"
@@ -109,13 +113,17 @@ const Contact = () => {
                   <FormError name="fullName" />
                 </div>
                 {/* Phone Number Field */}
-                <div className="relative z-0 group w-[100%] md:w-[80%] mt-5">
+                <div
+                  id="phone Number"
+                  className="relative z-0 group w-[100%] md:w-[80%] mt-5"
+                >
                   <Field
                     type="text"
                     name="phoneNumber"
                     className="block py-2.5 px-0 w-full text-sm text-[#999999] bg-transparent border-0 border-b-0.5 border-[#999999] appearance-none focus:outline-none focus:ring-0 peer"
                     placeholder=" "
                     required
+                    aria-label="phone Number"
                   />
                   <label
                     htmlFor="phoneNumber"
@@ -126,13 +134,17 @@ const Contact = () => {
                   <FormError name="phoneNumber" />
                 </div>
                 {/* Email Address Field */}
-                <div className="relative z-0 group w-[100%] md:w-[80%] mt-5">
+                <div
+                  id="Email Address"
+                  className="relative z-0 group w-[100%] md:w-[80%] mt-5"
+                >
                   <Field
                     type="email"
                     name="email"
                     className="block py-2.5 px-0 w-full text-sm text-[#999999] bg-transparent border-0 border-b-0.5 border-[#999999] appearance-none focus:outline-none focus:ring-0 peer"
                     placeholder=" "
                     required
+                    area-label="Email Address"
                   />
                   <label
                     htmlFor="email"
@@ -143,7 +155,10 @@ const Contact = () => {
                   <FormError name="email" />
                 </div>
                 {/* Case Details Field */}
-                <div className="relative z-0 group md:w-[80%] w-[100%]">
+                <div
+                  id="case Details"
+                  className="relative z-0 group md:w-[80%] w-[100%]"
+                >
                   <Field
                     component="textarea"
                     name="caseDetails"
@@ -151,6 +166,7 @@ const Contact = () => {
                     placeholder=" "
                     required
                     rows={4}
+                    area-label="case Details"
                   />
                   <label
                     htmlFor="caseDetails"
