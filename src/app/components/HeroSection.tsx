@@ -9,7 +9,7 @@ const HeroSection = () => {
           Lorem ipsum dolor sit amet Lorem ipsum dolor
         </p>
       </div>
-      <div className="py-20 w-[100%] flex flex-col justify-center gap-5 -mr-20 bg-[url('/Herobg.png')] bg-cover text-white">
+      <div className="py-20 w-[100%] flex flex-col justify-center gap-5 -mr-20 bg-[url('/Herobg.webp')] bg-cover text-white">
         <div className="flex items-center flex-col justify-center md:justify-start w-[100%] md:w-[69%] gap-6">
           <h1 className="xl:text-6xl dk-dirrrty md:text-5xl sm:text-4xl text-xl sm:w-full text-center w-[90%] bg-[url('/Lawyerbg.svg')] py-4 bg-cover">
             Atlanta Car accident Lawyer
