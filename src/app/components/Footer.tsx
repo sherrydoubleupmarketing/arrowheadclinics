@@ -39,9 +39,9 @@ const Footer = () => {
         <div className="w-full border border-primary-red"></div>
       </div>
       <div className="mt-6 mb-6 flex flex-col md:flex-row flex-wrap items-center justify-center m-auto gap-5">
-        <h4 className="text-xl font-bold text-primary-red work-sans-medium">
+        <h2 className="text-xl font-bold text-primary-red work-sans-medium">
           Quick links
-        </h4>
+        </h2>
         {FOOTER_LINKS.map(({ id, name, path }) => {
           return (
             <div key={id} className="flex gap-5">

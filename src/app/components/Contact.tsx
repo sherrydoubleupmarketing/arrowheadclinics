@@ -58,9 +58,9 @@ const Contact = () => {
       </div>
       <div className="mt-20 flex flex-col md:flex-row items-center justify-center m-auto w-[90%]">
         <div className="w-full md:w-[50%] bg-primary-red flex flex-col gap-6 items-center py-12">
-          <h3 className="md:text-4xl sm:text-3xl text-2xl text-white font-bold work-sans-bold">
+          <h1 className="md:text-4xl sm:text-3xl text-2xl text-white font-bold work-sans-bold">
             Request Consultation
-          </h3>
+          </h1>
           <p className="text-white text-center font-light text-md w-[90%] md:w-[65%] work-sans-regular">
             Get a free quote 30 - 60 minute consultation, please complete the
             online form below.

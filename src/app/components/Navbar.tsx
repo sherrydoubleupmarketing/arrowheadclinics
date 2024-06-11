@@ -13,7 +13,7 @@ const Navbar = () => {
           <h3 className="font-bold work-sans-bold text-2xl text-black flex-col md:flex hidden">
             <span>Review Your</span> <span>case today</span>
           </h3>
-          <button className="flex flex-col bg-primary-red h-12 rounded-xl text-white work-sans-bold font-bold text-xl py-10 px-7 items-center justify-center">
+          <button className="flex flex-col bg-primary-red h-fit rounded-xl text-white work-sans-bold font-bold text-xl py-4 px-8 items-center justify-center">
             <a href="tel:+(867)-746 2323">
               <p>Call now! </p>
               <p>(867)-746 2323</p>

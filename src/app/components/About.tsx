@@ -68,9 +68,9 @@ const About = () => {
       </div>
       <div className="w-full md:w-[50%] flex flex-col mt-12 md:-mt-48">
         <div className="bg-primary-red w-full md:w-[90%] flex flex-col gap-3 items-center justify-center py-6">
-          <h3 className="sm:text-3xl text-2xl md:text-4xl text-white font-bold work-sans-bold">
+          <h1 className="sm:text-3xl text-2xl md:text-4xl text-white font-bold work-sans-bold">
             Request Consultation
-          </h3>
+          </h1>
           <p className="text-white text-center font-light text-sm md:text-md w-[70%] work-sans-regular">
             Get a free quote 30 - 60 minute consultation, please complete the
             online form below.{" "}

@@ -34,9 +34,9 @@ const Testimonial = () => {
           <span className="w-[50%] border-t-0.5 border-white"></span>
           <p className="text-white work-sans-regular">TESTIMONIALS</p>
         </div>
-        <h3 className="sm:text-4xl text-3xl md:text-5xl font-bold text-primary-red w-[90%] md:w-[60%] work-sans-bold">
+        <h1 className="sm:text-4xl text-3xl md:text-5xl font-bold text-primary-red w-[90%] md:w-[60%] work-sans-bold">
           Hear what our past clients say
-        </h3>
+        </h1>
         <p className="font-light text-md w-[92%] md:w-[80%] work-sans-regular leading-relaxed">
           We strive to provide all of our clients with the best possible results
           and value how each feels about us and the services we have provided.
