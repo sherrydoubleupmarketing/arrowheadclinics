@@ -4,7 +4,7 @@ import React from "react";
 const HeroSection = () => {
   return (
     <div className="flex flex-col w-full">
-      <div className="h-16 w-full bg-black flex items-center justify-center sm:mt-0 mt-5">
+      <div className="h-16 w-full bg-black flex items-center justify-center">
         <p className="font-normal text-md w-[70%] sm:w-full md:text-2xl text-center text-white work-sans-medium">
           Lorem ipsum dolor sit amet Lorem ipsum dolor
         </p>

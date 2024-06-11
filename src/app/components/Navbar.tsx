@@ -4,7 +4,7 @@ import React from "react";
 import logoimaage from "../../../public/Logo.png";
 const Navbar = () => {
   return (
-    <div className="w-full px-12 mt-4">
+    <div className="w-full px-12 mt-4 mb-5 sm:mb-3">
       <div className="w-[90%] flex flex-wrap justify-center md:justify-between m-auto items-center">
         <div className="mb-3">
           <Image src={logoimaage} width={170} height={170} alt="Hero Image" />
