@@ -16,14 +16,15 @@ const Footer = () => {
           {FOOTER_ADDRESSES.map(({ id, name }) => {
             return (
               <div key={id}>
-                <h3 className="text-md md:text-xl font-bold work-san-medium">
+                <h2 className="text-md md:text-xl font-bold work-san-medium">
                   {name}
-                </h3>
+                </h2>
               </div>
             );
           })}
         </div>
         <iframe
+          title="My map Frame"
           className="opacity-25"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114964.52300824488!2d-80.22945845000001!3d25.7824075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b0a20ec8c111%3A0xff96f271ddad4f65!2sMiami%2C%20FL%2C%20USA!5e0!3m2!1sen!2s!4v1714567688703!5m2!1sen!2s"
           width="100%"

@@ -65,7 +65,7 @@ const Contact = () => {
             Get a free quote 30 - 60 minute consultation, please complete the
             online form below.
           </p>
-          <p className="text-black text-center font-light text-md w-[90%] md:w-[75%] work-sans-regular leading-relaxed">
+          <p className="text-white text-center font-light text-md w-[90%] md:w-[75%] work-sans-regular leading-relaxed">
             We strive to provide all of our clients with the best possible
             results and value how each feels about us and the services we have
             provided. We are honored by the reviews we have received from both

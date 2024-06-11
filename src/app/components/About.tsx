@@ -52,9 +52,9 @@ const About = () => {
           <span className="w-[50%] border-t-0.5 border-white"></span>
           <p className="text-white text-md work-sans-regular">ABOUT US</p>
         </div>
-        <h3 className="font-normal text-2xl sm:text-4xl md:text-5xl w-[90%] leading-normal text-primary-red tracking-wide work-sans-regular">
+        <h1 className="font-normal text-2xl sm:text-4xl md:text-5xl w-[90%] leading-normal text-primary-red tracking-wide work-sans-regular">
           Highly Qualified & Experienced in Personal Injury Law
-        </h3>
+        </h1>
         <p className="font-light text-md w-[90%] work-sans-regular leading-relaxed">
           We have expertise in many aspects of personal injury law. We fight to
           ensure our clients and their families receive the compensation, care
