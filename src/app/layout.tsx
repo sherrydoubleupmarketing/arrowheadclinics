@@ -1,11 +1,23 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
-import Head from "next/head";
 
 export const metadata: Metadata = {
   title: "Atlanta Happens",
   description: "Atlanta Happens",
+  openGraph: {
+    type: "website",
+    url: "https://atlantahappens.vercel.app/",
+    title: "Atlanta Happens",
+    description: "Atlanta Happens",
+    images: [
+      {
+        url: "/Bannertwo.png",
+        width: 800,
+        height: 600,
+        alt: "Featured Image",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
