@@ -20,10 +20,13 @@ const PracticeAreas = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 mt-1 md:mt-20 mb-12">
           {PRACTICE_CARD.map(({ id, name, desc, Icon }) => {
             return (
-              <div className="flex flex-col gap-4" key={id}>
+              <div
+                className="flex flex-col gap-4 items-center justify-center sm:justify-start sm:items-start"
+                key={id}
+              >
                 <Icon />
                 <p className="font-bold text-md work-sans-medium">{name}</p>
-                <p className="text-sm font-light w-[80%] leading-relaxed work-sans-regular">
+                <p className="text-sm font-light w-[80%] leading-relaxed work-sans-regular text-center sm:text-start">
                   {desc}
                 </p>
               </div>
