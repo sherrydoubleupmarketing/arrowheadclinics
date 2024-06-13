@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     description: "Atlanta Happens",
     images: [
       {
-        url: "https://atlantahappens.vercel.app/Bannerthree.webp",
+        url: "https://atlantahappens.vercel.app/_next/image?url=%2FBannertwo.png&w=2048&q=75",
         width: 800,
         height: 600,
         alt: "Featured Image",
