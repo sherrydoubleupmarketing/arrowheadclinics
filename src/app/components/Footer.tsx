@@ -11,7 +11,7 @@ const Footer = () => {
           ATLANTA HAPPENS
         </h1>
       </div>
-      <div className="">
+      <div className="w-[90%] m-auto">
         <div className=" text-white text-center mb-10 flex flex-col gap-7">
           {FOOTER_ADDRESSES.map(({ id, name }) => {
             return (

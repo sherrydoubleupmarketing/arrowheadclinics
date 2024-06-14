@@ -8,7 +8,7 @@ const AtlantaYoutube = () => {
   return (
     <div id="youtubeSection" className="mt-0 md:mt-20">
       <div className="flex flex-col w-[90%] m-auto gap-4">
-        <div className="w-80 h-12 mt-20 px-4 bg-primary-red flex gap-4 items-center justify-center">
+        <div className="w-64 md:w-80 text-ellipsis overflow-hidden md:overflow-auto text-nowrap h-12 mt-20 px-4 bg-primary-red flex gap-4 items-center justify-center">
           <span className="w-[30%] border-t-0.5 border-white"></span>
           <p className="text-white text-xs whitespace-nowrap work-sans-regular">
             ATLANTA HAPPENS ON YOUTUBE

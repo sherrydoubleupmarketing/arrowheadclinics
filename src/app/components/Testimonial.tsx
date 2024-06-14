@@ -32,7 +32,7 @@ const Testimonial = () => {
       className="w-[90%] flex flex-col md:flex-row m-auto mt-20"
     >
       <div className="w-[100%] md:w-[50%] flex flex-col gap-6 py-5">
-        <div className="w-80 h-12 px-4 bg-primary-red flex gap-4 items-center justify-center">
+        <div className="w-64 text-nowrap md:w-80 h-12 px-4 bg-primary-red flex gap-4 items-center justify-center">
           <span className="w-[50%] border-t-0.5 border-white"></span>
           <p className="text-white work-sans-regular">TESTIMONIALS</p>
         </div>

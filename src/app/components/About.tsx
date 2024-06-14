@@ -48,7 +48,7 @@ const About = () => {
       className="w-[90%] m-auto flex flex-col md:flex-row py-12"
     >
       <div className="w-full md:w-[50%] flex flex-col gap-6 ">
-        <div className="w-56 h-12 bg-primary-red flex gap-4 items-center justify-center">
+        <div className="w-56 text-ellipsis overflow-hidden h-12 bg-primary-red flex gap-4 items-center justify-center">
           <span className="w-[50%] border-t-0.5 border-white"></span>
           <p className="text-white text-md work-sans-regular">ABOUT US</p>
         </div>
@@ -76,7 +76,7 @@ const About = () => {
             online form below.{" "}
           </p>
         </div>
-        <div className="bg-black h-full w-full md:w-[90%] flex flex-col gap-7 py-12 cardshadow">
+        <div className="bg-black h-full w-full md:w-[90%] flex flex-col gap-7 py-12 md:cardshadow">
           <div className="flex flex-col w-full sm:w-[90%] m-auto px-10">
             <Formik
               initialValues={initialValues}

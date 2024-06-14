@@ -48,7 +48,7 @@ const Contact = () => {
     <div id="contactus" className="w-full bg-white pt-20">
       <div className="w-full h-5 bg-primary-red"></div>
       <div className="flex flex-col w-[90%] m-auto gap-4">
-        <div className="w-80 h-12 mt-20 px-4 bg-primary-red flex gap-4 items-center justify-center">
+        <div className="w-64 text-nowrap text-ellipsis overflow-hidden  h-12 mt-20 px-4 bg-primary-red flex gap-4 items-center justify-center">
           <span className="w-[50%] border-t-0.5 border-white"></span>
           <p className="text-white work-sans-regular">CONTACT US</p>
         </div>
@@ -56,30 +56,33 @@ const Contact = () => {
           We are here to help you with law questions
         </h3>
       </div>
-      <div className="mt-20 flex flex-col md:flex-row items-center justify-center m-auto w-[90%]">
-        <div className="w-full md:w-[50%] bg-primary-red flex flex-col gap-6 items-center py-12">
-          <h1 className="md:text-4xl sm:text-3xl text-2xl text-white font-bold work-sans-bold">
-            Request Consultation
-          </h1>
-          <p className="text-white text-center font-light text-md w-[90%] md:w-[65%] work-sans-regular">
-            Get a free quote 30 - 60 minute consultation, please complete the
-            online form below.
-          </p>
-          <p className="text-white text-center font-light text-md w-[90%] md:w-[75%] work-sans-regular leading-relaxed">
-            We strive to provide all of our clients with the best possible
-            results and value how each feels about us and the services we have
-            provided. We are honored by the reviews we have received from both
-            past and present clients
-          </p>
-          <Image
-            src="/Google.png"
-            width={250}
-            height={250}
-            alt="Google Image"
-            className="hidden md:block"
-          />
+
+      <div className="mt-20 flex flex-col md:flex-row w-[90%] m-auto justify-center">
+        <div className="bg-primary-red w-full md:w-1/2 flex items-center justify-center">
+          <div className="flex flex-col items-center gap-6 py-12xp md:py-0">
+            <h1 className="md:text-4xl sm:text-3xl text-2xl text-white font-bold work-sans-bold">
+              Request Consultation
+            </h1>
+            <p className="text-white text-center font-light text-md w-[90%] md:w-[65%] work-sans-regular">
+              Get a free quote 30 - 60 minute consultation, please complete the
+              online form below.
+            </p>
+            <p className="text-white text-center font-light text-md w-[90%] md:w-[75%] work-sans-regular leading-relaxed">
+              We strive to provide all of our clients with the best possible
+              results and value how each feels about us and the services we have
+              provided. We are honored by the reviews we have received from both
+              past and present clients
+            </p>
+            <Image
+              src="/Google.png"
+              width={250}
+              height={250}
+              alt="Google Image"
+              className="hidden md:block"
+            />
+          </div>
         </div>
-        <div className="w-full md:w-[50%] flex flex-col items-center m-auto bg-[#111111] py-3">
+        <div className="bg-black w-full md:w-1/2 py-3">
           <Formik
             initialValues={initialValues}
             validationSchema={contactSchema}
@@ -188,6 +191,7 @@ const Contact = () => {
           </Formik>
         </div>
       </div>
+
       <div className="w-[90%] md:w-[68%] flex items-center justify-center m-auto mt-20 sm:mt-24">
         <Image
           src="/Bannertwo.png"
