@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import { Formik, Form, Field, useFormikContext } from "formik";
 import * as Yup from "yup";
+import axios from "axios";
 
 const Contact = () => {
   const contactSchema = Yup.object().shape({
@@ -73,21 +74,30 @@ const Contact = () => {
               provided. We are honored by the reviews we have received from both
               past and present clients
             </p>
-            <Image
-              src="/Google.png"
-              width={250}
-              height={250}
-              alt="Google Image"
-              className="hidden md:block"
-            />
+            <div className="bg-black px-5 py-3 rounded-md">
+              <Image
+                src="/Google.png"
+                width={250}
+                height={250}
+                alt="Google Image"
+                className="hidden md:block"
+              />
+            </div>
           </div>
         </div>
         <div className="bg-black w-full md:w-1/2 py-3">
           <Formik
             initialValues={initialValues}
             validationSchema={contactSchema}
-            onSubmit={(values, { setSubmitting, resetForm }) => {
-              // console.log(values);
+            onSubmit={async (values, { setSubmitting, resetForm }) => {
+              const body = {
+                name: values.fullName,
+                email: values.email,
+                phone: values.phoneNumber,
+                message: values.caseDetails,
+              };
+              const res = await axios.post("/api", body);
+              console.log("res=>", res);
               setSubmitting(false);
               resetForm();
             }}

@@ -1,6 +1,7 @@
 import React from "react";
 import { Formik, Form, Field, useFormikContext } from "formik";
 import * as Yup from "yup";
+import axios from "axios";
 
 const About = () => {
   const contactSchema = Yup.object().shape({
@@ -81,10 +82,18 @@ const About = () => {
             <Formik
               initialValues={initialValues}
               validationSchema={contactSchema}
-              onSubmit={(values, { setSubmitting, resetForm }) => {
-                // console.log(values);
-                setSubmitting(false);
-                resetForm();
+              onSubmit={async (values, actions) => {
+                try {
+                  const body = {
+                    name: values.fullName,
+                    email: values.email,
+                    phone: values.phoneNumber,
+                    message: values.caseDetails,
+                  };
+                  const res = await axios.post("/api", body);
+                  console.log("res=>", res);
+                  actions.resetForm();
+                } catch (error) {}
               }}
             >
               {({ isSubmitting }) => (
