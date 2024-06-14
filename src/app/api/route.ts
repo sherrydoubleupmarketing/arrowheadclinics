@@ -7,7 +7,7 @@ const resend = new Resend("re_Ee5vvV31_Nwxej621fVwPTA2dXgX8F1L7");
 export async function POST(req: NextRequest) {
   const { name, email, message, phone } = await req.json();
 
-  if (!name || !email || !message || phone) {
+  if (!name || !email || !message || !phone) {
     return NextResponse.json(
       { message: "Missing required fields" },
       { status: 400 }

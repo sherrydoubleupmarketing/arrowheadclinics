@@ -19,6 +19,7 @@ const EmailTemplate = ({
   return (
     <Html>
       <Head />
+
       <Body
         style={{
           backgroundColor: "white",
@@ -28,7 +29,7 @@ const EmailTemplate = ({
           padding: "20px",
         }}
       >
-        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <table width="100%">
           <tr>
             <td
               style={{
@@ -59,77 +60,80 @@ const EmailTemplate = ({
               </h2>
             </td>
           </tr>
-          <tr style={{ marginTop: "20px", width: "80%" }}>
-            <td
-              style={{
-                backgroundColor: "black",
-                padding: "20px",
-                marginTop: "20px",
-              }}
-            >
-              <table width="80%" cellpadding="10" align="center">
+          <tr>
+            <td style={{ padding: "0" }}>
+              {/* Nested table for "margins" */}
+              <table width="100%">
                 <tr>
-                  <td
-                    style={{
-                      color: "white",
-                      fontSize: "16px",
-                      paddingTop: "20px",
-                      paddingBottom: "0",
-                    }}
-                  >
-                    {name}
+                  <td style={{ width: "10%" }}></td> {/* Left margin */}
+                  <td style={{ backgroundColor: "black", padding: "20px" }}>
+                    <table width="100%">
+                      <tr>
+                        <td
+                          style={{
+                            color: "white",
+                            fontSize: "16px",
+                            paddingTop: "20px",
+                            paddingBottom: "0",
+                          }}
+                        >
+                          {name}
+                        </td>
+                      </tr>
+                      <tr>
+                        <td
+                          style={{
+                            borderTop: "1px solid #374151",
+                            marginTop: "0",
+                            marginBottom: "0",
+                          }}
+                        ></td>
+                      </tr>
+                      <tr>
+                        <td
+                          style={{
+                            color: "white",
+                            fontSize: "16px",
+                            paddingTop: "20px",
+                          }}
+                        >
+                          {phone}
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style={{ borderTop: "1px solid #374151" }}></td>
+                      </tr>
+                      <tr>
+                        <td
+                          style={{
+                            color: "white",
+                            fontSize: "16px",
+                            paddingTop: "20px",
+                          }}
+                        >
+                          {email}
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style={{ borderTop: "1px solid #374151" }}></td>
+                      </tr>
+                      <tr>
+                        <td
+                          style={{
+                            color: "white",
+                            fontSize: "16px",
+                            paddingTop: "20px",
+                          }}
+                        >
+                          {message}
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style={{ borderTop: "1px solid #374151" }}></td>
+                      </tr>
+                    </table>
                   </td>
-                </tr>
-                <tr>
-                  <td
-                    style={{
-                      borderTop: "1px solid #374151",
-                      marginTop: "0",
-                      marginBottom: "0",
-                    }}
-                  ></td>
-                </tr>
-                <tr>
-                  <td
-                    style={{
-                      color: "white",
-                      fontSize: "16px",
-                      paddingTop: "20px",
-                    }}
-                  >
-                    {phone}
-                  </td>
-                </tr>
-                <tr>
-                  <td style={{ borderTop: "1px solid #374151" }}></td>
-                </tr>
-                <tr>
-                  <td
-                    style={{
-                      color: "white",
-                      fontSize: "16px",
-                      paddingTop: "20px",
-                    }}
-                  >
-                    {email}
-                  </td>
-                </tr>
-                <tr>
-                  <td style={{ borderTop: "1px solid #374151" }}></td>
-                </tr>
-                <tr>
-                  <td
-                    style={{
-                      color: "white",
-                      fontSize: "16px",
-                      paddingTop: "20px",
-                    }}
-                  >
-                    {message}
-                  </td>
-                </tr>
-                <tr>
-                  <td style={{ borderTop: "1px solid #374151" }}></td>
+                  <td style={{ width: "10%" }}></td> {/* Right margin */}
                 </tr>
               </table>
             </td>
