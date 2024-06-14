@@ -25,7 +25,7 @@ const PracticeAreas = () => {
                 key={id}
               >
                 <Icon />
-                <p className="font-bold text-md work-sans-medium">{name}</p>
+                <p className="font-bold text-2xl work-sans-medium">{name}</p>
                 <p className="text-sm font-light w-[80%] leading-relaxed work-sans-regular text-center sm:text-start">
                   {desc}
                 </p>
