@@ -8,9 +8,12 @@ type MessageUsEmailProps = {
 };
 
 const EmailTemplate = ({ name, email, message }: MessageUsEmailProps) => {
+  const previewText = `Weekly Updates 🚀${name} sent you a message.`;
+
   return (
     <Html>
       <Head />
+
       <Body
         style={{
           backgroundColor: "white",
@@ -20,118 +23,133 @@ const EmailTemplate = ({ name, email, message }: MessageUsEmailProps) => {
           padding: "20px",
         }}
       >
-        <div
-          style={{
-            backgroundColor: "#dc2626",
-            width: "100%",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-            padding: "20px 0",
-          }}
-        >
-          <h1
-            style={{
-              color: "white",
-              fontSize: "36px",
-              fontWeight: "bold",
-              margin: "0",
-            }}
-          >
-            ATLANTA
-          </h1>
-          <h1
-            style={{
-              color: "white",
-              fontSize: "48px",
-              fontWeight: "bold",
-              margin: "0",
-            }}
-          >
-            HAPPENS
-          </h1>
-        </div>
-        <div
-          style={{
-            backgroundColor: "black",
-            height: "384px",
-            width: "90%",
-            margin: "20px auto 0 auto",
-          }}
-        >
-          <div
-            style={{
-              width: "80%",
-              margin: "auto",
-              display: "flex",
-              flexDirection: "column",
-              gap: "20px",
-            }}
-          >
-            <p style={{ color: "white", marginTop: "48px", marginBottom: "0" }}>
-              Hasnain Ahmad
-            </p>
-            <hr
+        <table width="100%" border="0" cellspacing="20" cellpadding="0">
+          <tr>
+            <td
               style={{
-                borderTop: "1px solid #374151",
-                width: "100%",
-                marginTop: "0",
-                marginBottom: "0",
+                backgroundColor: "#dc2626",
+                textAlign: "center",
+                padding: "20px 0",
               }}
-            />
-            <p style={{ color: "white", marginTop: "0", marginBottom: "0" }}>
-              (000) 987 - 876
-            </p>
-            <hr
-              style={{
-                borderTop: "1px solid #374151",
-                width: "100%",
-                marginTop: "0",
-                marginBottom: "0",
-              }}
-            />
-            <p style={{ color: "white", marginTop: "0", marginBottom: "0" }}>
-              doubleupmarketing@gmail.com
-            </p>
-            <hr
-              style={{
-                borderTop: "1px solid #374151",
-                width: "100%",
-                marginTop: "0",
-                marginBottom: "0",
-              }}
-            />
-            <p style={{ color: "white", marginTop: "0", marginBottom: "0" }}>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam
-              omnis aliquam quaerat libero unde cum saepe nemo nisi labore?
-              Ipsam voluptas temporibus amet quisquam nisi fugiat molestiae
-              magni enim maxime.
-            </p>
-            <hr
-              style={{
-                borderTop: "1px solid #374151",
-                width: "100%",
-                marginTop: "0",
-                marginBottom: "0",
-              }}
-            />
-          </div>
-        </div>
-        <div
-          style={{
-            marginTop: "20px",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <img
-            src="https://atlantahappens.vercel.app/_next/image?url=%2FBannertwo.png&w=2048&q=75"
-            alt="Banner image"
-            style={{ height: "100px", width: "auto" }}
-          />
-        </div>
+            >
+              <h1
+                style={{
+                  color: "white",
+                  fontSize: "36px",
+                  fontWeight: "bold",
+                  margin: "0",
+                }}
+              >
+                ATLANTA
+              </h1>
+              <h2
+                style={{
+                  color: "white",
+                  fontSize: "48px",
+                  fontWeight: "bold",
+                  margin: "0",
+                }}
+              >
+                HAPPENS
+              </h2>
+            </td>
+          </tr>
+          <tr>
+            <td style={{ padding: "0" }}>
+              {/* Nested table for "margins" */}
+              <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td style={{ width: "10%" }}></td> {/* Left margin */}
+                  <td style={{ backgroundColor: "black", padding: "20px" }}>
+                    <table
+                      width="100%"
+                      border="0"
+                      cellspacing="20"
+                      cellpadding="0"
+                    >
+                      <tr>
+                        <td
+                          style={{
+                            color: "white",
+                            fontSize: "16px",
+                            paddingTop: "20px",
+                            paddingBottom: "0",
+                          }}
+                        >
+                          Hasnain Ahmad
+                        </td>
+                      </tr>
+                      <tr>
+                        <td
+                          style={{
+                            borderTop: "1px solid #374151",
+                            marginTop: "0",
+                            marginBottom: "0",
+                          }}
+                        ></td>
+                      </tr>
+                      <tr>
+                        <td
+                          style={{
+                            color: "white",
+                            fontSize: "16px",
+                            paddingTop: "20px",
+                          }}
+                        >
+                          (000) 987 - 876
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style={{ borderTop: "1px solid #374151" }}></td>
+                      </tr>
+                      <tr>
+                        <td
+                          style={{
+                            color: "white",
+                            fontSize: "16px",
+                            paddingTop: "20px",
+                          }}
+                        >
+                          doubleupmarketing@gmail.com
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style={{ borderTop: "1px solid #374151" }}></td>
+                      </tr>
+                      <tr>
+                        <td
+                          style={{
+                            color: "white",
+                            fontSize: "16px",
+                            paddingTop: "20px",
+                          }}
+                        >
+                          Lorem ipsum dolor sit, amet consectetur adipisicing
+                          elit. Nam omnis aliquam quaerat libero unde cum saepe
+                          nemo nisi labore? Ipsam voluptas temporibus amet
+                          quisquam nisi fugiat molestiae magni enim maxime.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style={{ borderTop: "1px solid #374151" }}></td>
+                      </tr>
+                    </table>
+                  </td>
+                  <td style={{ width: "10%" }}></td> {/* Right margin */}
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td style={{ textAlign: "center", paddingTop: "20px" }}>
+              <img
+                src="https://atlantahappens.vercel.app/wilsonlogo.png"
+                alt="Banner image"
+                style={{ height: "100px", width: "auto" }}
+              />
+            </td>
+          </tr>
+        </table>
       </Body>
     </Html>
   );
