@@ -75,7 +75,7 @@ const Testimonial = () => {
           </Slider>
           <div className="mt-12 flex flex-col md:flex-row md:justify-between items-center gap-4 px-5">
             <Image
-              src="/Google.png"
+              src="/Google-black.png"
               width={140}
               height={140}
               alt="Google image"
