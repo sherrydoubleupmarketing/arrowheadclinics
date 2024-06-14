@@ -74,7 +74,7 @@ const Contact = () => {
               provided. We are honored by the reviews we have received from both
               past and present clients
             </p>
-            <div className="bg-black px-5 py-3 rounded-md">
+            <div className="bg-black hidden md:block px-5 py-3 rounded-md">
               <Image
                 src="/Google.png"
                 width={250}
