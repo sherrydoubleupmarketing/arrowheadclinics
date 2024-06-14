@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <div className="mt-20 bg-black flex justify-center flex-col">
       <div>
-        <h1 className="md:text-6xl sm:text-4xl text-2xl flex dk-dirrrty text-primary-red items-center justify-center py-8 tracking-wider font-bold">
+        <h1 className="md:text-[5rem] text-4xl sm:mb-10 sm:mt-10 flex dk-dirrrty text-primary-red items-center justify-center py-8 tracking-wider font-bold">
           ATLANTA HAPPENS
         </h1>
       </div>
@@ -15,9 +15,9 @@ const Footer = () => {
         <div className=" text-white text-center mb-10 flex flex-col gap-7">
           {FOOTER_ADDRESSES.map(({ id, name, link }) => {
             return (
-              <div key={id}>
+              <div key={id} className="w-fit m-auto">
                 <a href={link}>
-                  <h2 className="text-md md:text-xl font-bold work-san-medium">
+                  <h2 className="text-md m-auto md:text-xl font-bold work-san-medium w-fit hover:text-primary-red hover:underline ">
                     {name}
                   </h2>
                 </a>
@@ -25,13 +25,15 @@ const Footer = () => {
             );
           })}
         </div>
+
         <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d106148.78206611586!2d-84.392151!3d33.756804!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f50380c24d30e5%3A0xb12b74cdc2eba46b!2s101%20Marietta%20St%20NW%20%23300%2C%20Atlanta%2C%20GA%2030303!5e0!3m2!1sen!2sus!4v1718389395417!5m2!1sen!2sus"
           title="My map Frame"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53052.38605797016!2d-84.42251845000001!3d33.7490985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f5041f1c723ea9%3A0xf4fb9f4d5df11a8d!2sAtlanta%2C%20GA%2C%20USA!5e0!3m2!1sen!2s!4v1714567688703!5m2!1sen!2s"
           width="100%"
           height="600px"
           loading="lazy"
         ></iframe>
+
         <a href="https://darriusg3.sg-host.com/">
           <div className="flex items-center justify-center m-4">
             <Image width={120} height={120} src="/Maskgroup.svg" alt="Logo" />
