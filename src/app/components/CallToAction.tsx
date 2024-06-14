@@ -13,8 +13,9 @@ const CallToAction = () => {
             Free Case Consultation Available
           </h1>
           <p className="w-[90%] md:w-[60%] work-sans-regular text-white text-sm text-center">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt
-            doloribus corrupti distinctio rerum labore? Optio veritatis iure
+            We’ve taken on big insurance companies and large corporations
+            nationwide to recover billions for clients hurt in accidents just
+            like you!
           </p>
           <Link href="#contactus">
             <button className="bg-black p-2 px-8 work-sans-regular rounded-xl text-white hover:bg-white hover:text-black transition ease-in-out duration-300">

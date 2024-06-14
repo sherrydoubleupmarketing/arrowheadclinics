@@ -11,8 +11,8 @@ const Footer = () => {
           ATLANTA HAPPENS
         </h1>
       </div>
-      <div className="relative">
-        <div className="left-[5%] sm:left-[10%] md:left-[25%] top-10 md:top-[30%] text-white absolute flex flex-col gap-7">
+      <div className="">
+        <div className=" text-white text-center mb-10 flex flex-col gap-7">
           {FOOTER_ADDRESSES.map(({ id, name }) => {
             return (
               <div key={id}>
@@ -25,15 +25,16 @@ const Footer = () => {
         </div>
         <iframe
           title="My map Frame"
-          className="opacity-25"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114964.52300824488!2d-80.22945845000001!3d25.7824075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b0a20ec8c111%3A0xff96f271ddad4f65!2sMiami%2C%20FL%2C%20USA!5e0!3m2!1sen!2s!4v1714567688703!5m2!1sen!2s"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53052.38605797016!2d-84.42251845000001!3d33.7490985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f5041f1c723ea9%3A0xf4fb9f4d5df11a8d!2sAtlanta%2C%20GA%2C%20USA!5e0!3m2!1sen!2s!4v1714567688703!5m2!1sen!2s"
           width="100%"
           height="600px"
           loading="lazy"
         ></iframe>
-        <div className="absolute left-[34%] md:left-[45%] -mt-14">
-          <Image width={120} height={120} src="/Maskgroup.svg" alt="Logo" />
-        </div>
+        <a href="https://darriusg3.sg-host.com/">
+          <div className="flex items-center justify-center m-4">
+            <Image width={120} height={120} src="/Maskgroup.svg" alt="Logo" />
+          </div>
+        </a>
       </div>
       <div className="flex flex-col mt-5">
         <div className="w-full border border-primary-red"></div>

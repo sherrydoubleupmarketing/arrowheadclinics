@@ -4,6 +4,8 @@ import Image from "next/image";
 import RightArrow from "../../../public/svg/RightArrow";
 import LeftArrow from "../../../public/svg/LeftArrow";
 import Slider from "react-slick";
+import { GOOGLE_REVIEWS } from "../constant";
+import Link from "next/link";
 
 const Testimonial = () => {
   const sliderRef = useRef<Slider | null>(null);
@@ -43,27 +45,24 @@ const Testimonial = () => {
           We are honored by the reviews we have received from both past and
           present clients
         </p>
-        <button className="px-5 py-3 work-sans-regular bg-primary-red rounded-sm w-56 mt-6 text-white hover:bg-black transition duration-300 ease-out">
-          Request a consultation
-        </button>
+
+        <Link href="#contactus">
+          <div className="px-5 py-3 work-sans-regular bg-primary-red rounded-sm w-56 mt-6 text-white hover:bg-black transition duration-300 ease-out">
+            Request A Consultation
+          </div>
+        </Link>
       </div>
       <div className="w-[100%] md:w-[45%] py-6 boxshadow h-fit">
         <div className="w-[90%] flex flex-col m-auto">
           <Slider ref={sliderRef} {...settings}>
-            {[0, 1, 2.3].map((index) => {
+            {GOOGLE_REVIEWS.map((item, index) => {
               return (
                 <div key={index} className="mt-6 w-[90%]">
                   <p className="font-light text-md m-auto work-sans-regular leading-relaxed">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Feugiat purus sed fames cursus. Est scelerisque nibh vivamus
-                    sed viverra. Nisi, amet arcu nascetur ac. Suspendisse id at
-                    sit molestie id malesuada dignissim nisl. Non cursus justo,
-                    scelerisque egestas. Gravida lacus sit in. Lorem ipsum dolor
-                    sit amet, consectetur adipiscing elit. Feugiat purus sed
-                    fames cursus. Est scelerisque nibh vivamus sed viverra.
+                    {item.review}
                   </p>
                   <h2 className="font-bold text-md work-sans-medium mt-6">
-                    Violet obsedoeo
+                    {item.name}
                   </h2>
                   <div className="flex gap-1">
                     {[0, 1, 2, 3, 4].map((index) => {

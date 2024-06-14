@@ -15,6 +15,7 @@ import Testimonial from "./components/Testimonial";
 import "./globals.css";
 import Slider from "react-slick";
 import Image from "next/image";
+import { CTAS } from "./constant";
 
 export default function Home() {
   const [activeSlide, setActiveSlide] = useState(0);
@@ -51,14 +52,14 @@ export default function Home() {
           sliderRef={sliderRef}
         />
         <div className="flex gap-2 mt-6">
-          {[0, 1, 2, 3, 4].map((index) => {
+          {CTAS.map((item) => {
             return (
               <div
-                key={index}
+                key={item.id}
                 className={`w-2 h-2 rounded-full cursor-pointer ${
-                  index === activeSlide ? "bg-primary-red" : "bg-white"
+                  item.id === activeSlide ? "bg-primary-red" : "bg-white"
                 }`}
-                onClick={() => goToSlide(index)}
+                onClick={() => goToSlide(item.id)}
               ></div>
             );
           })}
