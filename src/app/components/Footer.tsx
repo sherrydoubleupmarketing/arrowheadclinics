@@ -13,12 +13,14 @@ const Footer = () => {
       </div>
       <div className="w-[90%] m-auto">
         <div className=" text-white text-center mb-10 flex flex-col gap-7">
-          {FOOTER_ADDRESSES.map(({ id, name }) => {
+          {FOOTER_ADDRESSES.map(({ id, name, link }) => {
             return (
               <div key={id}>
-                <h2 className="text-md md:text-xl font-bold work-san-medium">
-                  {name}
-                </h2>
+                <a href={link}>
+                  <h2 className="text-md md:text-xl font-bold work-san-medium">
+                    {name}
+                  </h2>
+                </a>
               </div>
             );
           })}

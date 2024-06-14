@@ -105,18 +105,22 @@ export const FOOTER_ADDRESSES = [
   {
     id: 1,
     name: "Atlanta: 101 Marietta Street NW, Suite 3100, Atlanta, GA 30303 | (855) 247-WILSON",
+    link: "https://maps.app.goo.gl/RBg6JfxVDJwgsrtH6",
   },
   {
     id: 2,
     name: "Macon: 500a Northside Crossing, Macon, GA 31210 | (478) 606-9818",
+    link: "https://maps.app.goo.gl/LmcsQx2TDyvJhBQN9",
   },
   {
     id: 3,
     name: "Savannah: 2 E Bryan St Suite 504, Savannah, GA 31401 | (912) 378-1807",
+    link: "https://maps.app.goo.gl/rhjwhFEUuuFxs3K78",
   },
   {
     id: 4,
     name: "Decatur: 1 W Ct Square Suite 750, Decatur, GA 30030 | (470) 299-9867",
+    link: "https://maps.app.goo.gl/uBqWpnXWSBhVX1na9",
   },
 ];
 
