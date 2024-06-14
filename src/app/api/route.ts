@@ -5,9 +5,9 @@ import EmailTemplate from "../emails/EmailTemplate";
 const resend = new Resend("re_Ee5vvV31_Nwxej621fVwPTA2dXgX8F1L7");
 
 export async function POST(req: NextRequest) {
-  const { name, email, message } = await req.json();
+  const { name, email, message, phone } = await req.json();
 
-  if (!name || !email || !message) {
+  if (!name || !email || !message || phone) {
     return NextResponse.json(
       { message: "Missing required fields" },
       { status: 400 }
@@ -19,7 +19,7 @@ export async function POST(req: NextRequest) {
       from: "Acme <onboarding@resend.dev>",
       to: `hasnainahmad4890@gmail.com`,
       subject: `${name} has a message!`,
-      react: EmailTemplate({ name, email, message }),
+      react: EmailTemplate({ name, email, message, phone }),
     });
 
     return NextResponse.json({ message: "Email sent successfully", data });

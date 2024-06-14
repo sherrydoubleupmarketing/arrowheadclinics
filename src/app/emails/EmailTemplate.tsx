@@ -5,15 +5,20 @@ type MessageUsEmailProps = {
   name: string;
   email: string;
   message: string;
+  phone: string;
 };
 
-const EmailTemplate = ({ name, email, message }: MessageUsEmailProps) => {
+const EmailTemplate = ({
+  name,
+  email,
+  message,
+  phone,
+}: MessageUsEmailProps) => {
   const previewText = `Weekly Updates 🚀${name} sent you a message.`;
 
   return (
     <Html>
       <Head />
-
       <Body
         style={{
           backgroundColor: "white",
@@ -23,7 +28,7 @@ const EmailTemplate = ({ name, email, message }: MessageUsEmailProps) => {
           padding: "20px",
         }}
       >
-        <table width="100%" border="0" cellspacing="20" cellpadding="0">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
           <tr>
             <td
               style={{
@@ -54,88 +59,77 @@ const EmailTemplate = ({ name, email, message }: MessageUsEmailProps) => {
               </h2>
             </td>
           </tr>
-          <tr>
-            <td style={{ padding: "0" }}>
-              {/* Nested table for "margins" */}
-              <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr style={{ marginTop: "20px", width: "80%" }}>
+            <td
+              style={{
+                backgroundColor: "black",
+                padding: "20px",
+                marginTop: "20px",
+              }}
+            >
+              <table width="80%" cellpadding="10" align="center">
                 <tr>
-                  <td style={{ width: "10%" }}></td> {/* Left margin */}
-                  <td style={{ backgroundColor: "black", padding: "20px" }}>
-                    <table
-                      width="100%"
-                      border="0"
-                      cellspacing="20"
-                      cellpadding="0"
-                    >
-                      <tr>
-                        <td
-                          style={{
-                            color: "white",
-                            fontSize: "16px",
-                            paddingTop: "20px",
-                            paddingBottom: "0",
-                          }}
-                        >
-                          Hasnain Ahmad
-                        </td>
-                      </tr>
-                      <tr>
-                        <td
-                          style={{
-                            borderTop: "1px solid #374151",
-                            marginTop: "0",
-                            marginBottom: "0",
-                          }}
-                        ></td>
-                      </tr>
-                      <tr>
-                        <td
-                          style={{
-                            color: "white",
-                            fontSize: "16px",
-                            paddingTop: "20px",
-                          }}
-                        >
-                          (000) 987 - 876
-                        </td>
-                      </tr>
-                      <tr>
-                        <td style={{ borderTop: "1px solid #374151" }}></td>
-                      </tr>
-                      <tr>
-                        <td
-                          style={{
-                            color: "white",
-                            fontSize: "16px",
-                            paddingTop: "20px",
-                          }}
-                        >
-                          doubleupmarketing@gmail.com
-                        </td>
-                      </tr>
-                      <tr>
-                        <td style={{ borderTop: "1px solid #374151" }}></td>
-                      </tr>
-                      <tr>
-                        <td
-                          style={{
-                            color: "white",
-                            fontSize: "16px",
-                            paddingTop: "20px",
-                          }}
-                        >
-                          Lorem ipsum dolor sit, amet consectetur adipisicing
-                          elit. Nam omnis aliquam quaerat libero unde cum saepe
-                          nemo nisi labore? Ipsam voluptas temporibus amet
-                          quisquam nisi fugiat molestiae magni enim maxime.
-                        </td>
-                      </tr>
-                      <tr>
-                        <td style={{ borderTop: "1px solid #374151" }}></td>
-                      </tr>
-                    </table>
+                  <td
+                    style={{
+                      color: "white",
+                      fontSize: "16px",
+                      paddingTop: "20px",
+                      paddingBottom: "0",
+                    }}
+                  >
+                    {name}
                   </td>
-                  <td style={{ width: "10%" }}></td> {/* Right margin */}
+                </tr>
+                <tr>
+                  <td
+                    style={{
+                      borderTop: "1px solid #374151",
+                      marginTop: "0",
+                      marginBottom: "0",
+                    }}
+                  ></td>
+                </tr>
+                <tr>
+                  <td
+                    style={{
+                      color: "white",
+                      fontSize: "16px",
+                      paddingTop: "20px",
+                    }}
+                  >
+                    (000) 987 - 876
+                  </td>
+                </tr>
+                <tr>
+                  <td style={{ borderTop: "1px solid #374151" }}></td>
+                </tr>
+                <tr>
+                  <td
+                    style={{
+                      color: "white",
+                      fontSize: "16px",
+                      paddingTop: "20px",
+                    }}
+                  >
+                    {email}
+                  </td>
+                </tr>
+                <tr>
+                  <td style={{ borderTop: "1px solid #374151" }}></td>
+                </tr>
+                <tr>
+                  <td
+                    style={{
+                      color: "white",
+                      fontSize: "16px",
+                      paddingTop: "20px",
+                    }}
+                  >
+                    {message}
+                  </td>
+                </tr>
+                <tr>
+                  <td style={{ borderTop: "1px solid #374151" }}></td>
                 </tr>
               </table>
             </td>
