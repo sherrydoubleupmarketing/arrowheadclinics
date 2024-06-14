@@ -97,7 +97,7 @@ const EmailTemplate = ({
                       paddingTop: "20px",
                     }}
                   >
-                    (000) 987 - 876
+                    {phone}
                   </td>
                 </tr>
                 <tr>
