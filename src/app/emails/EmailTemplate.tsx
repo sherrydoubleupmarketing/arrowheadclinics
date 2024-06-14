@@ -29,7 +29,7 @@ const EmailTemplate = ({
           padding: "20px",
         }}
       >
-        <table width="100%">
+        <table width="80%">
           <tr>
             <td
               style={{
@@ -65,7 +65,7 @@ const EmailTemplate = ({
               {/* Nested table for "margins" */}
               <table width="100%">
                 <tr>
-                  <td style={{ width: "10%" }}></td> {/* Left margin */}
+                  {/* <td style={{ width: "10%" }}></td>  */}
                   <td style={{ backgroundColor: "black", padding: "20px" }}>
                     <table width="100%">
                       <tr>
@@ -133,7 +133,7 @@ const EmailTemplate = ({
                       </tr>
                     </table>
                   </td>
-                  <td style={{ width: "10%" }}></td> {/* Right margin */}
+                  {/* <td style={{ width: "10%" }}></td>  */}
                 </tr>
               </table>
             </td>
