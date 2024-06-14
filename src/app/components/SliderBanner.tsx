@@ -24,7 +24,7 @@ const SliderBanner = ({ activeSlide, goToSlide, sliderRef }: any) => {
         {CTAS.map((item, index) => (
           <div
             key={item.id}
-            className="w-full bg-[#000000] flex items-center justify-center"
+            className="w-full  flex items-center justify-center"
           >
             <div className="flex-col gap-4 flex items-center justify-center mt-4 py-5 relative z-10">
               <h1 className="font-normal text-3xl text-white relative z-10 work-sans-medium">

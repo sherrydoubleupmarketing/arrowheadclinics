@@ -37,7 +37,7 @@ export default function Home() {
       <CallToAction />
       <Testimonial />
       <div className="bg-black flex flex-col mt-20 items-center justify-center w-full py-6 relative">
-        <div className="absolute left-0 bottom-0">
+        <div className="absolute  z-0 left-0 bottom-0">
           <Image
             alt="Circle image"
             width={200}
@@ -64,7 +64,7 @@ export default function Home() {
             );
           })}
         </div>
-        <div className="absolute right-0 top-0">
+        <div className="absolute hidden sm:block right-0 top-0">
           <Image
             alt="Circle image"
             width={200}
