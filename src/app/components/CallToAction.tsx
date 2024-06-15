@@ -10,7 +10,7 @@ const CallToAction = () => {
       <div className="flex items-end justify-end flex-col">
         <div className="flex items-center justify-center flex-col gap-3">
           <h1 className="text-xl md:text-3xl font-bold work-sans-medium text-white">
-            Free Case Consultation Available
+            Get A Free Case Review
           </h1>
           <p className="w-[90%] md:w-[60%] work-sans-regular text-white text-sm text-center">
             We’ve taken on big insurance companies and large corporations

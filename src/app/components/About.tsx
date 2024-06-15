@@ -72,9 +72,8 @@ const About = () => {
           <h1 className="sm:text-3xl text-2xl md:text-4xl text-white font-bold work-sans-bold">
             Request Consultation
           </h1>
-          <p className="text-white text-center font-light text-sm md:text-md w-[70%] work-sans-regular">
-            Get a free quote 30 - 60 minute consultation, please complete the
-            online form below.{" "}
+          <p className="text-white text-center font-semibold text-md md:text-xl w-[70%] work-sans-regular">
+            Get A Free 30 - 60 Minutes Consultation
           </p>
         </div>
         <div className="bg-black h-full w-full md:w-[90%] flex flex-col gap-7 py-12 md:cardshadow">
@@ -172,7 +171,7 @@ const About = () => {
                     className="px-5 py-2 bg-primary-red rounded-sm w-56 mt-6 text-white hover:bg-white hover:text-primary-red duration-300 ease-in-out disabled:bg-gray-400"
                     disabled={isSubmitting}
                   >
-                    Request A Consultation
+                    Get A Free Consultation
                   </button>
                 </Form>
               )}

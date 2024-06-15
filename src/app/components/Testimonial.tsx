@@ -47,8 +47,8 @@ const Testimonial = () => {
         </p>
 
         <Link href="#contactus">
-          <div className="px-5 py-3 work-sans-regular bg-primary-red rounded-sm w-56 mt-6 text-white hover:bg-black transition duration-300 ease-out">
-            Request A Consultation
+          <div className="px-2 py-3 flex items-center justify-center work-sans-regular bg-primary-red rounded-sm w-56 mt-6 text-white hover:bg-black transition duration-300 ease-out">
+            Get A Free Consultation
           </div>
         </Link>
       </div>

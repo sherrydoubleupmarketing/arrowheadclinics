@@ -10,15 +10,13 @@ const ImportantSteps = () => {
         <div className="p-4">
           <h1 className="font-bold work-sans-bold text-2xl sm:text-3xl md:text-4xl text-white w-[85%] mt-3 m-auto text-center leading-relaxed">
             Important Steps to Take When in a{" "}
-            <span className="text-black dk-dirrrty block">
-              Car Accident
-            </span>
+            <span className="text-black dk-dirrrty block">Car Accident</span>
           </h1>
-          <div className="flex flex-col gap-4 px-3 md:px-10 text-white items-center justify-center">
+          <div className="flex flex-col gap-4 px-3 md:px-10 text-white">
             {IMPORTANT_STEPS.map(({ id, text, Icon }) => {
               return (
                 <div key={id} className="flex gap-4">
-                  <span>
+                  <span className="mt-1">
                     <Icon />
                   </span>
                   <p className="text-sm font-light work-sans-medium">{text}</p>

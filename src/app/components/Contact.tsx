@@ -54,7 +54,7 @@ const Contact = () => {
           <p className="text-white work-sans-regular">CONTACT US</p>
         </div>
         <h3 className="sm:text-4xl text-2xl md:text-5xl work-sans-bold font-bold text-primary-red w-full md:w-[45%]">
-          We are here to help you with law questions
+          Get A Free Case Review
         </h3>
       </div>
 
@@ -64,9 +64,8 @@ const Contact = () => {
             <h1 className="md:text-4xl sm:text-3xl text-2xl text-white font-bold work-sans-bold">
               Request Consultation
             </h1>
-            <p className="text-white text-center font-light text-md w-[90%] md:w-[65%] work-sans-regular">
-              Get a free quote 30 - 60 minute consultation, please complete the
-              online form below.
+            <p className="text-white text-center font-semibold text-xl w-[90%] md:w-[65%] work-sans-regular">
+              Get A Free 30 - 60 Minutes Consultation
             </p>
             <p className="text-white text-center font-light text-md w-[90%] md:w-[75%] work-sans-regular leading-relaxed">
               We strive to provide all of our clients with the best possible
@@ -194,7 +193,7 @@ const Contact = () => {
                   className="px-5 py-2 bg-primary-red rounded-sm w-56 mt-6 text-white hover:bg-white hover:text-primary-red duration-300 ease-in-out disabled:bg-gray-400"
                   disabled={isSubmitting}
                 >
-                  Request A Consultation
+                  Get A Free Consultation
                 </button>
               </Form>
             )}
