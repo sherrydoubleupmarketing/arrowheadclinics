@@ -14,7 +14,7 @@ export const FOOTER_LINKS = [
   },
   {
     id: 2,
-    name: "Practice Area's",
+    name: "Practice Areas",
     path: "#practiceArea",
   },
   {

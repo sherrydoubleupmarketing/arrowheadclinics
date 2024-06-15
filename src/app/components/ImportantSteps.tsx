@@ -11,7 +11,7 @@ const ImportantSteps = () => {
           <h1 className="font-bold work-sans-bold text-2xl sm:text-3xl md:text-4xl text-white w-[85%] mt-3 m-auto text-center leading-relaxed">
             Important Steps to Take When in a{" "}
             <span className="text-black dk-dirrrty block">
-              Motor Vehicles Accident
+              Car Accident
             </span>
           </h1>
           <div className="flex flex-col gap-4 px-3 md:px-10 text-white items-center justify-center">
