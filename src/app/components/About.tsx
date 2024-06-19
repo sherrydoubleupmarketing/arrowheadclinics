@@ -70,10 +70,10 @@ const About = () => {
       <div className="w-full md:w-[50%] flex flex-col mt-12 md:-mt-48">
         <div className="bg-primary-red w-full md:w-[90%] flex flex-col gap-3 items-center justify-center py-6">
           <h1 className="sm:text-3xl text-2xl md:text-4xl text-white font-bold work-sans-bold">
-            Request Consultation
+            Request A Consultation
           </h1>
           <p className="text-white text-center font-semibold text-md md:text-xl w-[70%] work-sans-regular">
-            Get A Free 30 - 60 Minutes Consultation
+            Get A Free 30 - 60 Minute Consultation
           </p>
         </div>
         <div className="bg-black h-full w-full md:w-[90%] flex flex-col gap-7 py-12 md:cardshadow">

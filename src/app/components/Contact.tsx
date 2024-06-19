@@ -62,10 +62,10 @@ const Contact = () => {
         <div className="bg-primary-red w-full md:w-1/2 flex items-center justify-center">
           <div className="flex flex-col items-center gap-6 py-12 md:py-0">
             <h1 className="md:text-4xl sm:text-3xl text-2xl text-white font-bold work-sans-bold">
-              Request Consultation
+              Request A Consultation
             </h1>
             <p className="text-white text-center font-semibold text-xl w-[90%] md:w-[65%] work-sans-regular">
-              Get A Free 30 - 60 Minutes Consultation
+              Get A Free 30 - 60 Minute Consultation
             </p>
             <p className="text-white text-center font-light text-md w-[90%] md:w-[75%] work-sans-regular leading-relaxed">
               We strive to provide all of our clients with the best possible
