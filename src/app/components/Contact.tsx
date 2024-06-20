@@ -14,6 +14,7 @@ const Contact = () => {
     typeOfAccident: Yup.string().required("Please tell us your accident type"),
     date: Yup.date().required("Please tell us when the accident happened"),
     honeyPot: Yup.string(),
+    isChecked: Yup.boolean(),
   });
 
   const initialValues = {
@@ -23,7 +24,8 @@ const Contact = () => {
     caseDetails: "",
     honeyPot: "",
     typeOfAccident: "",
-    date: new Date(),
+    date: "",
+    isChecked: false,
   };
 
   interface FormValues {
@@ -34,6 +36,7 @@ const Contact = () => {
     honeyPot: string;
     typeOfAccident: string;
     date: Date;
+    isChecked: boolean;
   }
 
   interface FormErrorProps {
@@ -111,7 +114,11 @@ const Contact = () => {
                 phone: values.phoneNumber,
                 message: values.caseDetails,
                 type: values.honeyPot.length > 0 ? "bot" : "human",
+                date: values.date,
+                typeOfAccident: values.typeOfAccident,
+                isChecked: values.isChecked,
               };
+              console.log (body);
               const res = await axios.post("/api", body);
               setSubmitting(false);
               resetForm();
@@ -192,19 +199,33 @@ const Contact = () => {
                 </div>
                 {/*  Type of Accident Field */}
                 <div
-                  id="case Details"
+                  id="typeOfAccident"
                   className="relative z-0 mt-5 group md:w-[80%] w-[100%]"
                 >
                   <Field
-                    type="text"
+                    as="select"
                     name="typeOfAccident"
                     className="block py-2.5 px-0 w-full text-sm text-[#999999] bg-transparent border-0 border-b-0.5 border-[#999999] appearance-none focus:outline-none focus:ring-0 peer"
-                    placeholder=" "
                     required
                     aria-label="type of accident"
-                  />
+                  >
+                    <option value="">Select your accident type</option>
+                    <option value="Bicycle Accident">Bicycle Accident</option>
+                    <option value="Car Crash">Car Crash</option>
+                    <option value="DUI Accident">DUI Accident</option>
+                    <option value="Hurt at Work">Hurt at Work</option>
+                    <option value="Motorcycle Accident">
+                      Motorcycle Accident
+                    </option>
+                    <option value="Pedestrian Accident">
+                      Pedestrian Accident
+                    </option>
+                    <option value="Slip and Fall">Slip and Fall</option>
+                    <option value="Truck Accident">Truck Accident</option>
+                    <option value="Other Injury">Other Injury</option>
+                  </Field>
                   <label
-                    htmlFor="caseDetails"
+                    htmlFor="typeOfAccident"
                     className="peer-focus:font-medium absolute text-sm text-[#999999] duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-[#ccc] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                   >
                     Type Of Accident
@@ -213,7 +234,7 @@ const Contact = () => {
                 </div>
                 {/*  Date Field */}
                 <div
-                  id="case Details"
+                  id="date"
                   className="relative z-0 mt-5 group md:w-[80%] w-[100%]"
                 >
                   <Field
@@ -225,7 +246,7 @@ const Contact = () => {
                     aria-label="date"
                   />
                   <label
-                    htmlFor="caseDetails"
+                    htmlFor="date"
                     className="peer-focus:font-medium absolute text-sm text-[#999999] duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-[#ccc] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                   >
                     Date
@@ -253,6 +274,25 @@ const Contact = () => {
                     Tell Us About Your Case
                   </label>
                   <FormError name="caseDetails" />
+                </div>
+
+                <div
+                  id="checkbox"
+                  className="relative z-0 mt-5 group md:w-[80%] w-[100%] flex items-center"
+                >
+                  <Field
+                    type="checkbox"
+                    name="isChecked"
+                    className="mr-2"
+                    aria-label="isChecked"
+                  />
+                  <label
+                    htmlFor="isChecked"
+                    className="text-sm text-[#999999] peer-focus:font-medium"
+                  >
+                    Were You At Fault?
+                  </label>
+                  <FormError name="isChecked" />
                 </div>
 
                 <button

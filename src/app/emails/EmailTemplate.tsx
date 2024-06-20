@@ -8,6 +8,9 @@ type MessageUsEmailProps = {
   phone: string;
   validity: string;
   type: string;
+  date?: string;
+  typeOfAccident?: string;
+  isChecked?: string;
 };
 
 const EmailTemplate = ({
@@ -17,8 +20,10 @@ const EmailTemplate = ({
   phone,
   validity,
   type,
+  date,
+  typeOfAccident,
+  isChecked = "false",
 }: MessageUsEmailProps) => {
-
   return (
     <Html>
       <Head />
@@ -70,39 +75,39 @@ const EmailTemplate = ({
                 <tr>
                   <td style={{ backgroundColor: "black", padding: "20px" }}>
                     <table width="100%">
-                      {/* {validity === "Spam" && ( */}
-                      <tr>
-                        <td
-                          style={{
-                            color: "#fff !important",
-                            fontSize: "16px",
-                            paddingTop: "20px",
-                            padding: "5px",
-                            backgroundColor: "red",
-                          }}
-                        >
-                          <table>
-                            <tr>
-                              <td>
-                                <img
-                                  src="https://atlantahappens.vercel.app/warn.png"
-                                  alt="Spam"
-                                  style={{
-                                    width: "20px",
-                                    height: "20px",
-                                    marginRight: "5px",
-                                  }}
-                                />
-                              </td>
-                              <td style={{ color: "#fff !important" }}>
-                                This submission could be a spam (invalid email
-                                address detected).
-                              </td>
-                            </tr>
-                          </table>
-                        </td>
-                      </tr>
-                      {/* )} */}
+                      {validity === "Spam" && (
+                        <tr>
+                          <td
+                            style={{
+                              color: "#fff !important",
+                              fontSize: "16px",
+                              paddingTop: "20px",
+                              padding: "5px",
+                              backgroundColor: "red",
+                            }}
+                          >
+                            <table>
+                              <tr>
+                                <td>
+                                  <img
+                                    src="https://atlantahappens.vercel.app/warn.png"
+                                    alt="Spam"
+                                    style={{
+                                      width: "20px",
+                                      height: "20px",
+                                      marginRight: "5px",
+                                    }}
+                                  />
+                                </td>
+                                <td style={{ color: "#fff !important" }}>
+                                  This submission could be a spam (invalid email
+                                  address detected).
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      )}
                       {type === "bot" && (
                         <tr>
                           <td
@@ -195,6 +200,47 @@ const EmailTemplate = ({
                           <b>Message:</b> {message}
                         </td>
                       </tr>
+
+                      {date && (
+                        <tr>
+                          <td
+                            style={{
+                              color: "white",
+                              fontSize: "16px",
+                              paddingTop: "20px",
+                            }}
+                          >
+                            <b>Date:</b> {date}
+                          </td>
+                        </tr>
+                      )}
+                      {typeOfAccident && (
+                        <tr>
+                          <td
+                            style={{
+                              color: "white",
+                              fontSize: "16px",
+                              paddingTop: "20px",
+                            }}
+                          >
+                            <b>Type Of Accident:</b> {typeOfAccident}
+                          </td>
+                        </tr>
+                      )}
+                      {typeOfAccident && (
+                        <tr>
+                          <td
+                            style={{
+                              color: "white",
+                              fontSize: "16px",
+                              paddingTop: "20px",
+                            }}
+                          >
+                            <b>Were You At Fault?:</b> {isChecked}
+                          </td>
+                        </tr>
+                      )}
+
                       <tr>
                         <td style={{ borderTop: "1px solid #374151" }}></td>
                       </tr>
