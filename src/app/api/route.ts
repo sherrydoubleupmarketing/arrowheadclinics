@@ -6,7 +6,7 @@ import dns2 from "dns2";
 const resend = new Resend("re_Ee5vvV31_Nwxej621fVwPTA2dXgX8F1L7");
 
 export async function POST(req: NextRequest) {
-  const { name, email, message, phone } = await req.json();
+  const { name, email, message, phone, type } = await req.json();
 
   if (!name || !email || !message || !phone) {
     return NextResponse.json(
@@ -23,7 +23,7 @@ export async function POST(req: NextRequest) {
       from: "Acme <onboarding@resend.dev>",
       to: `hasnainahmad4890@gmail.com`,
       subject: `${name} has a message!`,
-      react: EmailTemplate({ name, email, message, phone, validity }),
+      react: EmailTemplate({ name, email, message, phone, validity, type }),
     });
 
     return NextResponse.json({ message: "Email sent successfully", data });

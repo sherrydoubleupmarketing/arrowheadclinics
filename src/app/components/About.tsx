@@ -10,12 +10,14 @@ const About = () => {
     phoneNumber: Yup.string().required("Phone number is required"),
     email: Yup.string().email("Invalid email").required("Email is required"),
     caseDetails: Yup.string().required("Please tell us about your case"),
+    honeyPot: Yup.string(),
   });
   const initialValues = {
     fullName: "",
     phoneNumber: "",
     email: "",
     caseDetails: "",
+    honeyPot: "",
   };
 
   interface FormValues {
@@ -23,6 +25,7 @@ const About = () => {
     phoneNumber: string;
     email: string;
     caseDetails: string;
+    honeyPot: string;
   }
 
   interface FormErrorProps {
@@ -89,7 +92,9 @@ const About = () => {
                     email: values.email,
                     phone: values.phoneNumber,
                     message: values.caseDetails,
+                    type: values.honeyPot !== undefined ? "bot" : "human",
                   };
+
                   const res = await axios.post("/api", body);
                   actions.resetForm();
                 } catch (error) {}
@@ -97,6 +102,14 @@ const About = () => {
             >
               {({ isSubmitting }) => (
                 <Form className="w-full px-5">
+                  <div className="relative z-0 group w-[100%] honeypot">
+                    <Field
+                      type="text"
+                      name="honeyPot"
+                      className="hidden"
+                      placeholder="Leave this field empty"
+                    />
+                  </div>
                   {/* Full Name Field */}
                   <div className="relative z-0 group w-[100%]">
                     <Field

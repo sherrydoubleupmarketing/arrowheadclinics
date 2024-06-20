@@ -7,6 +7,7 @@ type MessageUsEmailProps = {
   message: string;
   phone: string;
   validity: string;
+  type:string;
 };
 
 const EmailTemplate = ({
@@ -15,6 +16,7 @@ const EmailTemplate = ({
   message,
   phone,
   validity,
+  type,
 }: MessageUsEmailProps) => {
   const previewText = `Weekly Updates 🚀${name} sent you a message.`;
 
@@ -31,7 +33,7 @@ const EmailTemplate = ({
           padding: "20px",
         }}
       >
-        <table width="80%">
+        <table width="100%" style={{ maxWidth: "600px", margin: "auto" }}>
           <tr>
             <td
               style={{
@@ -79,15 +81,54 @@ const EmailTemplate = ({
                               paddingBottom: "0",
                             }}
                           >
-                            <img
-                              src="https://doubleupmarketing.vercel.app/warn.png"
-                              alt="Spam"
-                            />
-                            This Email Could Be A Spam
+                            <table>
+                              <tr>
+                                <td>
+                                  <img
+                                    src="https://atlantahappens.vercel.app/warn.png"
+                                    alt="Spam"
+                                    style={{
+                                      width: "20px",
+                                      height: "20px",
+                                      marginRight: "5px",
+                                    }}
+                                  />
+                                </td>
+                                <td>This Email Could Be A Spam</td>
+                              </tr>
+                            </table>
                           </td>
                         </tr>
                       )}
-
+                      {type === "bot" && (
+                        <tr>
+                          <td
+                            style={{
+                              color: "red",
+                              fontSize: "16px",
+                              paddingTop: "20px",
+                              paddingBottom: "0",
+                            }}
+                          >
+                            <table>
+                              <tr>
+                                <td>
+                                  <img
+                                    src="https://atlantahappens.vercel.app/warn.png"
+                                    alt="Spam"
+                                    style={{
+                                      width: "20px",
+                                      height: "20px",
+                                      marginRight: "5px",
+                                    }}
+                                  />
+                                </td>
+                                <td>This Email Is Submitted By Bot</td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      )}
                       <tr>
                         <td
                           style={{
@@ -97,7 +138,7 @@ const EmailTemplate = ({
                             paddingBottom: "0",
                           }}
                         >
-                          Name: {name}
+                          <b>Name:</b> {name}
                         </td>
                       </tr>
                       <tr>
@@ -117,7 +158,7 @@ const EmailTemplate = ({
                             paddingTop: "20px",
                           }}
                         >
-                          Phone: {phone}
+                          <b>Phone:</b> {phone}
                         </td>
                       </tr>
                       <tr>
@@ -131,7 +172,7 @@ const EmailTemplate = ({
                             paddingTop: "20px",
                           }}
                         >
-                          Email: {email}
+                          <b>Email:</b> {email}
                         </td>
                       </tr>
                       <tr>
@@ -145,7 +186,7 @@ const EmailTemplate = ({
                             paddingTop: "20px",
                           }}
                         >
-                          Message: {message}
+                          <b>Message:</b> {message}
                         </td>
                       </tr>
                       <tr>
