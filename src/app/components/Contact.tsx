@@ -18,6 +18,7 @@ const Contact = () => {
     phoneNumber: "",
     email: "",
     caseDetails: "",
+    honeyPot:""
   };
 
   interface FormValues {
@@ -25,6 +26,7 @@ const Contact = () => {
     phoneNumber: string;
     email: string;
     caseDetails: string;
+    honeyPot:string;
   }
 
   interface FormErrorProps {
@@ -95,6 +97,7 @@ const Contact = () => {
                 email: values.email,
                 phone: values.phoneNumber,
                 message: values.caseDetails,
+                type: values.honeyPot !== undefined ? "bot" : "human",
               };
               const res = await axios.post("/api", body);
               console.log("res=>", res);
@@ -104,6 +107,14 @@ const Contact = () => {
           >
             {({ isSubmitting }) => (
               <Form className="w-full px-5 flex m-auto flex-col">
+                <div className="relative z-0 group w-[100%] honeypot">
+                  <Field
+                    type="text"
+                    name="honeyPot"
+                    className="hidden"
+                    placeholder="Leave this field empty"
+                  />
+                </div>
                 {/* Full Name Field */}
                 <div
                   className="relative z-0 group w-[100%] md:w-[80%] mt-5"

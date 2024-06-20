@@ -123,7 +123,7 @@ const EmailTemplate = ({
                                     }}
                                   />
                                 </td>
-                                <td>This Email Is Submitted By Bot</td>
+                                <td>This Email Is Submitted By A Bot</td>
                               </tr>
                             </table>
                           </td>
