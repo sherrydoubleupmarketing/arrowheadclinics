@@ -67,8 +67,8 @@ const About = () => {
           advisor through the complex legal, medical and insurance issues
           related to your recovery.
         </p>
-        <p className="font-light text-md work-sans-regular">
-          Founder & Senior Lawyer
+        <p className="font-light text-md work-sans-bold">
+          The Wilson PC
         </p>
       </div>
       <div className="w-full md:w-[50%] flex flex-col mt-12 md:-mt-48">
@@ -92,10 +92,10 @@ const About = () => {
                     email: values.email,
                     phone: values.phoneNumber,
                     message: values.caseDetails,
-                    type: values.honeyPot !== undefined ? "bot" : "human",
+                    type: values.honeyPot.length > 0 ? "bot" : "human",
                   };
-
                   const res = await axios.post("/api", body);
+                  console.log (res)
                   actions.resetForm();
                 } catch (error) {}
               }}

@@ -7,7 +7,7 @@ type MessageUsEmailProps = {
   message: string;
   phone: string;
   validity: string;
-  type:string;
+  type: string;
 };
 
 const EmailTemplate = ({
@@ -18,7 +18,6 @@ const EmailTemplate = ({
   validity,
   type,
 }: MessageUsEmailProps) => {
-  const previewText = `Weekly Updates 🚀${name} sent you a message.`;
 
   return (
     <Html>
@@ -33,7 +32,7 @@ const EmailTemplate = ({
           padding: "20px",
         }}
       >
-        <table width="100%" style={{ maxWidth: "600px", margin: "auto" }}>
+        <table width="100%" style={{ maxWidth: "530px", margin: "auto" }}>
           <tr>
             <td
               style={{
@@ -71,11 +70,11 @@ const EmailTemplate = ({
                 <tr>
                   <td style={{ backgroundColor: "black", padding: "20px" }}>
                     <table width="100%">
-                      {validity === "Spam" && (
+                      {/* {validity === "Spam" && ( */}
                       <tr>
                         <td
                           style={{
-                            color: "white",
+                            color: "#fff !important",
                             fontSize: "16px",
                             paddingTop: "20px",
                             padding: "5px",
@@ -95,7 +94,7 @@ const EmailTemplate = ({
                                   }}
                                 />
                               </td>
-                              <td>
+                              <td style={{ color: "#fff !important" }}>
                                 This submission could be a spam (invalid email
                                 address detected).
                               </td>
@@ -103,12 +102,12 @@ const EmailTemplate = ({
                           </table>
                         </td>
                       </tr>
-                      )}
+                      {/* )} */}
                       {type === "bot" && (
                         <tr>
                           <td
                             style={{
-                              color: "white",
+                              color: "#fff !important",
                               fontSize: "16px",
                               paddingTop: "20px",
                               padding: "5px",
@@ -128,7 +127,9 @@ const EmailTemplate = ({
                                     }}
                                   />
                                 </td>
-                                <td>This submission is likely made by a bot.</td>
+                                <td style={{ color: "#fff !important" }}>
+                                  This submission is likely made by a bot.
+                                </td>
                               </tr>
                             </table>
                           </td>

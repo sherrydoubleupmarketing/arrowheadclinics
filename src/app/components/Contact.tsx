@@ -11,6 +11,9 @@ const Contact = () => {
     phoneNumber: Yup.string().required("Phone number is required"),
     email: Yup.string().email("Invalid email").required("Email is required"),
     caseDetails: Yup.string().required("Please tell us about your case"),
+    typeOfAccident: Yup.string().required("Please tell us your accident type"),
+    date: Yup.date().required("Please tell us when the accident happened"),
+    honeyPot: Yup.string(),
   });
 
   const initialValues = {
@@ -18,7 +21,9 @@ const Contact = () => {
     phoneNumber: "",
     email: "",
     caseDetails: "",
-    honeyPot:""
+    honeyPot: "",
+    typeOfAccident: "",
+    date: new Date(),
   };
 
   interface FormValues {
@@ -26,7 +31,9 @@ const Contact = () => {
     phoneNumber: string;
     email: string;
     caseDetails: string;
-    honeyPot:string;
+    honeyPot: string;
+    typeOfAccident: string;
+    date: Date;
   }
 
   interface FormErrorProps {
@@ -97,10 +104,9 @@ const Contact = () => {
                 email: values.email,
                 phone: values.phoneNumber,
                 message: values.caseDetails,
-                type: values.honeyPot !== undefined ? "bot" : "human",
+                type: values.honeyPot.length > 0 ? "bot" : "human",
               };
               const res = await axios.post("/api", body);
-              console.log("res=>", res);
               setSubmitting(false);
               resetForm();
             }}
@@ -178,6 +184,48 @@ const Contact = () => {
                   </label>
                   <FormError name="email" />
                 </div>
+                {/*  Type of Accident Field */}
+                <div
+                  id="case Details"
+                  className="relative z-0 mt-5 group md:w-[80%] w-[100%]"
+                >
+                  <Field
+                    type="text"
+                    name="typeOfAccident"
+                    className="block py-2.5 px-0 w-full text-sm text-[#999999] bg-transparent border-0 border-b-0.5 border-[#999999] appearance-none focus:outline-none focus:ring-0 peer"
+                    placeholder=" "
+                    required
+                    aria-label="type of accident"
+                  />
+                  <label
+                    htmlFor="caseDetails"
+                    className="peer-focus:font-medium absolute text-sm text-[#999999] duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-[#ccc] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                  >
+                    Type Of Accident
+                  </label>
+                  <FormError name="typeOfAccident" />
+                </div>
+                {/*  Date Field */}
+                <div
+                  id="case Details"
+                  className="relative z-0 mt-5 group md:w-[80%] w-[100%]"
+                >
+                  <Field
+                    type="date"
+                    name="date"
+                    className="block py-2.5 px-0 w-full text-sm text-[#999999] bg-transparent border-0 border-b-0.5 border-[#999999] appearance-none focus:outline-none focus:ring-0 peer"
+                    placeholder=" "
+                    required
+                    aria-label="date"
+                  />
+                  <label
+                    htmlFor="caseDetails"
+                    className="peer-focus:font-medium absolute text-sm text-[#999999] duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-[#ccc] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                  >
+                    Date
+                  </label>
+                  <FormError name="date" />
+                </div>
                 {/* Case Details Field */}
                 <div
                   id="case Details"
@@ -200,6 +248,7 @@ const Contact = () => {
                   </label>
                   <FormError name="caseDetails" />
                 </div>
+
                 <button
                   type="submit"
                   className="px-5 py-2 bg-primary-red rounded-sm w-56 flex items-center justify-center mt-6 text-white hover:bg-white hover:text-primary-red duration-300 ease-in-out disabled:bg-gray-400"
