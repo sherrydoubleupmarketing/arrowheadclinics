@@ -72,42 +72,47 @@ const EmailTemplate = ({
                   <td style={{ backgroundColor: "black", padding: "20px" }}>
                     <table width="100%">
                       {validity === "Spam" && (
-                        <tr>
-                          <td
-                            style={{
-                              color: "red",
-                              fontSize: "16px",
-                              paddingTop: "20px",
-                              paddingBottom: "0",
-                            }}
-                          >
-                            <table>
-                              <tr>
-                                <td>
-                                  <img
-                                    src="https://atlantahappens.vercel.app/warn.png"
-                                    alt="Spam"
-                                    style={{
-                                      width: "20px",
-                                      height: "20px",
-                                      marginRight: "5px",
-                                    }}
-                                  />
-                                </td>
-                                <td>This Email Could Be A Spam</td>
-                              </tr>
-                            </table>
-                          </td>
-                        </tr>
+                      <tr>
+                        <td
+                          style={{
+                            color: "white",
+                            fontSize: "16px",
+                            paddingTop: "20px",
+                            padding: "5px",
+                            backgroundColor: "red",
+                          }}
+                        >
+                          <table>
+                            <tr>
+                              <td>
+                                <img
+                                  src="https://atlantahappens.vercel.app/warn.png"
+                                  alt="Spam"
+                                  style={{
+                                    width: "20px",
+                                    height: "20px",
+                                    marginRight: "5px",
+                                  }}
+                                />
+                              </td>
+                              <td>
+                                This submission could be a spam (invalid email
+                                address detected).
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
                       )}
                       {type === "bot" && (
                         <tr>
                           <td
                             style={{
-                              color: "red",
+                              color: "white",
                               fontSize: "16px",
                               paddingTop: "20px",
-                              paddingBottom: "0",
+                              padding: "5px",
+                              backgroundColor: "red",
                             }}
                           >
                             <table>
@@ -123,7 +128,7 @@ const EmailTemplate = ({
                                     }}
                                   />
                                 </td>
-                                <td>This Email Is Submitted By A Bot</td>
+                                <td>This submission is likely made by a bot.</td>
                               </tr>
                             </table>
                           </td>
