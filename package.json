@@ -12,7 +12,10 @@
   "dependencies": {
     "@react-email/components": "0.0.19",
     "axios": "^1.7.2",
+    "dgram": "^1.0.1",
+    "dns2": "^2.1.0",
     "formik": "^2.4.6",
+    "net": "^1.0.2",
     "next": "14.2.3",
     "react": "^18",
     "react-dom": "^18",
@@ -23,6 +26,7 @@
     "yup": "^1.4.0"
   },
   "devDependencies": {
+    "@types/dns2": "^2.0.9",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

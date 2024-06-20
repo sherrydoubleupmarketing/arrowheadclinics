@@ -6,6 +6,7 @@ type MessageUsEmailProps = {
   email: string;
   message: string;
   phone: string;
+  validity: string;
 };
 
 const EmailTemplate = ({
@@ -13,6 +14,7 @@ const EmailTemplate = ({
   email,
   message,
   phone,
+  validity,
 }: MessageUsEmailProps) => {
   const previewText = `Weekly Updates 🚀${name} sent you a message.`;
 
@@ -65,9 +67,27 @@ const EmailTemplate = ({
               {/* Nested table for "margins" */}
               <table width="100%">
                 <tr>
-                  {/* <td style={{ width: "10%" }}></td>  */}
                   <td style={{ backgroundColor: "black", padding: "20px" }}>
                     <table width="100%">
+                      {validity === "Spam" && (
+                        <tr>
+                          <td
+                            style={{
+                              color: "red",
+                              fontSize: "16px",
+                              paddingTop: "20px",
+                              paddingBottom: "0",
+                            }}
+                          >
+                            <img
+                              src="https://doubleupmarketing.vercel.app/warn.png"
+                              alt="Spam"
+                            />
+                            This Email Could Be A Spam
+                          </td>
+                        </tr>
+                      )}
+
                       <tr>
                         <td
                           style={{
@@ -77,7 +97,7 @@ const EmailTemplate = ({
                             paddingBottom: "0",
                           }}
                         >
-                          {name}
+                          Name: {name}
                         </td>
                       </tr>
                       <tr>
@@ -97,7 +117,7 @@ const EmailTemplate = ({
                             paddingTop: "20px",
                           }}
                         >
-                          {phone}
+                          Phone: {phone}
                         </td>
                       </tr>
                       <tr>
@@ -111,7 +131,7 @@ const EmailTemplate = ({
                             paddingTop: "20px",
                           }}
                         >
-                          {email}
+                          Email: {email}
                         </td>
                       </tr>
                       <tr>
@@ -125,7 +145,7 @@ const EmailTemplate = ({
                             paddingTop: "20px",
                           }}
                         >
-                          {message}
+                          Message: {message}
                         </td>
                       </tr>
                       <tr>
