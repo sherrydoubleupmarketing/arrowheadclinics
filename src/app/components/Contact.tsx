@@ -44,13 +44,19 @@ const Contact = () => {
   const FormError: React.FC<FormErrorProps> = ({ name }) => {
     const { errors, touched } = useFormikContext<FormValues>();
     const showError = errors[name] && touched[name];
+    const errorMessage: any = showError
+      ? typeof errors[name] === "string"
+        ? errors[name]
+        : "Invalid value"
+      : "";
+
     return (
       <div
         className={`h-6 text-primary-red text-sm font-light work-san-light ${
           showError ? "visible" : "invisible"
         }`}
       >
-        {showError ? errors[name] : ""}
+        {errorMessage}
       </div>
     );
   };
