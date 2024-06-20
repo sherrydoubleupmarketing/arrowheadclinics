@@ -2,6 +2,7 @@ import React from "react";
 import { Formik, Form, Field, useFormikContext } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
+import Spinner from "./Spinner";
 
 const About = () => {
   const contactSchema = Yup.object().shape({
@@ -90,7 +91,6 @@ const About = () => {
                     message: values.caseDetails,
                   };
                   const res = await axios.post("/api", body);
-                  console.log("res=>", res);
                   actions.resetForm();
                 } catch (error) {}
               }}
@@ -168,10 +168,10 @@ const About = () => {
                   </div>
                   <button
                     type="submit"
-                    className="px-5 py-2 bg-primary-red rounded-sm w-56 mt-6 text-white hover:bg-white hover:text-primary-red duration-300 ease-in-out disabled:bg-gray-400"
+                    className="px-5 py-2 bg-primary-red rounded-sm w-56 mt-6 text-white hover:bg-white hover:text-primary-red duration-300 ease-in-out disabled:bg-gray-400 flex items-center justify-center"
                     disabled={isSubmitting}
                   >
-                    Get A Free Consultation
+                    {isSubmitting ? <Spinner /> : "Get A Free Consultation"}
                   </button>
                 </Form>
               )}
