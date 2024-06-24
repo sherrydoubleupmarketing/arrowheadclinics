@@ -11,7 +11,7 @@ const SliderBanner = ({ activeSlide, goToSlide, sliderRef }: any) => {
     infinite: true,
     speed: 500,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 20000,
     arrows: false,
     slidesToShow: 1,
     slidesToScroll: 1,

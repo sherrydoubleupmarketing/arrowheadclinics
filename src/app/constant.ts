@@ -38,37 +38,37 @@ export const PRACTICE_CARD = [
   {
     id: 1,
     name: "Car Accidents",
-    desc: "We represent clients who have suffered personal injuries or property damage in automobile accidents.",
+    desc: "We represent clients who have suffered personal injuries in automobile accidents.",
     Icon: CarIcon,
   },
   {
     id: 2,
     name: "Bicycle Accidents",
-    desc: "We specialize in representing clients in Atlanta who have suffered injuries or property damage due to bicycle accidents.",
+    desc: "We specialize in representing clients in Atlanta who have suffered injuries due to bicycle accidents.",
     Icon: Bycycle,
   },
   {
     id: 3,
     name: "Motorcyle Accidents",
-    desc: "Motorcycle accidents may result in serious injuries or property damage. Our motorcycle injury lawyers are ready to help.",
+    desc: "Motorcycle accidents may result in serious injuries. Our motorcycle injury lawyers are ready to help.",
     Icon: Bike,
   },
   {
     id: 4,
     name: "Pedestrian Accidents",
-    desc: "At Atlanta Happens, work tirelessly to ensure that our clients receive the compensation they deserve for the damages they have suffered.",
+    desc: "At The Wilson PC, work tirelessly to ensure that our clients receive the compensation they deserve for the damages they have suffered.",
     Icon: Padestrian,
   },
   {
     id: 5,
     name: "Truck Crashes",
-    desc: "We are dedicated to representing clients who have experienced personal injuries or property damage as a result of trucking accidents.",
+    desc: "We are dedicated to representing clients who have experienced personal injuries.",
     Icon: Truck,
   },
   {
     id: 6,
     name: "Wrongful Death",
-    desc: "A Skilled Atlanta Wrongful Death can improve your chances to win a civil suit and get the compensation you need to support your family.",
+    desc: "A skilled Atlanta wrongful death can improve your chances to win a civil suit and get the compensation you need to support your family.",
     Icon: WrongDeath,
   },
 ];
