@@ -38,7 +38,7 @@ export const PRACTICE_CARD = [
   {
     id: 1,
     name: "Car Accidents",
-    desc: "We represent clients who have suffered personal injuries in automobile accidents.",
+    desc: "We represent clients who have suffered injuries in automobile accidents.",
     Icon: CarIcon,
   },
   {
@@ -56,19 +56,19 @@ export const PRACTICE_CARD = [
   {
     id: 4,
     name: "Pedestrian Accidents",
-    desc: "At The Wilson PC, work tirelessly to ensure that our clients receive the compensation they deserve for the damages they have suffered.",
+    desc: "At The Wilson PC, we work tirelessly to ensure that our clients receive the compensation they deserve for the damages they have suffered.",
     Icon: Padestrian,
   },
   {
     id: 5,
     name: "Truck Crashes",
-    desc: "We are dedicated to representing clients who have experienced personal injuries.",
+    desc: "We are dedicated to representing clients who have experienced injuries in accidents involving trucks.",
     Icon: Truck,
   },
   {
     id: 6,
     name: "Wrongful Death",
-    desc: "A skilled Atlanta wrongful death can improve your chances to win a civil suit and get the compensation you need to support your family.",
+    desc: "A skilled Atlanta wrongful death attorney can improve your chances to win a civil suit and get the compensation you need to support your family.",
     Icon: WrongDeath,
   },
 ];
