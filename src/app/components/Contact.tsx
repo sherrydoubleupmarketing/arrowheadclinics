@@ -14,7 +14,7 @@ const Contact = () => {
     typeOfAccident: Yup.string().required("Please tell us your accident type"),
     date: Yup.date().required("Please tell us when the accident happened"),
     honeyPot: Yup.string(),
-    isChecked: Yup.boolean(),
+    isChecked: Yup.string().required("Please select if you were at fault"),
   });
 
   const initialValues = {
@@ -25,7 +25,7 @@ const Contact = () => {
     honeyPot: "",
     typeOfAccident: "",
     date: "",
-    isChecked: false,
+    isChecked: "No",
   };
 
   interface FormValues {
@@ -36,11 +36,11 @@ const Contact = () => {
     honeyPot: string;
     typeOfAccident: string;
     date: Date;
-    isChecked: boolean;
+    isChecked: string;
   }
 
   interface FormErrorProps {
-    name: keyof FormValues; // Use keyof to restrict to keys of FormValues
+    name: keyof FormValues; 
   }
 
   // Custom Error Message Component with proper typing
@@ -118,7 +118,6 @@ const Contact = () => {
                 typeOfAccident: values.typeOfAccident,
                 isChecked: values.isChecked,
               };
-              console.log (body);
               const res = await axios.post("/api", body);
               setSubmitting(false);
               resetForm();
@@ -134,7 +133,7 @@ const Contact = () => {
                     placeholder="Leave this field empty"
                   />
                 </div>
-                {/* Full Name Field */}
+              
                 <div
                   className="relative z-0 group w-[100%] md:w-[80%] mt-5"
                   id="Full Name"
@@ -155,7 +154,6 @@ const Contact = () => {
                   </label>
                   <FormError name="fullName" />
                 </div>
-                {/* Phone Number Field */}
                 <div
                   id="phone Number"
                   className="relative z-0 group w-[100%] md:w-[80%] mt-5"
@@ -176,7 +174,6 @@ const Contact = () => {
                   </label>
                   <FormError name="phoneNumber" />
                 </div>
-                {/* Email Address Field */}
                 <div
                   id="Email Address"
                   className="relative z-0 group w-[100%] md:w-[80%] mt-5"
@@ -197,7 +194,6 @@ const Contact = () => {
                   </label>
                   <FormError name="email" />
                 </div>
-                {/*  Type of Accident Field */}
                 <div
                   id="typeOfAccident"
                   className="relative z-0 mt-5 group md:w-[80%] w-[100%]"
@@ -220,22 +216,19 @@ const Contact = () => {
                     <option value="Pedestrian Accident">
                       Pedestrian Accident
                     </option>
-                    <option value="Slip and Fall">Slip and Fall</option>
-                    <option value="Truck Accident">Truck Accident</option>
-                    <option value="Other Injury">Other Injury</option>
+                    <option value="Other">Other</option>
                   </Field>
                   <label
                     htmlFor="typeOfAccident"
                     className="peer-focus:font-medium absolute text-sm text-[#999999] duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-[#ccc] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                   >
-                    Type Of Accident
+                    Type of Accident
                   </label>
                   <FormError name="typeOfAccident" />
                 </div>
-                {/*  Date Field */}
                 <div
                   id="date"
-                  className="relative z-0 mt-5 group md:w-[80%] w-[100%]"
+                  className="relative z-0 group w-[100%] md:w-[80%] mt-5"
                 >
                   <Field
                     type="date"
@@ -249,72 +242,85 @@ const Contact = () => {
                     htmlFor="date"
                     className="peer-focus:font-medium absolute text-sm text-[#999999] duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-[#ccc] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                   >
-                    Date
+                    Date of Accident
                   </label>
                   <FormError name="date" />
                 </div>
-                {/* Case Details Field */}
                 <div
-                  id="case Details"
-                  className="relative z-0 group md:w-[80%] w-[100%]"
+                  id="caseDetails"
+                  className="relative z-0 group w-[100%] md:w-[80%] mt-5"
                 >
                   <Field
-                    component="textarea"
+                    as="textarea"
                     name="caseDetails"
+                    rows={4}
                     className="block py-2.5 px-0 w-full text-sm text-[#999999] bg-transparent border-0 border-b-0.5 border-[#999999] appearance-none focus:outline-none focus:ring-0 peer"
                     placeholder=" "
                     required
-                    rows={4}
-                    area-label="case Details"
+                    area-label="Case Details"
                   />
                   <label
                     htmlFor="caseDetails"
                     className="peer-focus:font-medium absolute text-sm text-[#999999] duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-[#ccc] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                   >
-                    Tell Us About Your Case
+                    Case Details
                   </label>
                   <FormError name="caseDetails" />
                 </div>
-
                 <div
-                  id="checkbox"
-                  className="relative z-0 mt-5 group md:w-[80%] w-[100%] flex items-center"
+                  id="atFault"
+                  className=" z-0 group w-[100%] md:w-[80%] mt-5"
                 >
-                  <Field
-                    type="checkbox"
-                    name="isChecked"
-                    className="mr-2"
-                    aria-label="isChecked"
-                  />
                   <label
-                    htmlFor="isChecked"
-                    className="text-sm text-[#999999] peer-focus:font-medium"
+                    htmlFor="atFaultYes"
+                    className="text-sm text-[#999999] font-light cursor-pointer"
                   >
                     Were You At Fault?
                   </label>
+                  <div className="flex items-center gap-4 mt-4 cursor-pointer">
+                    <Field
+                      type="radio"
+                      id="atFaultYes"
+                      name="isChecked"
+                      value="Yes" 
+                    />
+                    <label
+                      htmlFor="atFaultYes"
+                      className="text-sm text-[#999999] font-light cursor-pointer"
+                    >
+                      Yes
+                    </label>
+                    <Field
+                      type="radio"
+                      id="atFaultNo"
+                      name="isChecked"
+                      value="No"
+                    />
+                    <label
+                      htmlFor="atFaultNo"
+                      className="text-sm text-[#999999] font-light cursor-pointer"
+                    >
+                      No
+                    </label>
+                  </div>
                   <FormError name="isChecked" />
                 </div>
-
-                <button
-                  type="submit"
-                  className="px-5 py-2 bg-primary-red rounded-sm w-56 flex items-center justify-center mt-6 text-white hover:bg-white hover:text-primary-red duration-300 ease-in-out disabled:bg-gray-400"
-                  disabled={isSubmitting}
+                <div
+                  id="submit"
+                  className="relative z-0 group w-[100%] md:w-[80%] mt-5"
                 >
-                  {isSubmitting ? <Spinner /> : "Get A Free Consultation"}
-                </button>
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="w-full py-2.5 text-center text-white bg-primary-red rounded-md text-sm work-sans-regular cursor-pointer duration-200 hover:opacity-80"
+                  >
+                    {isSubmitting ? <Spinner /> : "Submit"}
+                  </button>
+                </div>
               </Form>
             )}
           </Formik>
         </div>
-      </div>
-
-      <div className="w-[90%] md:w-[68%] flex items-center justify-center m-auto mt-20 sm:mt-24">
-        <Image
-          src="/Bannertwo.png"
-          alt="Banner image"
-          width={1000}
-          height={1000}
-        />
       </div>
     </div>
   );

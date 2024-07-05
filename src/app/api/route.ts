@@ -14,7 +14,7 @@ export async function POST(req: NextRequest) {
     type,
     date,
     typeOfAccident,
-    isChecked = false,
+    isChecked = "No",
   } = await req.json();
 
   if (!name || !email || !message || !phone) {
@@ -42,7 +42,7 @@ export async function POST(req: NextRequest) {
         type,
         date,
         typeOfAccident,
-        isChecked: isChecked.toString(),
+        isChecked: isChecked,
       }),
     });
 
