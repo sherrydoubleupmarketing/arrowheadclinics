@@ -33,6 +33,10 @@ export default async function LocaleLayout({
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>
+        <script
+          type="text/javascript"
+          src="//cdn.callrail.com/companies/542677903/715a9313af9e0701b31e/12/swap.js"
+        ></script>
       </body>
     </html>
   );
