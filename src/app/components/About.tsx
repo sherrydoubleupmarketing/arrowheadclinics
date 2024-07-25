@@ -54,7 +54,7 @@ const About = () => {
 
   return (
     <div
-      id="aboutUs"
+      id="about-us"
       className="w-[90%] m-auto flex flex-col md:flex-row py-12"
     >
       <div className="w-full md:w-[50%] flex flex-col gap-6">

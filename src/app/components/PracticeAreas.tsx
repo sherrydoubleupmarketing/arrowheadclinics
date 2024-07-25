@@ -7,7 +7,7 @@ const PracticeAreas = () => {
 
   return (
     <div
-      id="practiceArea"
+      id="practice-area"
       className="w-full relative bg-[url('/Practice.svg')]"
     >
       <div className="w-[40%] h-4 bg-primary-red"></div>

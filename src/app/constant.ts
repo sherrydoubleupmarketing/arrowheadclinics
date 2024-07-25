@@ -10,12 +10,12 @@ export const FOOTER_LINKS = [
   {
     id: 1,
     name: "About",
-    path: "#aboutUs",
+    path: "#about-us",
   },
   {
     id: 2,
     name: "Practice",
-    path: "#practiceArea",
+    path: "#practice-area",
   },
   {
     id: 3,
@@ -25,7 +25,7 @@ export const FOOTER_LINKS = [
   {
     id: 4,
     name: "Contact",
-    path: "#contactus",
+    path: "#contact-us",
   },
   {
     id: 5,

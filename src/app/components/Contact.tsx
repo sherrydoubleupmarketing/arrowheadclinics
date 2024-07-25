@@ -1,10 +1,13 @@
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import { Formik, Form, Field, useFormikContext } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
 import Spinner from "./Spinner";
 import { useTranslations } from "next-intl";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import { FaCalendarAlt } from "react-icons/fa";
 
 const Contact = () => {
   const t = useTranslations("Contact");
@@ -29,7 +32,7 @@ const Contact = () => {
     caseDetails: "",
     honeyPot: "",
     typeOfAccident: "",
-    date: "",
+    date: new Date(),
     isChecked: "No",
   };
 
@@ -125,7 +128,7 @@ const Contact = () => {
               resetForm();
             }}
           >
-            {({ isSubmitting }) => (
+            {({ isSubmitting, setFieldValue }) => (
               <Form className="w-full px-5 flex m-auto flex-col">
                 <div className="relative z-0 group w-[100%] honeypot">
                   <Field
@@ -232,19 +235,25 @@ const Contact = () => {
                 </div>
                 <div
                   id="date"
-                  className="relative z-0 group w-[100%] md:w-[80%] mt-5"
+                  className="relative z-50 group w-[100%] md:w-[80%] mt-5"
                 >
-                  <Field
-                    type="date"
-                    name="date"
-                    className="block py-2.5 px-0 w-full text-sm text-[#999999] bg-transparent border-0 border-b-0.5 border-[#999999] appearance-none focus:outline-none focus:ring-0 peer"
-                    placeholder=" "
-                    required
-                    aria-label="date"
-                  />
+                  <Field name="date">
+                    {({ field }: any) => (
+                      <div className="relative">
+                        <DatePicker
+                          {...field}
+                          selected={field.value}
+                          onChange={(date) => setFieldValue("date", date)}
+                          className="block py-2.5 px-10 w-full text-sm text-[#999999] bg-black border-0 border-b-0.5 border-[#999999] appearance-none focus:outline-none focus:ring-0 peer"
+                          aria-label="date"
+                        />
+                        <FaCalendarAlt className="absolute left-2 top-1/2 transform -translate-y-1/2 text-[#999999]" />
+                      </div>
+                    )}
+                  </Field>
                   <label
                     htmlFor="date"
-                    className="peer-focus:font-medium absolute text-sm text-[#999999] duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-[#ccc] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                    className="peer-focus:font-medium absolute -mt-2 text-sm text-[#999999] duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-[#ccc] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                   >
                     {t("Date")}
                   </label>

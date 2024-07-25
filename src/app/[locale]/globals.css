@@ -11,6 +11,7 @@
 @font-face {
   font-family: "Work sans light";
   src: url("../fonts/work-sans.light.ttf");
+  font-display: swap;
 }
 .work-sans-light {
   font-family: "Work sans light";
@@ -20,14 +21,17 @@
 @font-face {
   font-family: "Work sans bold";
   src: url("../fonts/work-sans.bold.ttf");
+  font-display: swap;
 }
 .work-sans-bold {
   font-family: "Work sans bold";
 }
+
 /* Medium*/
 @font-face {
   font-family: "Work sans medium";
   src: url("../fonts/work-sans.medium.ttf");
+  font-display: swap;
 }
 .work-sans-medium {
   font-family: "Work sans medium";
@@ -37,6 +41,7 @@
 @font-face {
   font-family: "Work sans regular";
   src: url("../fonts/work-sans.regular.ttf");
+  font-display: swap;
 }
 .work-sans-regular {
   font-family: "Work sans regular";
@@ -46,6 +51,7 @@
 @font-face {
   font-family: "DK Dirrrty";
   src: url("../fonts/DK\ Dirrrty.ttf");
+  font-display: swap;
 }
 .dk-dirrrty {
   font-family: "DK Dirrrty";
@@ -109,4 +115,14 @@ input:-moz-autofill:active {
   box-shadow: 0 0 0 30px transparent inset !important;
   -moz-text-fill-color: white !important;
   transition: background-color 5000s ease-in-out 0s;
+}
+
+html {
+  scroll-snap-type: x mandatory;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  overflow-x: hidden;
 }
