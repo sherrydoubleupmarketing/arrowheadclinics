@@ -15,7 +15,6 @@ import { CTAS } from "../constant";
 import Contact from "../components/Contact";
 import AtlantaYoutube from "../components/AtlantaYoutube";
 import Footer from "../components/Footer";
-import Script from "next/script";
 export default function Home() {
   const [activeSlide, setActiveSlide] = useState(0);
   const sliderRef = useRef<Slider | null>(null);
@@ -27,10 +26,6 @@ export default function Home() {
   };
   return (
     <main>
-      <Script
-        src="//cdn.callrail.com/companies/542677903/715a9313af9e0701b31e/12/swap.js"
-        strategy="lazyOnload"
-      />
       <Navbar />
       <HeroSection />
       <About />

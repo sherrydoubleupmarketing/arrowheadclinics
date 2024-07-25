@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Atlanta Car Accident Lawyer | Atlanta Happens",
@@ -33,6 +34,10 @@ export default async function LocaleLayout({
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>
+        <Script
+          src="//cdn.callrail.com/companies/542677903/715a9313af9e0701b31e/12/swap.js"
+          strategy="lazyOnload"
+        />
       </body>
     </html>
   );

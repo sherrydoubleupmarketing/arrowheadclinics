@@ -18,9 +18,9 @@ const Navbar = () => {
             <span>{t("Review")}</span> <span>{t("Case")}</span>
           </h3>
           <button className="flex rounded-[0px] w-[100vw] md:w-fit mb-[-20px] md:!mb-0 flex-col bg-primary-red h-fit md:rounded-xl text-white work-sans-bold font-bold text-xl py-4 px-8 items-center justify-center">
-            <a href="tel:+(867)-746 2323">
+            <a href="tel:+4705756130">
               <p>{t("Call")}</p>
-              <p>(867)-746 2323</p>
+              <p>(470)-575-6130</p>
             </a>
           </button>
         </div>
