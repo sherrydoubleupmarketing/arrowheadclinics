@@ -28,7 +28,6 @@ export async function POST(req: NextRequest) {
     const dns = new dns2();
     const response = await dns.resolveA(domain);
     const validity = response.answers.length > 0 ? "Valid" : "Spam";
-    console.log("TESTing");
     const data = await resend.emails.send({
       from: "Acme <onboarding@resend.dev>",
       to: `newclients@thewilsonpc.com`,
@@ -48,7 +47,6 @@ export async function POST(req: NextRequest) {
 
     return NextResponse.json({ message: "Email sent successfully", data });
   } catch (error) {
-    console.log(error);
     return NextResponse.json(
       { message: "Failed to send email", error },
       { status: 500 }

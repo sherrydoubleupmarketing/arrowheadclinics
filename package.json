@@ -17,6 +17,7 @@
     "formik": "^2.4.6",
     "net": "^1.0.2",
     "next": "14.2.3",
+    "next-intl": "^3.17.1",
     "react": "^18",
     "react-dom": "^18",
     "react-email": "2.1.4",

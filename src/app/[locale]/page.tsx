@@ -1,22 +1,20 @@
-// pages/Home.js
 "use client";
 import React, { useRef, useState } from "react";
-import About from "./components/About";
-import AtlantaYoutube from "./components/AtlantaYoutube";
-import CallToAction from "./components/CallToAction";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
-import HeroSection from "./components/HeroSection";
-import ImportantSteps from "./components/ImportantSteps";
-import Navbar from "./components/Navbar";
-import PracticeAreas from "./components/PracticeAreas";
-import SliderBanner from "./components/SliderBanner";
-import Testimonial from "./components/Testimonial";
 import "./globals.css";
 import Slider from "react-slick";
 import Image from "next/image";
-import { CTAS } from "./constant";
-
+import Navbar from "../components/Navbar";
+import HeroSection from "../components/HeroSection";
+import About from "../components/About";
+import ImportantSteps from "../components/ImportantSteps";
+import PracticeAreas from "../components/PracticeAreas";
+import CallToAction from "../components/CallToAction";
+import Testimonial from "../components/Testimonial";
+import SliderBanner from "../components/SliderBanner";
+import { CTAS } from "../constant";
+import Contact from "../components/Contact";
+import AtlantaYoutube from "../components/AtlantaYoutube";
+import Footer from "../components/Footer";
 export default function Home() {
   const [activeSlide, setActiveSlide] = useState(0);
   const sliderRef = useRef<Slider | null>(null);
@@ -26,7 +24,6 @@ export default function Home() {
       sliderRef.current.slickGoTo(index);
     }
   };
-
   return (
     <main>
       <Navbar />
@@ -45,14 +42,13 @@ export default function Home() {
             src="/Circle.png"
           />
         </div>
-
         <SliderBanner
           activeSlide={activeSlide}
           goToSlide={goToSlide}
           sliderRef={sliderRef}
         />
         <div className="flex gap-2 mt-6">
-          {CTAS.map((item) => {
+          {CTAS.map((item: any) => {
             return (
               <div
                 key={item.id}

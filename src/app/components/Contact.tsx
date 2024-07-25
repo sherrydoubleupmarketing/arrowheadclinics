@@ -4,15 +4,20 @@ import { Formik, Form, Field, useFormikContext } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
 import Spinner from "./Spinner";
+import { useTranslations } from "next-intl";
 
 const Contact = () => {
+  const t = useTranslations("Contact");
+
   const contactSchema = Yup.object().shape({
-    fullName: Yup.string().required("Full name is required"),
-    phoneNumber: Yup.string().required("Phone number is required"),
-    email: Yup.string().email("Invalid email").required("Email is required"),
-    caseDetails: Yup.string().required("Please tell us about your case"),
-    typeOfAccident: Yup.string().required("Please tell us your accident type"),
-    date: Yup.date().required("Please tell us when the accident happened"),
+    fullName: Yup.string().required(`${t("NameReq")}`),
+    phoneNumber: Yup.string().required(`${t("PhoneReq")}`),
+    email: Yup.string()
+      .email("Invalid email")
+      .required(`${t("EmailReq")}`),
+    caseDetails: Yup.string().required(`${t("CaseReq")}`),
+    typeOfAccident: Yup.string().required(`${t("AccidentType")}`),
+    date: Yup.date().required(`${t("AccidentHappened")}`),
     honeyPot: Yup.string(),
     isChecked: Yup.string().required("Please select if you were at fault"),
   });
@@ -40,7 +45,7 @@ const Contact = () => {
   }
 
   interface FormErrorProps {
-    name: keyof FormValues; 
+    name: keyof FormValues;
   }
 
   // Custom Error Message Component with proper typing
@@ -65,15 +70,15 @@ const Contact = () => {
   };
 
   return (
-    <div id="contactus" className="w-full bg-white pt-20">
+    <div id="contact-us" className="w-full bg-white pt-20">
       <div className="w-full h-5 bg-primary-red"></div>
       <div className="flex flex-col w-[90%] m-auto gap-4">
         <div className="w-64 text-nowrap text-ellipsis overflow-hidden  h-12 mt-20 px-4 bg-primary-red flex gap-4 items-center justify-center">
           <span className="w-[50%] border-t-0.5 border-white"></span>
-          <p className="text-white work-sans-regular">CONTACT US</p>
+          <p className="text-white work-sans-regular">{t("Contact")}</p>
         </div>
         <h3 className="sm:text-4xl text-2xl md:text-5xl work-sans-bold font-bold text-primary-red w-full md:w-[45%]">
-          Get A Free Case Review
+          {t("GetFree")}
         </h3>
       </div>
 
@@ -81,16 +86,13 @@ const Contact = () => {
         <div className="bg-primary-red w-full md:w-1/2 flex items-center justify-center">
           <div className="flex flex-col items-center gap-6 py-12 md:py-0">
             <h1 className="md:text-4xl sm:text-3xl text-2xl text-white font-bold work-sans-bold">
-              Request A Consultation
+              {t("Request")}
             </h1>
             <p className="text-white text-center font-semibold text-xl w-[90%] md:w-[65%] work-sans-regular">
-              Get A Free 30 - 60 Minute Consultation
+              {t("GetMinutes")}
             </p>
             <p className="text-white text-center font-light text-md w-[90%] md:w-[75%] work-sans-regular leading-relaxed">
-              We strive to provide all of our clients with the best possible
-              results and value how each feels about us and the services we have
-              provided. We are honored by the reviews we have received from both
-              past and present clients
+              {t("Strive")}
             </p>
             <div className="bg-black hidden md:block px-5 py-3 rounded-md">
               <Image
@@ -133,7 +135,7 @@ const Contact = () => {
                     placeholder="Leave this field empty"
                   />
                 </div>
-              
+
                 <div
                   className="relative z-0 group w-[100%] md:w-[80%] mt-5"
                   id="Full Name"
@@ -150,7 +152,7 @@ const Contact = () => {
                     htmlFor="fullName"
                     className="peer-focus:font-medium absolute text-sm text-[#999999] duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-[#ccc] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                   >
-                    Full Name
+                    {t("FullName")}
                   </label>
                   <FormError name="fullName" />
                 </div>
@@ -170,7 +172,7 @@ const Contact = () => {
                     htmlFor="phoneNumber"
                     className="peer-focus:font-medium absolute text-sm text-[#999999] duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-[#ccc] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                   >
-                    Phone Number
+                    {t("Phone")}
                   </label>
                   <FormError name="phoneNumber" />
                 </div>
@@ -190,7 +192,7 @@ const Contact = () => {
                     htmlFor="email"
                     className="peer-focus:font-medium absolute text-sm text-[#999999] duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-[#ccc] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                   >
-                    Email Address
+                    {t("Email")}
                   </label>
                   <FormError name="email" />
                 </div>
@@ -205,24 +207,26 @@ const Contact = () => {
                     required
                     aria-label="type of accident"
                   >
-                    <option value="">Select your accident type</option>
-                    <option value="Bicycle Accident">Bicycle Accident</option>
-                    <option value="Car Crash">Car Crash</option>
-                    <option value="DUI Accident">DUI Accident</option>
-                    <option value="Hurt at Work">Hurt at Work</option>
+                    <option value="">{t("SelectType")}</option>
+                    <option value="Bicycle Accident">
+                      {t("BicycleAccident")}
+                    </option>
+                    <option value="Car Crash">{t("CarCrash")}</option>
+                    <option value="DUI Accident">{t("DUIAccident")}</option>
+                    <option value="Hurt at Work">{t("Hurt")}</option>
                     <option value="Motorcycle Accident">
-                      Motorcycle Accident
+                      {t("MotorcycleAccident")}
                     </option>
                     <option value="Pedestrian Accident">
-                      Pedestrian Accident
+                      {t("PedestrianAccident")}
                     </option>
-                    <option value="Other">Other</option>
+                    <option value="Other">{t("Other")}</option>
                   </Field>
                   <label
                     htmlFor="typeOfAccident"
                     className="peer-focus:font-medium absolute text-sm text-[#999999] duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-[#ccc] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                   >
-                    Type of Accident
+                    {t("Type")}
                   </label>
                   <FormError name="typeOfAccident" />
                 </div>
@@ -242,7 +246,7 @@ const Contact = () => {
                     htmlFor="date"
                     className="peer-focus:font-medium absolute text-sm text-[#999999] duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-[#ccc] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                   >
-                    Date of Accident
+                    {t("Date")}
                   </label>
                   <FormError name="date" />
                 </div>
@@ -263,7 +267,7 @@ const Contact = () => {
                     htmlFor="caseDetails"
                     className="peer-focus:font-medium absolute text-sm text-[#999999] duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-[#ccc] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                   >
-                    Case Details
+                    {t("CaseDetails")}
                   </label>
                   <FormError name="caseDetails" />
                 </div>
@@ -275,20 +279,20 @@ const Contact = () => {
                     htmlFor="atFaultYes"
                     className="text-sm text-[#999999] font-light cursor-pointer"
                   >
-                    Were You At Fault?
+                    {t("Fault")}
                   </label>
                   <div className="flex items-center gap-4 mt-4 cursor-pointer">
                     <Field
                       type="radio"
                       id="atFaultYes"
                       name="isChecked"
-                      value="Yes" 
+                      value="Yes"
                     />
                     <label
                       htmlFor="atFaultYes"
                       className="text-sm text-[#999999] font-light cursor-pointer"
                     >
-                      Yes
+                      {t("yes")}
                     </label>
                     <Field
                       type="radio"
@@ -300,7 +304,7 @@ const Contact = () => {
                       htmlFor="atFaultNo"
                       className="text-sm text-[#999999] font-light cursor-pointer"
                     >
-                      No
+                      {t("no")}
                     </label>
                   </div>
                   <FormError name="isChecked" />
@@ -314,7 +318,7 @@ const Contact = () => {
                     disabled={isSubmitting}
                     className="w-full py-2.5 text-center text-white bg-primary-red rounded-md text-sm work-sans-regular cursor-pointer duration-200 hover:opacity-80"
                   >
-                    {isSubmitting ? <Spinner /> : "Submit"}
+                    {isSubmitting ? <Spinner /> : `${t("submit")}`}
                   </button>
                 </div>
               </Form>

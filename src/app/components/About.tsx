@@ -3,13 +3,18 @@ import { Formik, Form, Field, useFormikContext } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
 import Spinner from "./Spinner";
+import { useTranslations } from "next-intl";
 
 const About = () => {
+  const t = useTranslations("About");
+
   const contactSchema = Yup.object().shape({
-    fullName: Yup.string().required("Full name is required"),
-    phoneNumber: Yup.string().required("Phone number is required"),
-    email: Yup.string().email("Invalid email").required("Email is required"),
-    caseDetails: Yup.string().required("Please tell us about your case"),
+    fullName: Yup.string().required(`${t("NameReq")}`),
+    phoneNumber: Yup.string().required(`${t("PhoneReq")}`),
+    email: Yup.string()
+      .email("Invalid email")
+      .required(`${t("EmailReq")}`),
+    caseDetails: Yup.string().required(`${t("CaseReq")}`),
     honeyPot: Yup.string(),
   });
   const initialValues = {
@@ -52,32 +57,27 @@ const About = () => {
       id="aboutUs"
       className="w-[90%] m-auto flex flex-col md:flex-row py-12"
     >
-      <div className="w-full md:w-[50%] flex flex-col gap-6 ">
+      <div className="w-full md:w-[50%] flex flex-col gap-6">
         <div className="w-56 text-ellipsis overflow-hidden h-12 bg-primary-red flex gap-4 items-center justify-center">
           <span className="w-[50%] border-t-0.5 border-white"></span>
-          <p className="text-white text-md work-sans-regular">ABOUT US</p>
+          <p className="text-white text-md work-sans-regular">{t("AboutUs")}</p>
         </div>
         <h1 className="font-normal text-2xl sm:text-4xl md:text-5xl w-[90%] leading-normal text-primary-red tracking-wide work-sans-regular">
-          Highly Qualified & Experienced in Personal Injury Law
+          {t("HighlyQualified")}
         </h1>
         <p className="font-light text-md w-[90%] work-sans-regular leading-relaxed">
-          We have expertise in many aspects of personal injury law. We fight to
-          ensure our clients and their families receive the compensation, care
-          and support they deserve. We proudly act as your advocate and trusted
-          advisor through the complex legal, medical and insurance issues
-          related to your recovery.
+          {t("Expertise")}
         </p>
-        <p className="font-light text-md work-sans-bold">
-          The Wilson PC
-        </p>
+
+        <p className="font-light text-md work-sans-bold">{t("WilsonPC")}</p>
       </div>
       <div className="w-full md:w-[50%] flex flex-col mt-12 md:-mt-48">
         <div className="bg-primary-red w-full md:w-[90%] flex flex-col gap-3 items-center justify-center py-6">
           <h1 className="sm:text-3xl text-2xl md:text-4xl text-white font-bold work-sans-bold">
-            Request A Consultation
+            {t("Request")}
           </h1>
           <p className="text-white text-center font-semibold text-md md:text-xl w-[70%] work-sans-regular">
-            Get A Free 30 - 60 Minute Consultation
+            {t("GetFree")}
           </p>
         </div>
         <div className="bg-black h-full w-full md:w-[90%] flex flex-col gap-7 py-12 md:cardshadow">
@@ -95,7 +95,6 @@ const About = () => {
                     type: values.honeyPot.length > 0 ? "bot" : "human",
                   };
                   const res = await axios.post("/api", body);
-                  console.log (res)
                   actions.resetForm();
                 } catch (error) {}
               }}
@@ -123,7 +122,7 @@ const About = () => {
                       htmlFor="fullName"
                       className="peer-focus:font-medium absolute text-sm text-[#999999] duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-[#ccc] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                     >
-                      Full Name
+                      {t("FullName")}
                     </label>
                     <FormError name="fullName" />
                   </div>
@@ -140,7 +139,7 @@ const About = () => {
                       htmlFor="phoneNumber"
                       className="peer-focus:font-medium absolute text-sm text-[#999999] duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-[#ccc] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                     >
-                      Phone Number
+                      {t("Phone")}
                     </label>
                     <FormError name="phoneNumber" />
                   </div>
@@ -157,7 +156,7 @@ const About = () => {
                       htmlFor="email"
                       className="peer-focus:font-medium absolute text-sm text-[#999999] duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-[#ccc] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                     >
-                      Email Address
+                      {t("Email")}
                     </label>
                     <FormError name="email" />
                   </div>
@@ -175,16 +174,16 @@ const About = () => {
                       htmlFor="caseDetails"
                       className="peer-focus:font-medium absolute text-sm text-[#999999] duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-[#ccc] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                     >
-                      Tell Us About Your Case
+                      {t("Tell")}
                     </label>
                     <FormError name="caseDetails" />
                   </div>
                   <button
                     type="submit"
-                    className="px-5 py-2 bg-primary-red rounded-sm w-56 mt-6 text-white hover:bg-white hover:text-primary-red duration-300 ease-in-out disabled:bg-gray-400 flex items-center justify-center"
+                    className="px-5 py-2 bg-primary-red rounded-sm w-64 mt-6 text-white hover:bg-white hover:text-primary-red duration-300 ease-in-out disabled:bg-gray-400 flex items-center justify-center"
                     disabled={isSubmitting}
                   >
-                    {isSubmitting ? <Spinner /> : "Get A Free Consultation"}
+                    {isSubmitting ? <Spinner /> : `${t("CaseEvaluation")}`}
                   </button>
                 </Form>
               )}

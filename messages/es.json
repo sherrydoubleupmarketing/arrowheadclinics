@@ -1,0 +1,139 @@
+{
+  "Herosection": {
+    "Heading":"Nos enorgullecemos del servicio y los resultados",
+    "AtlantaCar":"Abogado de accidentes automovilísticos en Atlanta",
+    "DidAtlanta":"¿Te ocurrió Atlanta?",
+    "Covered":"¡Te tenemos cubierto!",
+    "CaseEvaluation":"Obtén una evaluación gratuita de tu caso"
+  },
+  "Navbar":{
+    "Review": "Revisa tu",
+    "Case":"Caso hoy",
+    "Call":"Llama ahora"
+  },
+  "About":{
+    "AboutUs":"SOBRE NOSOTROS",
+    "HighlyQualified":"Altamente calificados y con experiencia en derecho de lesiones personales",
+    "Expertise":"Tenemos experiencia en muchos aspectos del derecho de lesiones personales. Luchamos para garantizar que nuestros clientes y sus familias reciban la compensación, el cuidado y el apoyo que merecen. Con orgullo actuamos como su defensor y asesor de confianza en los complejos asuntos legales, médicos y de seguros relacionados con su recuperación.",
+    "WilsonPC":"The Wilson PC",
+    "Request":"Solicita una consulta",
+    "GetFree":"Obtén una consulta gratuita de 30 a 60 minutos",
+    "FullName":"Nombre completo",
+    "Phone":"Número de teléfono",
+    "Email":"Dirección de correo electrónico",
+    "Tell":"Cuéntanos sobre tu caso",
+    "CaseEvaluation":"Obtén una consulta gratuita",
+    "NameReq":"Se requiere el nombre completo",
+    "PhoneReq":"Se requiere el número de teléfono",
+    "EmailReq":"Se requiere el correo electrónico",
+    "CaseReq":"Por favor, cuéntenos sobre su caso"
+   },
+  "ImportantSteps":{
+    "imp":"Pasos importantes a seguir cuando se está en un",
+    "Car":"accidente automovilístico",
+    "CallThePolice":"Llama a la policía: es importante presentar un informe policial. Esto ayuda a construir la base de tu caso.",
+    "TakePhotographs":"Toma fotografías del lugar: esto permite a los abogados negociar tu caso de manera efectiva.",
+    "PayAttention":"Presta atención: escucha los detalles de la parte culpable. Cualquier admisión o lo que crean que causó el accidente. Sus respuestas pueden ser utilizadas en el tribunal.",
+    "SeekMedical":"Busca atención médica: colabora con las fuerzas del orden y los profesionales médicos en el lugar. La atención médica ayudará a tu recuperación y creará un registro oficial de tu lesión, proporcionando evidencia para tu caso.",
+    "BePatient":"Ten paciencia: tu salud es lo más importante. Si decides dejarnos luchar por tu caso, nosotros nos encargaremos de los aspectos legales mientras tú te concentras en tu plan de recuperación."
+  },
+  "PracticeArea":{
+    "PracticeArea":"ÁREA DE PRÁCTICA",
+    "PracticeAreas":"Áreas de práctica",
+    "CarAccidents":"Accidentes automovilísticos",
+    "RepresentClients":"Representamos a clientes que han sufrido lesiones en accidentes automovilísticos.",
+    "BicycleAccidents":"Accidentes de bicicleta",
+    "Specialize":"Nos especializamos en representar a clientes en Atlanta que han sufrido lesiones debido a accidentes de bicicleta.",
+    "MotorcyleAccidents":"Accidentes de motocicleta",
+    "Motorcycle":"Los accidentes de motocicleta pueden resultar en lesiones graves. Nuestros abogados especializados en lesiones de motocicleta están listos para ayudar.",
+    "PedestrianAccidents":"Accidentes de peatones",
+    "WilsonPC":"En The Wilson PC, trabajamos incansablemente para asegurar que nuestros clientes reciban la compensación que merecen por los daños que han sufrido.",
+    "TruckCrashes":"Accidentes de camiones",
+    "Dedicated":"Nos dedicamos a representar a clientes que han sufrido lesiones en accidentes que involucran camiones.",
+    "WrongfulDeath":"Homicidio culposo",
+    "SkilledAtlanta":"Un abogado especializado en homicidio culposo en Atlanta puede mejorar tus posibilidades de ganar una demanda civil y obtener la compensación que necesitas para apoyar a tu familia."
+
+  },
+  "CallToAction":{
+    "ALTANTAHAPPENS":"ATLANTA HAPPENS",
+    "GetFree":"Obtén una revisión gratuita de tu caso",
+    "BigInsurance":"Hemos enfrentado a grandes compañías de seguros y corporaciones a nivel nacional para recuperar miles de millones para clientes heridos en accidentes como tú.",
+    "Contact":"Contáctanos"
+  },
+  "Testimonials":{
+    "Testimonials":"TESTIMONIOS",
+    "Hear":"Escucha lo que dicen nuestros clientes anteriores",
+    "Strive":"Nos esforzamos por brindar a todos nuestros clientes los mejores resultados posibles y valoramos lo que cada uno siente sobre nosotros y los servicios que hemos proporcionado. Nos sentimos honrados por las reseñas que hemos recibido tanto de clientes pasados como actuales.",
+    "GetFree":"Obtén una consulta gratuita",
+    "AngelKisses":"Angel Kisses",
+    "IncrediblySweet":"¡Fueron increíblemente amables, conocedores y muy, muy serviciales! ¡Aprecio todo lo que han hecho por mí! Si alguna vez necesito un abogado de accidentes en el futuro o si alguien que conozco necesita uno, ustedes serán mis abogados nuevamente, ¡sin duda alguna! ¡Muchas gracias por su ayuda y estoy muy feliz con el resultado!",
+    "Chelsea":"Chelsea",
+    "GreatExperience":"Tuve una excelente experiencia trabajando con este bufete de abogados de principio a fin. El equipo siempre comunicó actualizaciones, respondió a mis preguntas, ayudó con acomodaciones especiales y luchó por mi caso. Un equipo muy educado, transparente y compasivo.",
+    "MichaelThompson":"Michael Thompson",
+    "handled":"Manejaron mi caso con el máximo profesionalismo y cuidado, asegurándose de que estuviera bien informado y apoyado durante todo el proceso. Su experiencia y dedicación resultaron en un resultado favorable, y estoy verdaderamente agradecido por su arduo trabajo y compromiso con mi caso.",
+    "JessicaWilliams":"Jessica Williams",
+    "Responsive":"Su equipo fue increíblemente conocedor, receptivo y genuinamente se preocupó por mi caso. Proporcionaron orientación y apoyo claros durante todo el proceso, asegurándose de que comprendiera mis opciones y me sintiera seguro en las decisiones que tomamos."
+  },
+  "SliderBanner": {
+    "TruckAccident": "Accidente de Camión",
+    "TruckAccidenttag": "400K",
+    "Improper": "Un cambio de carril indebido por parte de un camión semi-remolque provocó un accidente con múltiples vehículos que dejó a nuestro cliente con graves lesiones en la columna vertebral. El seguro del conductor culpable inicialmente ofreció $78,000. Después de múltiples intercambios con el abogado contrario, nuestros abogados lograron un acuerdo final de $400,000, cinco veces el monto de la oferta inicial.",
+    "CarAccident": "Accidente de Coche",
+    "CarAccidenttag": "400K",
+    "RearEnded": "Nuestra clienta fue golpeada por detrás mientras regresaba a casa del trabajo. El demandado trató de minimizar las lesiones y daños de nuestra clienta, pero el equipo de litigación de lesiones personales de la firma alcanzó un acuerdo de $400,000.",
+    "CarTwo": "Accidente de Coche",
+    "CarTwotag": "1M",
+    "HeadOn": "Nuestro cliente fue golpeado por un demandado que viajaba en el lado opuesto de la carretera a velocidades de autopista. La práctica de pre-litigio de lesiones personales de la firma resolvió este caso de vehículo motorizado por $1,050,000.",
+    "SemiTruckAccident": "Accidente de Camión Semi-Remolque",
+    "SemiTruckAccidenttag": "600K",
+    "Slowing": "Nuestro cliente estaba reduciendo la velocidad debido al tráfico adelante cuando un camión semi-remolque arrolló tanto al vehículo detrás de él como a su vehículo, destruyendo la mitad trasera de su coche. La firma resolvió un accidente de camión semi-remolque por $600,000."
+  },
+  "Contact": {
+    "Contact": "CONTÁCTENOS",
+    "GetFree": "Obtenga una Revisión de Caso Gratuita",
+    "Request": "Solicite una Consulta",
+    "GetMinutes": "Obtenga una Consulta Gratuita de 30 - 60 Minutos",
+    "Strive": "Nos esforzamos por brindar a todos nuestros clientes los mejores resultados posibles y valoramos cómo se sienten sobre nosotros y los servicios que hemos proporcionado. Nos sentimos honrados por las reseñas que hemos recibido tanto de clientes anteriores como actuales.",
+    "FullName": "Nombre Completo",
+    "Phone": "Número de Teléfono",
+    "Email": "Dirección de Correo Electrónico",
+    "Type": "Tipo de Accidente",
+    "Tell": "Cuéntenos Sobre Su Caso",
+    "CaseEvaluation": "Obtenga una Consulta Gratuita",
+    "Date": "Fecha del Accidente",
+    "CaseDetails": "Detalles del Caso",
+    "Fault": "¿Fue Usted Culpable?",
+    "SelectType": "Seleccione el Tipo de Accidente",
+    "BicycleAccident": "Accidente de Bicicleta",
+    "CarCrash": "Accidente de Coche",
+    "DUIAccident": "Accidente por Conducir Ebrio",
+    "Hurt": "Lesión en el Trabajo",
+    "MotorcycleAccident": "Accidente de Motocicleta",
+    "PedestrianAccident": "Accidente de Peatón",
+    "Other": "Otro",
+    "submit":"Enviar",
+    "yes":"Sí",
+    "no":"No",
+    "NameReq":"Se requiere el nombre completo",
+    "PhoneReq":"Se requiere el número de teléfono",
+    "EmailReq":"Se requiere el correo electrónico",
+    "CaseReq":"Por favor, cuéntenos sobre su caso",
+    "AccidentType":"Por favor, díganos el tipo de su accidente",
+    "AccidentHappened":"Por favor, díganos cuándo ocurrió el accidente"
+
+
+  },
+  "YOUTUBE":{
+    "ATLANTAYOUTUBE":"ATLANTA HAPPENS EN YOUTUBE",
+    "NeedHelp":"¿Necesita ayuda? Contacte a nuestro equipo de abogados experimentados en accidentes de coche hoy al (470) 300-1797."
+  },
+  "Footer": {
+    "Quicklinks": "Enlaces Rápidos",
+    "About": "Sobre Nosotros",
+    "Practice": "Áreas de Práctica",
+    "Testimonials": "Testimonios",
+    "Contact": "Contáctenos",
+    "Youtube": "Video de YouTube"
+  }
+  
+}

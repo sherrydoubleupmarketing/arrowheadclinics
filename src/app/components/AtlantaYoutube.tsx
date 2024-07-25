@@ -1,8 +1,10 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import YoutubeIcon from "../../../public/svg/YoutubeIcon";
+import { useTranslations } from "next-intl";
 
 const AtlantaYoutube = () => {
+  const t = useTranslations("YOUTUBE");
   const [showVideo, setShowVideo] = useState(false);
 
   return (
@@ -10,13 +12,12 @@ const AtlantaYoutube = () => {
       <div className="flex flex-col w-[90%] m-auto gap-4">
         <div className="w-64 md:w-80 text-ellipsis overflow-hidden md:overflow-auto text-nowrap h-12 mt-20 px-4 bg-primary-red flex gap-4 items-center justify-center">
           <span className="w-[30%] border-t-0.5 border-white"></span>
-          <p className="text-white text-xs whitespace-nowrap work-sans-regular">
-            ATLANTA HAPPENS ON YOUTUBE
+          <p className="text-white text-sm whitespace-nowrap work-sans-regular">
+            {t("ATLANTAYOUTUBE")}
           </p>
         </div>
         <h2 className="text-xl md:text-3xl font-bold text-primary-red w-[100%] md:w-[50%] leading-normal work-sans-bold">
-          Need help? Contact our team of experienced car accident lawyers today
-          (470) 300-1797
+          {t("NeedHelp")}
         </h2>
       </div>
       <div className="mt-10 flex justify-center items-center m-auto w-[90%]">

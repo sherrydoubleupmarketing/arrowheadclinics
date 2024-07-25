@@ -1,0 +1,137 @@
+{
+    "Herosection": {
+      "Heading":"We Pride Ourselves On Service & Results",
+      "AtlantaCar":"Atlanta Car accident Lawyer",
+      "DidAtlanta":"Did Atlanta Happen to You?",
+      "Covered":"We’ve got you covered!",
+      "CaseEvaluation":"Get A Free Case Evaluation"
+    },
+    "Navbar":{
+      "Review": "Review Your",
+      "Case":"Case Today",
+      "Call":"Call Now "
+    },
+    "About":{
+      "AboutUs":"ABOUT US",
+      "HighlyQualified":"Highly Qualified & Experienced in Personal Injury Law",
+      "Expertise":"We have expertise in many aspects of personal injury law. We fight to ensure our clients and their families receive the compensation, care and support they deserve. We proudly act as your advocate and trusted advisor through the complex legal, medical and insurance issues related to your recovery.",
+      "WilsonPC":"The Wilson PC",
+      "Request":"Request A Consultation",
+      "GetFree":"Get A Free 30 - 60 Minute Consultation",
+      "FullName":"Full Name",
+      "Phone":"phone Number",
+      "Email":"Email Address",
+      "Tell":"Tell Us About Your Case",
+      "CaseEvaluation":"Get A Free Consultation",
+      "NameReq":"Full name is required",
+      "PhoneReq":"Phone number is required",
+      "EmailReq":"Email is required",
+      "CaseReq":"Please tell us about your case"
+    },
+    "ImportantSteps":{
+      "imp":"Important Steps to Take When in a",
+      "Car":"Car Accident",
+      "CallThePolice":"Call The Police - It’s important to file a police report. This helps build the foundation of your case.",
+      "TakePhotographs":"Take Photographs Of The Scene - This enables the attorneys to effectively negotiate your case.",
+      "PayAttention":"Pay Attention - Listen for details from the at-fault party. Any admittance or what they believe caused the accident. Their answers can be used in court.",
+      "SeekMedical":"Seek Medical Attention - Work with law enforcement and medical professionals on the scene. Medical care will aid your recovery and create an official record of your injury - providing evidence for your case.",
+      "BePatient":"Be Patient - Your health is what’s most important. If you decide to let us fight your case, we’ll worry about the legalities while you focus on your recovery treatment plan."
+    },
+    "PracticeArea":{
+      "PracticeArea":"PRACTICE AREA",
+      "PracticeAreas":"Practice Areas",
+      "CarAccidents":"Car Accidents",
+      "RepresentClients":"We represent clients who have suffered injuries in automobile accidents.",
+      "BicycleAccidents":"Bicycle Accidents",
+      "Specialize":"We specialize in representing clients in Atlanta who have suffered injuries due to bicycle accidents.",
+      "MotorcyleAccidents":"Motorcyle Accidents",
+      "Motorcycle":"Motorcycle accidents may result in serious injuries. Our motorcycle injury lawyers are ready to help.",
+      "PedestrianAccidents":"Pedestrian Accidents",
+      "WilsonPC":"At The Wilson PC, we work tirelessly to ensure that our clients receive the compensation they deserve for the damages they have suffered.",
+      "TruckCrashes":"Truck Crashes",
+      "Dedicated":"We are dedicated to representing clients who have experienced injuries in accidents involving trucks.",
+      "WrongfulDeath":"Wrongful Death",
+      "SkilledAtlanta":"A skilled Atlanta wrongful death attorney can improve your chances to win a civil suit and get the compensation you need to support your family."
+
+    },
+    "CallToAction":{
+      "ALTANTAHAPPENS":"ATLANTA HAPPENS",
+      "GetFree":"Get A Free Case Review",
+      "BigInsurance":" We’ve taken on big insurance companies and large corporations nationwide to recover billions for clients hurt in accidents just like you!",
+      "Contact":"Contact Us"
+    },
+    "Testimonials":{
+      "Testimonials":"TESTIMONIALS",
+      "Hear":"Hear what our past clients say",
+      "Strive":"We strive to provide all of our clients with the best possible results and value how each feels about us and the services we have provided. We are honored by the reviews we have received from both past and present clients",
+      "GetFree":"Get A Free Consultation",
+      "AngelKisses":"Angel Kisses",
+      "IncrediblySweet":"They were incredibly sweet, knowledgeable, and very very helpful! I appreciate you all for everything you’ve done for me! If I ever need an accident lawyer in the future or if anyone I know needs one, you all will be my attorney again! No doubt about it! Thank you so so much for you guys help and I’m so happy with the outcome.",
+      "Chelsea":"Chelsea",
+      "GreatExperience":"I had a great experience working with this law firm from start to finish. The team always communicated updates, answered my questions, helped with special accommodations and fought for my case. Very polite, transparent and compassionate team.",
+      "MichaelThompson":"Michael Thompson",
+      "handled":"They handled my case with the utmost professionalism and care, ensuring I was well-informed and supported throughout the entire process. Their expertise and dedication resulted in a favorable outcome, and I am truly grateful for their hard work and commitment to my case.",
+      "JessicaWilliams":"Jessica Williams",
+      "Responsive":"Their team was incredibly knowledgeable, responsive, and genuinely cared about my case. They provided clear guidance and support throughout the entire process, ensuring I understood my options and felt confident in the decisions we made."
+    },
+    "SliderBanner":{
+      "TruckAccident":"Truck Accident",
+      "TruckAccidenttag":"400K",
+      "Improper":"An improper lane change by a semi-truck led to a multi-vehicle crash that left our client suffering severe spinal injuries. The at-fault driver’s insurance initially offered $78,000. After multiple exchanges with the opposing counsel, our attorneys reached a final settlement of $400,000 5 times the amount of the original offer",
+      "CarAccident":"Car Accident",
+      "CarAccidenttag":"400K",
+      "RearEnded":"Our client was rear-ended on her way home for work. The defendant tried to minimize our client’s injuries and damages, but the firm’s personal injury litigation team reached a $400,000 settlement.",
+      "CarTwo":"Car Accident",
+      "CarTwotag":"1M",
+      "HeadOn":"Our client was struck  by a defendant traveling on the opposite side of the road at highway speeds. The firm’s personal injury pre-suit practice settled this motor vehicle case for $1,050,000.",
+      "SemiTruckAccident":"Semi Truck Accident",
+      "SemiTruckAccidenttag":"600K",
+      "Slowing":"Our client was slowing down for traffic ahead when a semitruck plowed through both the vehicle behind him and into his vehicle destroying the rear half of his car. The firm settled a semi-truck accident for $600,000."
+    },
+    "Contact":{
+      "Contact":"CONTACT US",
+      "GetFree":"Get A Free Case Review",
+      "Request":"Request A Consultation",
+      "GetMinutes":"Get A Free 30 - 60 Minute Consultation",
+      "Strive":"We strive to provide all of our clients with the best possible results and value how each feels about us and the services we have provided. We are honored by the reviews we have received from both past and present clients",
+      "FullName":"Full Name",
+      "Phone":"phone Number",
+      "Email":"Email Address",
+      "Type":"Type of Accident",
+      "Tell":"Tell Us About Your Case",
+      "CaseEvaluation":"Get A Free Consultation",
+      "Date":"Date of Accident",
+      "CaseDetails":"Case Details",
+      "Fault":"Were You At Fault?",
+      "SelectType":"Select your accident type",
+      "BicycleAccident":"Bicycle Accident",
+      "CarCrash":"Car Crash",
+      "DUIAccident":"DUI Accident",
+      "Hurt":"Hurt at Work",
+      "MotorcycleAccident":"Motorcycle Accident",
+      "PedestrianAccident":"Pedestrian Accident",
+      "Other":"Other",
+      "submit":"Submit",
+      "yes":"Yes",
+      "no":"No",
+      "NameReq":"Full name is required",
+      "PhoneReq":"Phone number is required",
+      "EmailReq":"Email is required",
+      "CaseReq":"Please tell us about your case",
+      "AccidentType":"Please tell us your accident type",
+      "AccidentHappened":"Please tell us when the accident happened"
+
+    },
+    "YOUTUBE":{
+      "ATLANTAYOUTUBE":"ATLANTA HAPPENS ON YOUTUBE",
+      "NeedHelp":"Need help? Contact our team of experienced car accident lawyers today (470) 300-1797"
+    },
+    "Footer":{
+      "Quicklinks":"Quick links",
+      "About":"About Us",
+      "Practice":"Practice Areas",
+      "Testimonials":"Testimonials",
+      "Contact":"Contact Us",
+      "Youtube":"Youtube Video"
+    }
+  }

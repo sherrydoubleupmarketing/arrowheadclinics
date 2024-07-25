@@ -4,8 +4,11 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { CTAS } from "../constant";
+import { useTranslations } from "next-intl";
 
 const SliderBanner = ({ activeSlide, goToSlide, sliderRef }: any) => {
+  const t = useTranslations("SliderBanner");
+
   const settings = {
     dots: false,
     infinite: true,
@@ -28,13 +31,13 @@ const SliderBanner = ({ activeSlide, goToSlide, sliderRef }: any) => {
           >
             <div className="flex-col gap-4 flex items-center justify-center mt-4 py-5 relative z-10">
               <h1 className="font-normal text-3xl text-white relative z-10 work-sans-medium">
-                {item.name}
+                {t(item.name)}
               </h1>
               <h2 className="font-bold text-5xl text-primary-red work-sans-bold">
-                ${item.tag}
+                ${t(item.tag)}
               </h2>
               <p className="sm:text-base text-md font-light text-white w-[90%] sm:w-[60%] text-center work-sans-regular leading-relaxed">
-                {item.text}
+                {t(item.text)}
               </p>
             </div>
           </div>
