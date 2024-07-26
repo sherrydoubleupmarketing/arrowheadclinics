@@ -43,20 +43,6 @@ export default async function LocaleLayout({
           }}
         />
         {/* End Google Tag Manager */}
-        {/* Google Analytics */}
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-88B4D9LTQ2"
-        ></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-88B4D9LTQ2');`,
-          }}
-        />
-        {/* End Google Analytics */}
       </Head>
       <body>
         {/* Google Tag Manager (noscript) */}
@@ -69,6 +55,17 @@ export default async function LocaleLayout({
           ></iframe>
         </noscript>
         {/* End Google Tag Manager (noscript) */}
+        {/* Google Analytics */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-88B4D9LTQ2"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-88B4D9LTQ2');`,
+          }}
+        />
+        {/* End Google Analytics */}
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>
