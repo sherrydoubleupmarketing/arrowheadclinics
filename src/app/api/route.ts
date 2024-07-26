@@ -2,6 +2,7 @@ import { Resend } from "resend";
 import { NextRequest, NextResponse } from "next/server";
 import EmailTemplate from "../emails/EmailTemplate";
 import dns2 from "dns2";
+import { INVALID_DOMAINS } from "./domain";
 
 const resend = new Resend("re_GLr1k5Rf_Bi4nYpVrGivRobHC4P6qVr6d");
 
@@ -25,6 +26,9 @@ export async function POST(req: NextRequest) {
   }
   try {
     const domain = email.split("@")[1];
+    if (INVALID_DOMAINS.includes(domain)) {
+      return NextResponse.json({ message: "Invalid domain" }, { status: 400 });
+    }
     const dns = new dns2();
     const response = await dns.resolveA(domain);
     const validity = response.answers.length > 0 ? "Valid" : "Spam";
