@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.atlantahappens.com
+
+# Sitemaps
+Sitemap: https://www.atlantahappens.com/sitemap.xml
