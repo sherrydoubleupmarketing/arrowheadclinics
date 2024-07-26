@@ -1,8 +1,8 @@
 import { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
-import Head from "next/head";
 import Script from "next/script";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 export const metadata: Metadata = {
   title: "Atlanta Car Accident Lawyer | Atlanta Happens",
@@ -31,19 +31,7 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
-      <Head>
-        {/* Google Tag Manager */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-              })(window,document,'script','dataLayer','GTM-W6HWDQJT');`,
-          }}
-        />
-        {/* End Google Tag Manager */}
-      </Head>
+      <GoogleTagManager gtmId="GTM-W6HWDQJT" />
       <body>
         {/* Google Tag Manager (noscript) */}
         <noscript>
@@ -56,7 +44,10 @@ export default async function LocaleLayout({
         </noscript>
         {/* End Google Tag Manager (noscript) */}
         {/* Google Analytics */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-88B4D9LTQ2"></script>
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-88B4D9LTQ2"
+        ></script>
         <script
           dangerouslySetInnerHTML={{
             __html: `window.dataLayer = window.dataLayer || [];
