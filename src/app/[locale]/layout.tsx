@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
+import Head from "next/head";
 import Script from "next/script";
 
 export const metadata: Metadata = {
@@ -30,6 +31,12 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
+      <Head>
+        <meta
+          name="google-site-verification"
+          content="UI445ezHIhG9-lmWB3w2o6ZbvcqubA4sISFAJzbaDXQ"
+        />
+      </Head>
       <body>
         <NextIntlClientProvider messages={messages}>
           {children}
