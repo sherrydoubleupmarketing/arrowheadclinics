@@ -15,8 +15,8 @@ const DownArrow: React.FC<DownArrowProps> = ({ className }) => {
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M20 9L12 17L4 9L6 7L12 13L18 7L20 9Z"
         fill="black"
       />

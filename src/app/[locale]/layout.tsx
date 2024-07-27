@@ -8,6 +8,7 @@ import Head from "next/head";
 export const metadata: Metadata = {
   title: "Atlanta Car Accident Lawyer | Atlanta Happens",
   description: "Atlanta Car Accident Lawyer | Atlanta Happens",
+  verification: {other : {"ahref-site-verification": "cdd50b40aa52a77450bf8d56e9b308a6f3ff9128653aded1396fd1eecbf62d67"}},
   openGraph: {
     type: "website",
     url: "https://www.atlantahappens.com/",
@@ -32,9 +33,6 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
-      <Head>
-        <meta name="ahrefs-site-verification" content="cdd50b40aa52a77450bf8d56e9b308a6f3ff9128653aded1396fd1eecbf62d67" />
-      </Head>
       <GoogleTagManager gtmId="GTM-W6HWDQJT" />
       <body>
         {/* Google Tag Manager (noscript) */}
