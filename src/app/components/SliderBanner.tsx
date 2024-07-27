@@ -30,9 +30,9 @@ const SliderBanner = ({ activeSlide, goToSlide, sliderRef }: any) => {
             className="w-full  flex items-center justify-center"
           >
             <div className="flex-col gap-4 flex items-center justify-center mt-4 py-5 relative z-10">
-              <h1 className="font-normal text-3xl text-white relative z-10 work-sans-medium">
+              <h2 className="font-normal text-3xl text-white relative z-10 work-sans-medium">
                 {t(item.name)}
-              </h1>
+              </h2>
               <h2 className="font-bold text-5xl text-primary-red work-sans-bold">
                 ${t(item.tag)}
               </h2>

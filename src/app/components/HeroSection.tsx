@@ -18,10 +18,10 @@ const HeroSection = () => {
           <h1 className="xl:text-6xl dk-dirrrty md:text-5xl sm:text-4xl text-2xl sm:w-full text-center w-[90%] bg-[url('/Lawyerbg.svg')] py-4 bg-cover">
             {t("AtlantaCar")}
           </h1>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold sm:w-full w-[70%] text-center work-sans-bold">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold sm:w-full w-[70%] text-center work-sans-bold">
             {t("DidAtlanta")}
-          </h1>
-          <h1 className="md:text-2xl text-xl work-sans-bold">{t("Covered")}</h1>
+          </h2>
+          <h2 className="md:text-2xl text-xl work-sans-bold">{t("Covered")}</h2>
           <Link href="#contact-us">
             <div className="w-[80%] min-w-fit px-6 cursor-pointer md:w-[36%] py-3 bg-primary-red flex items-center justify-center text-xl font-normal work-sans-medium">
               {t("CaseEvaluation")}

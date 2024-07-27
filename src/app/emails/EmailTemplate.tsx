@@ -46,7 +46,7 @@ const EmailTemplate = ({
                 padding: "20px 0",
               }}
             >
-              <h1
+              <h2
                 style={{
                   color: "white",
                   fontSize: "36px",
@@ -55,7 +55,7 @@ const EmailTemplate = ({
                 }}
               >
                 ATLANTA
-              </h1>
+              </h2>
               <h2
                 style={{
                   color: "white",

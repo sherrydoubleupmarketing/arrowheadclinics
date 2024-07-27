@@ -16,9 +16,9 @@ const PracticeAreas = () => {
           <span className="w-[50%] border-t-0.5 border-white"></span>
           <p className="text-white work-sans-regular">{t("PracticeArea")}</p>
         </div>
-        <h1 className="sm:text-4xl text-3xl md:text-5xl font-bold text-primary-red w-[70%] md:w-[30%] leading-normal work-sans-bold">
+        <h2 className="sm:text-4xl text-3xl md:text-5xl font-bold text-primary-red w-[70%] md:w-[30%] leading-normal work-sans-bold">
           {t("PracticeAreas")}
-        </h1>
+        </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 mt-1 md:mt-20 mb-12">
           {PRACTICE_CARD.map(({ id, name, desc, Icon }) => {
             return (

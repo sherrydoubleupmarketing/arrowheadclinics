@@ -7,14 +7,14 @@ const CallToAction = () => {
 
   return (
     <div className="bg-[url('/Bannerthree.webp')] bg-cover w-[90%] md:w-[80%] items-center justify-center m-auto py-5 mt-20 rounded-xl">
-      <h1 className="dk-dirrrty md:text-6xl sm:text-4xl text-4xl lg:text-[6rem] p-2 text-white">
+      <h2 className="dk-dirrrty md:text-6xl sm:text-4xl text-4xl lg:text-[6rem] p-2 text-white">
         {t("ALTANTAHAPPENS")}
-      </h1>
+      </h2>
       <div className="flex items-end justify-end flex-col">
         <div className="flex items-center justify-center flex-col gap-3">
-          <h1 className="text-2xl md:text-3xl font-bold work-sans-medium text-white">
+          <h2 className="text-2xl md:text-3xl font-bold work-sans-medium text-white">
             {t("GetFree")}
-          </h1>
+          </h2>
           <p className="w-[90%] md:w-[60%] work-sans-regular text-white text-md text-center">
             {t("BigInsurance")}
           </p>

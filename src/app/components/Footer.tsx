@@ -10,9 +10,9 @@ const Footer = () => {
   return (
     <div className="mt-20 bg-black flex justify-center flex-col">
       <div>
-        <h1 className="md:text-[5rem] text-4xl sm:mb-10 sm:mt-10 flex dk-dirrrty text-primary-red items-center justify-center py-8 tracking-wider font-bold">
+        <h2 className="md:text-[5rem] text-4xl sm:mb-10 sm:mt-10 flex dk-dirrrty text-primary-red items-center justify-center py-8 tracking-wider font-bold">
           ATLANTA HAPPENS
-        </h1>
+        </h2>
       </div>
       <div className="w-[90%] m-auto">
         <div className=" text-white text-center mb-10 flex flex-col gap-7">

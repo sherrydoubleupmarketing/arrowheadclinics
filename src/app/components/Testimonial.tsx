@@ -39,9 +39,9 @@ const Testimonial = () => {
           <span className="w-[50%] border-t-0.5 border-white"></span>
           <p className="text-white work-sans-regular">{t("Testimonials")}</p>
         </div>
-        <h1 className="sm:text-4xl text-3xl md:text-5xl font-bold text-primary-red w-[90%] md:w-[60%] work-sans-bold">
+        <h2 className="sm:text-4xl text-3xl md:text-5xl font-bold text-primary-red w-[90%] md:w-[60%] work-sans-bold">
           {t("Hear")}
-        </h1>
+        </h2>
         <p className="font-light text-md w-[92%] md:w-[80%] work-sans-regular leading-relaxed">
           {t("Strive")}
         </p>

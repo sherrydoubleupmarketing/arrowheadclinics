@@ -88,9 +88,9 @@ const Contact = () => {
       <div className="mt-20 flex flex-col md:flex-row w-[90%] m-auto justify-center">
         <div className="bg-primary-red w-full md:w-1/2 flex items-center justify-center">
           <div className="flex flex-col items-center gap-6 py-12 md:py-0">
-            <h1 className="md:text-4xl sm:text-3xl text-2xl text-white font-bold work-sans-bold">
+            <h2 className="md:text-4xl sm:text-3xl text-2xl text-white font-bold work-sans-bold">
               {t("Request")}
-            </h1>
+            </h2>
             <p className="text-white text-center font-semibold text-xl w-[90%] md:w-[65%] work-sans-regular">
               {t("GetMinutes")}
             </p>

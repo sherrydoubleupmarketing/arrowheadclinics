@@ -62,9 +62,9 @@ const About = () => {
           <span className="w-[50%] border-t-0.5 border-white"></span>
           <p className="text-white text-md work-sans-regular">{t("AboutUs")}</p>
         </div>
-        <h1 className="font-normal text-2xl sm:text-4xl md:text-5xl w-[90%] leading-normal text-primary-red tracking-wide work-sans-regular">
+        <h2 className="font-normal text-2xl sm:text-4xl md:text-5xl w-[90%] leading-normal text-primary-red tracking-wide work-sans-regular">
           {t("HighlyQualified")}
-        </h1>
+        </h2>
         <p className="font-light text-md w-[90%] work-sans-regular leading-relaxed">
           {t("Expertise")}
         </p>
@@ -73,9 +73,9 @@ const About = () => {
       </div>
       <div className="w-full md:w-[50%] flex flex-col mt-12 md:-mt-48">
         <div className="bg-primary-red w-full md:w-[90%] flex flex-col gap-3 items-center justify-center py-6">
-          <h1 className="sm:text-3xl text-2xl md:text-4xl text-white font-bold work-sans-bold">
+          <h2 className="sm:text-3xl text-2xl md:text-4xl text-white font-bold work-sans-bold">
             {t("Request")}
-          </h1>
+          </h2>
           <p className="text-white text-center font-semibold text-md md:text-xl w-[70%] work-sans-regular">
             {t("GetFree")}
           </p>
