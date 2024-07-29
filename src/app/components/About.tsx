@@ -48,6 +48,7 @@ const About = () => {
   const FormError: React.FC<FormErrorProps> = ({ name }) => {
     const { errors, touched } = useFormikContext<FormValues>();
     const showError = errors[name] && touched[name];
+    console.log(showError);
     return (
       <div
         className={`h-6 text-primary-red text-sm font-light work-san-light ${
@@ -92,8 +93,6 @@ const About = () => {
             <Formik
               initialValues={initialValues}
               validationSchema={contactSchema}
-              validateOnChange={false}
-              validateOnBlur={false}
               onSubmit={async (values: any, actions: any) => {
                 try {
                   const body = {
