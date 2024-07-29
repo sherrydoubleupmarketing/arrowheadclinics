@@ -5,10 +5,12 @@ import axios from "axios";
 import Spinner from "./Spinner";
 import { useTranslations } from "next-intl";
 import { INVALID_DOMAINS } from "../api/domain";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const About = () => {
   const t = useTranslations("About");
   const [referer, setReferer] = useState<string>("");
+  const [recaptchaValue, setRecaptchaValue] = useState<string | null>(null);
 
   const contactSchema = Yup.object().shape({
     fullName: Yup.string().required(`${t("NameReq")}`),
@@ -18,13 +20,16 @@ const About = () => {
       .required(`${t("EmailReq")}`),
     caseDetails: Yup.string().required(`${t("CaseReq")}`),
     honeyPot: Yup.string(),
+    recaptcha: Yup.string().required("Please complete the reCAPTCHA"),
   });
+
   const initialValues = {
     fullName: "",
     phoneNumber: "",
     email: "",
     caseDetails: "",
     honeyPot: "",
+    recaptcha: "",
   };
 
   interface FormValues {
@@ -33,6 +38,7 @@ const About = () => {
     email: string;
     caseDetails: string;
     honeyPot: string;
+    recaptcha: string;
   }
 
   interface FormErrorProps {
@@ -58,6 +64,9 @@ const About = () => {
         {showError ? errors[name] : ""}
       </div>
     );
+  };
+  const handleRecaptchaChange = (value: string | null) => {
+    setRecaptchaValue(value);
   };
 
   return (
@@ -99,6 +108,9 @@ const About = () => {
                     console.log(
                       `Following domain link ${referer} is blocked by author`
                     );
+                    return;
+                  }
+                  if (!recaptchaValue) {
                     return;
                   }
 
@@ -192,6 +204,13 @@ const About = () => {
                       {t("Tell")}
                     </label>
                     <FormError name="caseDetails" />
+                  </div>
+                  <div className="mt-10">
+                    <ReCAPTCHA
+                      onChange={handleRecaptchaChange}
+                      sitekey="6LfZ8xoqAAAAAFUCAGRN52Bz0OewBK85KILKIsti"
+                    />
+                    <FormError name="recaptcha" />
                   </div>
                   <button
                     type="submit"

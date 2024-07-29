@@ -11,7 +11,7 @@ import { FaCalendarAlt } from "react-icons/fa";
 import { INVALID_DOMAINS } from "../api/domain";
 import ReCAPTCHA from "react-google-recaptcha";
 import { isValid } from "date-fns";
-ReCAPTCHA;
+
 const Contact = () => {
   const t = useTranslations("Contact");
   const [recaptchaValue, setRecaptchaValue] = useState<string | null>(null);
