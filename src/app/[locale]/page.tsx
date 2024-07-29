@@ -15,6 +15,7 @@ import { CTAS } from "../constant";
 import Contact from "../components/Contact";
 import AtlantaYoutube from "../components/AtlantaYoutube";
 import Footer from "../components/Footer";
+import { INVALID_DOMAINS } from "../api/domain";
 export default function Home() {
   const [activeSlide, setActiveSlide] = useState(0);
   const sliderRef = useRef<Slider | null>(null);
@@ -24,6 +25,12 @@ export default function Home() {
       sliderRef.current.slickGoTo(index);
     }
   };
+
+  useEffect(() => {
+    if (INVALID_DOMAINS.includes(document.referrer)) {
+      window.location.href = "https://www.atlantahappens.com/404";
+    }
+  }, []);
 
   return (
     <main>
