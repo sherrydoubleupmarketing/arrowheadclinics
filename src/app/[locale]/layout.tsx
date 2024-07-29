@@ -46,7 +46,7 @@ export default async function LocaleLayout({
         </noscript>
         {/* End Google Tag Manager (noscript) */}
         {/* Google Analytics */}
-        {/* <script
+        <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-88B4D9LTQ2"
         ></script>
@@ -57,7 +57,7 @@ export default async function LocaleLayout({
               gtag('js', new Date());
               gtag('config', 'G-88B4D9LTQ2');`,
           }}
-        /> */}
+        />
         {/* End Google Analytics */}
         <NextIntlClientProvider messages={messages}>
           {children}
