@@ -114,6 +114,7 @@ const About = () => {
                     return;
                   }
 
+                  alert("send");
                   const body = {
                     name: values.fullName,
                     email: values.email,
@@ -121,8 +122,11 @@ const About = () => {
                     message: values.caseDetails,
                     type: values.honeyPot.length > 0 ? "bot" : "human",
                   };
-                  const res = await axios.post("/api", body);
-                  actions.resetForm();
+
+                  console.log(body);
+
+                  // const res = await axios.post("/api", body);
+                  // actions.resetForm();
                 } catch (error) {}
               }}
             >
@@ -214,8 +218,10 @@ const About = () => {
                   </div>
                   <button
                     type="submit"
-                    className="px-5 py-2 bg-primary-red rounded-sm w-64 mt-6 text-white hover:bg-white hover:text-primary-red duration-300 ease-in-out disabled:bg-gray-400 flex items-center justify-center"
-                    disabled={INVALID_DOMAINS.includes(referer) || isSubmitting}
+                    className={`px-5 py-2 bg-primary-red rounded-sm w-64 mt-6  hover:bg-white  ${
+                      recaptchaValue && "hover:!text-primary-red "
+                    }  !text-white duration-300 ease-in-out disabled:!text-gray-600 disabled:bg-gray-400 flex items-center justify-center`}
+                    disabled={!recaptchaValue}
                   >
                     {isSubmitting ? <Spinner /> : `${t("CaseEvaluation")}`}
                   </button>

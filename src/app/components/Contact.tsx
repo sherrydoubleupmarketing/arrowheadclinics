@@ -272,7 +272,7 @@ const Contact = () => {
                 </div>
                 <div
                   id="date"
-                  className="relative z-50 group w-[100%] md:w-[80%] mt-5"
+                  className="relative z-50 group w-[100%] md:w-[80%] mt-5 border-0 border-b-0.5 border-[#999999]"
                 >
                   <Field name="date">
                     {({ field }: any) => (
@@ -281,7 +281,7 @@ const Contact = () => {
                           {...field}
                           selected={field.value}
                           onChange={(date) => setFieldValue("date", date)}
-                          className="block py-2.5 px-10 w-full text-sm text-[#999999] bg-black border-0 border-b-0.5 border-[#999999] appearance-none focus:outline-none focus:ring-0 peer"
+                          className="block py-2.5 px-10 w-[80%] text-sm text-[#999999] bg-black  appearance-none focus:outline-none focus:ring-0 peer"
                           aria-label="date"
                         />
                         <FaCalendarAlt className="absolute left-2 top-1/2 transform -translate-y-1/2 text-[#999999]" />
@@ -364,13 +364,11 @@ const Contact = () => {
                 </div>
 
                 <button
-                  className={`bg-primary-red text-white py-2 px-4 rounded-md w-[80%] mt-5 md:w-[80%] ${
-                    isSubmitting || (!isValid && !recaptchaValue)
-                      ? "opacity-50 cursor-not-allowed"
-                      : ""
-                  }`}
                   type="submit"
-                  disabled={isSubmitting || !isValid}
+                  className={`px-5 py-2 bg-primary-red rounded-sm w-[80%] mt-6  hover:bg-white  ${
+                    recaptchaValue && "hover:!text-primary-red "
+                  }  !text-white duration-300 ease-in-out disabled:!text-gray-600 disabled:bg-gray-400 flex items-center justify-center`}
+                  disabled={!recaptchaValue}
                 >
                   {isSubmitting ? <Spinner /> : t("submit")}
                 </button>
