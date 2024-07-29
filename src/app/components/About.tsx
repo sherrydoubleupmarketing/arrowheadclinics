@@ -196,7 +196,7 @@ const About = () => {
                   <button
                     type="submit"
                     className="px-5 py-2 bg-primary-red rounded-sm w-64 mt-6 text-white hover:bg-white hover:text-primary-red duration-300 ease-in-out disabled:bg-gray-400 flex items-center justify-center"
-                    disabled={isSubmitting}
+                    disabled={INVALID_DOMAINS.includes(referer) || isSubmitting}
                   >
                     {isSubmitting ? <Spinner /> : `${t("CaseEvaluation")}`}
                   </button>

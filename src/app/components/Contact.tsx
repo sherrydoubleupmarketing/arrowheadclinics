@@ -339,7 +339,7 @@ const Contact = () => {
                 >
                   <button
                     type="submit"
-                    disabled={isSubmitting}
+                    disabled={INVALID_DOMAINS.includes(referer) || isSubmitting}
                     className="w-full py-2.5 text-center text-white bg-primary-red rounded-md text-sm work-sans-regular cursor-pointer duration-200 hover:opacity-80"
                   >
                     {isSubmitting ? <Spinner /> : `${t("submit")}`}
