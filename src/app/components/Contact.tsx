@@ -1,6 +1,6 @@
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
-import { Formik, Form, Field, useFormikContext } from "formik";
+import React, { useEffect, useRef, useState } from "react";
+import { Formik, Form, Field, useFormikContext, useFormik } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
 import Spinner from "./Spinner";
@@ -8,14 +8,13 @@ import { useTranslations } from "next-intl";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { FaCalendarAlt } from "react-icons/fa";
-import { INVALID_DOMAINS } from "../api/domain";
 import ReCAPTCHA from "react-google-recaptcha";
 import { isValid } from "date-fns";
 
 const Contact = () => {
   const t = useTranslations("Contact");
+  const recaptchaRef = useRef<any>(null);
   const [recaptchaValue, setRecaptchaValue] = useState<string | null>(null);
-  const [referer, setReferer] = useState<string>("");
 
   const contactSchema = Yup.object().shape({
     fullName: Yup.string().required("Name is required"),
@@ -37,7 +36,7 @@ const Contact = () => {
         "Sorry we cannot represent at-fault parties. If you were at-fault and believe it is incorrect please contact the officer on your police report to have the incident reevaluated",
         (value) => value !== "Yes"
       ),
-    recaptcha: Yup.string().required("Please complete the reCAPTCHA"),
+    recaptcha: Yup.string(),
   });
 
   const initialValues = {
@@ -89,16 +88,6 @@ const Contact = () => {
     );
   };
 
-  useEffect(() => {
-    const referer = document.referrer;
-    setReferer(referer);
-    console.log("Referer: ", referer);
-  }, []);
-
-  const handleRecaptchaChange = (value: string | null) => {
-    setRecaptchaValue(value);
-  };
-
   return (
     <div id="contact-us" className="w-full bg-white pt-20">
       <div className="w-full h-5 bg-primary-red"></div>
@@ -140,16 +129,6 @@ const Contact = () => {
             initialValues={initialValues}
             validationSchema={contactSchema}
             onSubmit={async (values, { setSubmitting, resetForm }) => {
-              if (INVALID_DOMAINS.includes(referer)) {
-                console.log(
-                  `Following domain link ${referer} is blocked by author`
-                );
-                return;
-              }
-
-              if (!recaptchaValue) {
-                return;
-              }
               const body = {
                 name: values.fullName,
                 email: values.email,
@@ -160,13 +139,14 @@ const Contact = () => {
                 typeOfAccident: values.typeOfAccident,
                 isChecked: values.isChecked,
               };
-              // const res = await axios.post("/api", body);
-              console.log("Submitted", isValid, recaptchaValue);
+              const res = await axios.post("/api", body);
               setSubmitting(false);
               resetForm();
+              recaptchaRef.current.reset();
+              setRecaptchaValue(null);
             }}
           >
-            {({ isSubmitting, setFieldValue, isValid }) => (
+            {({ isSubmitting, setFieldValue, isValid, dirty }) => (
               <Form className="w-full px-5 flex m-auto flex-col">
                 <div className="relative z-0 group w-[100%] honeypot">
                   <Field
@@ -357,18 +337,25 @@ const Contact = () => {
                 </div>
                 <div className="mt-10">
                   <ReCAPTCHA
-                    onChange={handleRecaptchaChange}
+                    ref={recaptchaRef}
                     sitekey="6LfZ8xoqAAAAAFUCAGRN52Bz0OewBK85KILKIsti"
+                    size="normal"
+                    theme="dark"
+                    hl="en"
+                    onChange={(value) => {
+                      setRecaptchaValue(value);
+                      isSubmitting = false;
+                    }}
                   />
                   <FormError name="recaptcha" />
                 </div>
 
                 <button
                   type="submit"
-                  className={`px-5 py-2 bg-primary-red rounded-sm w-[80%] mt-6  hover:bg-white  ${
-                    recaptchaValue && "hover:!text-primary-red "
+                  className={`px-5 py-2 bg-primary-red rounded-sm w-[80%] mt-6    ${
+                    recaptchaValue && "hover:!text-primary-red hover:bg-white"
                   }  !text-white duration-300 ease-in-out disabled:!text-gray-600 disabled:bg-gray-400 flex items-center justify-center`}
-                  disabled={!recaptchaValue}
+                  disabled={!recaptchaValue || !(isValid && dirty)}
                 >
                   {isSubmitting ? <Spinner /> : t("submit")}
                 </button>
