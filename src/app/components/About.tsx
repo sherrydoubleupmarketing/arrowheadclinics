@@ -114,7 +114,6 @@ const About = () => {
                     return;
                   }
 
-                  alert("send");
                   const body = {
                     name: values.fullName,
                     email: values.email,
@@ -122,11 +121,8 @@ const About = () => {
                     message: values.caseDetails,
                     type: values.honeyPot.length > 0 ? "bot" : "human",
                   };
-
-                  console.log(body);
-
-                  // const res = await axios.post("/api", body);
-                  // actions.resetForm();
+                  const res = await axios.post("/api", body);
+                  actions.resetForm();
                 } catch (error) {}
               }}
             >
