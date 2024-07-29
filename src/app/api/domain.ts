@@ -216,5 +216,4 @@ export const INVALID_DOMAINS = [
   "https://www.womenshelters.org",
   "https://www.nationalevictions.com",
   "https://www.play.google.com/store/apps/details?id=com.sinyee.babybus.taxi",
-  "https://www.google.com/",
 ];

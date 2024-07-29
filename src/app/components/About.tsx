@@ -96,7 +96,9 @@ const About = () => {
               onSubmit={async (values, actions) => {
                 try {
                   if (INVALID_DOMAINS.includes(referer)) {
-                    console.log("Invalid domain: ", referer);
+                    console.log(
+                      `Following domain link ${referer} is blocked by author`
+                    );
                     return;
                   }
 
