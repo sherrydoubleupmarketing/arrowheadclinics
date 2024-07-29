@@ -25,11 +25,6 @@ export default function Home() {
     }
   };
 
-  useEffect(() => {
-    const referer = document.referrer;
-    console.log("Referer: ", referer);
-  }, []);
-
   return (
     <main>
       <Navbar />

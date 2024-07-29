@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Formik, Form, Field, useFormikContext } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
 import Spinner from "./Spinner";
 import { useTranslations } from "next-intl";
+import { INVALID_DOMAINS } from "../api/domain";
 
 const About = () => {
   const t = useTranslations("About");
+  const [referer, setReferer] = useState<string>("");
 
   const contactSchema = Yup.object().shape({
     fullName: Yup.string().required(`${t("NameReq")}`),
@@ -36,6 +38,12 @@ const About = () => {
   interface FormErrorProps {
     name: keyof FormValues; // Use keyof to restrict to keys of FormValues
   }
+
+  useEffect(() => {
+    const referer = document.referrer;
+    setReferer(referer);
+    console.log("Referer: ", referer);
+  }, []);
 
   // Custom Error Message Component with proper typing
   const FormError: React.FC<FormErrorProps> = ({ name }) => {
@@ -87,6 +95,11 @@ const About = () => {
               validationSchema={contactSchema}
               onSubmit={async (values, actions) => {
                 try {
+                  if (INVALID_DOMAINS.includes(referer)) {
+                    console.log("Invalid domain: ", referer);
+                    return;
+                  }
+
                   const body = {
                     name: values.fullName,
                     email: values.email,

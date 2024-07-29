@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Formik, Form, Field, useFormikContext } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
@@ -8,9 +8,11 @@ import { useTranslations } from "next-intl";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { FaCalendarAlt } from "react-icons/fa";
+import { INVALID_DOMAINS } from "../api/domain";
 
 const Contact = () => {
   const t = useTranslations("Contact");
+  const [referer, setReferer] = useState<string>("");
 
   const contactSchema = Yup.object().shape({
     fullName: Yup.string().required(`${t("NameReq")}`),
@@ -72,6 +74,12 @@ const Contact = () => {
     );
   };
 
+  useEffect(() => {
+    const referer = document.referrer;
+    setReferer(referer);
+    console.log("Referer: ", referer);
+  }, []);
+
   return (
     <div id="contact-us" className="w-full bg-white pt-20">
       <div className="w-full h-5 bg-primary-red"></div>
@@ -113,6 +121,11 @@ const Contact = () => {
             initialValues={initialValues}
             validationSchema={contactSchema}
             onSubmit={async (values, { setSubmitting, resetForm }) => {
+              if (INVALID_DOMAINS.includes(referer)) {
+                console.log("Invalid domain: ", referer);
+                return;
+              }
+
               const body = {
                 name: values.fullName,
                 email: values.email,
