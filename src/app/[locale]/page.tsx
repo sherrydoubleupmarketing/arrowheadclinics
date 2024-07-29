@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./globals.css";
 import Slider from "react-slick";
 import Image from "next/image";
@@ -24,6 +24,12 @@ export default function Home() {
       sliderRef.current.slickGoTo(index);
     }
   };
+
+  useEffect(() => {
+    const referer = document.referrer;
+    console.log("Referer: ", referer);
+  }, []);
+
   return (
     <main>
       <Navbar />
