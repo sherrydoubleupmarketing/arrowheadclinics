@@ -211,7 +211,7 @@ export const INVALID_DOMAINS = [
   "https://www.forbes.com",
   "https://www.incomepeedia.in",
   "https://www.play.google.com/store/apps/details?id=com.xphotokit.chatgptassist",
-  "https://www.www.infoorfutures.com",
+  "https://www.infoorfutures.com",
   "https://www.mcqquestionbank.com",
   "https://www.womenshelters.org",
   "https://www.nationalevictions.com",
