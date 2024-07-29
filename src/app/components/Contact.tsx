@@ -9,22 +9,35 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { FaCalendarAlt } from "react-icons/fa";
 import { INVALID_DOMAINS } from "../api/domain";
-
+import ReCAPTCHA from "react-google-recaptcha";
+import { isValid } from "date-fns";
+ReCAPTCHA;
 const Contact = () => {
   const t = useTranslations("Contact");
+  const [recaptchaValue, setRecaptchaValue] = useState<string | null>(null);
   const [referer, setReferer] = useState<string>("");
 
   const contactSchema = Yup.object().shape({
-    fullName: Yup.string().required(`${t("NameReq")}`),
-    phoneNumber: Yup.string().required(`${t("PhoneReq")}`),
-    email: Yup.string()
-      .email("Invalid email")
-      .required(`${t("EmailReq")}`),
-    caseDetails: Yup.string().required(`${t("CaseReq")}`),
-    typeOfAccident: Yup.string().required(`${t("AccidentType")}`),
-    date: Yup.date().required(`${t("AccidentHappened")}`),
+    fullName: Yup.string().required("Name is required"),
+    phoneNumber: Yup.string().required("Phone number is required"),
+    email: Yup.string().email("Invalid email").required("Email is required"),
+    caseDetails: Yup.string().required("Case details are required"),
+    typeOfAccident: Yup.string().required("Accident type is required"),
+    date: Yup.date()
+      .required("Accident date is required")
+      .min(
+        new Date(new Date().setFullYear(new Date().getFullYear() - 2)),
+        "Sorry but due to the state laws we would not be able to represent you in your case"
+      ),
     honeyPot: Yup.string(),
-    isChecked: Yup.string().required("Please select if you were at fault"),
+    isChecked: Yup.string()
+      .required("Please select if you were at fault")
+      .test(
+        "is-not-at-fault",
+        "Sorry we cannot represent at-fault parties. If you were at-fault and believe it is incorrect please contact the officer on your police report to have the incident reevaluated",
+        (value) => value !== "Yes"
+      ),
+    recaptcha: Yup.string().required("Please complete the reCAPTCHA"),
   });
 
   const initialValues = {
@@ -36,6 +49,7 @@ const Contact = () => {
     typeOfAccident: "",
     date: new Date(),
     isChecked: "No",
+    recaptcha: "",
   };
 
   interface FormValues {
@@ -47,6 +61,7 @@ const Contact = () => {
     typeOfAccident: string;
     date: Date;
     isChecked: string;
+    recaptcha: string;
   }
 
   interface FormErrorProps {
@@ -79,6 +94,10 @@ const Contact = () => {
     setReferer(referer);
     console.log("Referer: ", referer);
   }, []);
+
+  const handleRecaptchaChange = (value: string | null) => {
+    setRecaptchaValue(value);
+  };
 
   return (
     <div id="contact-us" className="w-full bg-white pt-20">
@@ -128,6 +147,9 @@ const Contact = () => {
                 return;
               }
 
+              if (!recaptchaValue) {
+                return;
+              }
               const body = {
                 name: values.fullName,
                 email: values.email,
@@ -138,12 +160,13 @@ const Contact = () => {
                 typeOfAccident: values.typeOfAccident,
                 isChecked: values.isChecked,
               };
-              const res = await axios.post("/api", body);
+              // const res = await axios.post("/api", body);
+              console.log("Submitted", isValid, recaptchaValue);
               setSubmitting(false);
               resetForm();
             }}
           >
-            {({ isSubmitting, setFieldValue }) => (
+            {({ isSubmitting, setFieldValue, isValid }) => (
               <Form className="w-full px-5 flex m-auto flex-col">
                 <div className="relative z-0 group w-[100%] honeypot">
                   <Field
@@ -153,7 +176,6 @@ const Contact = () => {
                     placeholder="Leave this field empty"
                   />
                 </div>
-
                 <div
                   className="relative z-0 group w-[100%] md:w-[80%] mt-5"
                   id="Full Name"
@@ -316,7 +338,7 @@ const Contact = () => {
                       htmlFor="atFaultYes"
                       className="text-sm text-[#999999] font-light cursor-pointer"
                     >
-                      {t("yes")}
+                      Yes
                     </label>
                     <Field
                       type="radio"
@@ -328,23 +350,32 @@ const Contact = () => {
                       htmlFor="atFaultNo"
                       className="text-sm text-[#999999] font-light cursor-pointer"
                     >
-                      {t("no")}
+                      No
                     </label>
                   </div>
                   <FormError name="isChecked" />
                 </div>
-                <div
-                  id="submit"
-                  className="relative z-0 group w-[100%] md:w-[80%] mt-5"
-                >
-                  <button
-                    type="submit"
-                    disabled={INVALID_DOMAINS.includes(referer) || isSubmitting}
-                    className="w-full py-2.5 text-center text-white bg-primary-red rounded-md text-sm work-sans-regular cursor-pointer duration-200 hover:opacity-80"
-                  >
-                    {isSubmitting ? <Spinner /> : `${t("submit")}`}
-                  </button>
+                <div className="mt-10">
+                  <ReCAPTCHA
+                    onChange={handleRecaptchaChange}
+                    sitekey={
+                      process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY as string
+                    }
+                  />
+                  <FormError name="recaptcha" />
                 </div>
+
+                <button
+                  className={`bg-primary-red text-white py-2 px-4 rounded-md w-[80%] mt-5 md:w-[80%] ${
+                    isSubmitting || (!isValid && !recaptchaValue)
+                      ? "opacity-50 cursor-not-allowed"
+                      : ""
+                  }`}
+                  type="submit"
+                  disabled={isSubmitting || !isValid}
+                >
+                  {isSubmitting ? <Spinner /> : t("submit")}
+                </button>
               </Form>
             )}
           </Formik>
