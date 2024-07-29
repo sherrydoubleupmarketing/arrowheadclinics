@@ -358,9 +358,7 @@ const Contact = () => {
                 <div className="mt-10">
                   <ReCAPTCHA
                     onChange={handleRecaptchaChange}
-                    sitekey={
-                      process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY as string
-                    }
+                    sitekey="6LfZ8xoqAAAAAFUCAGRN52Bz0OewBK85KILKIsti"
                   />
                   <FormError name="recaptcha" />
                 </div>
