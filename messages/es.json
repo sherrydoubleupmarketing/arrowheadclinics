@@ -119,9 +119,10 @@
     "EmailReq":"Se requiere el correo electrónico",
     "CaseReq":"Por favor, cuéntenos sobre su caso",
     "AccidentType":"Por favor, díganos el tipo de su accidente",
-    "AccidentHappened":"Por favor, díganos cuándo ocurrió el accidente"
-
-
+    "AccidentHappened":"Por favor, díganos cuándo ocurrió el accidente",
+    "Datereq": "Se requiere fecha",
+  "TwoyearsOld": "Lo sentimos, pero debido a las leyes estatales no podremos representarlo en su caso",
+  "YesFault": "Lo sentimos, no podemos representar a las partes culpables. Si usted fue el culpable y cree que es incorrecto, por favor contacte al oficial en su informe policial para que el incidente sea reevaluado"
   },
   "YOUTUBE":{
     "ATLANTAYOUTUBE":"ATLANTA HAPPENS EN YOUTUBE",

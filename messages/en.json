@@ -119,7 +119,10 @@
       "EmailReq":"Email is required",
       "CaseReq":"Please tell us about your case",
       "AccidentType":"Please tell us your accident type",
-      "AccidentHappened":"Please tell us when the accident happened"
+      "AccidentHappened":"Please tell us when the accident happened",
+      "Datereq":"Date is required",
+      "TwoyearsOld":"Sorry but due to the state laws we would not be able to represent you in your case",
+      "YesFault":"Sorry we cannot represent at-fault parties. If you were at-fault and believe it is incorrect please contact the officer on your police report to have the incident reevaluated"
 
     },
     "YOUTUBE":{

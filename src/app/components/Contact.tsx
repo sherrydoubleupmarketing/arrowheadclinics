@@ -17,28 +17,25 @@ const Contact = () => {
   const [recaptchaValue, setRecaptchaValue] = useState<string | null>(null);
 
   const contactSchema = Yup.object().shape({
-    fullName: Yup.string().required("Name is required"),
-    phoneNumber: Yup.string().required("Phone number is required"),
-    email: Yup.string().email("Invalid email").required("Email is required"),
-    caseDetails: Yup.string().required("Case details are required"),
-    typeOfAccident: Yup.string().required("Accident type is required"),
+    fullName: Yup.string().required(`${t("NameReq")}`),
+    phoneNumber: Yup.string().required(`${t("PhoneReq")}`),
+    email: Yup.string()
+      .email("Invalid email")
+      .required(`${t("EmailReq")}`),
+    caseDetails: Yup.string().required(`${t("CaseReq")}`),
+    typeOfAccident: Yup.string().required(`${t("AccidentType")}`),
     date: Yup.date()
-      .required("Accident date is required")
+      .required(`${t("PhoneReq")}`)
       .min(
         new Date(new Date().setFullYear(new Date().getFullYear() - 2)),
-        "Sorry but due to the state laws we would not be able to represent you in your case"
+        `${t("TwoyearsOld")}`
       ),
     honeyPot: Yup.string(),
     isChecked: Yup.string()
       .required("Please select if you were at fault")
-      .test(
-        "is-not-at-fault",
-        "Sorry we cannot represent at-fault parties. If you were at-fault and believe it is incorrect please contact the officer on your police report to have the incident reevaluated",
-        (value) => value !== "Yes"
-      ),
+      .test("is-not-at-fault", `${t("YesFault")}`, (value) => value !== "Yes"),
     recaptcha: Yup.string(),
   });
-
   const initialValues = {
     fullName: "",
     phoneNumber: "",
