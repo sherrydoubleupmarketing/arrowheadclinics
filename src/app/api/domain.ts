@@ -273,4 +273,8 @@ export const INVALID_DOMAINS = [
   "https://0363a662a909410e4fedd1ff48aa2904.safeframe.googlesyndication.com/",
   "https://65310e11b34f254ba67014642cb277cd.safeframe.googlesyndication.com/",
   "https://www.stockorinfo.com/",
+  "https://cliqueutil.com/",
+  "https://imasdk.googleapis.com",
+  "https://imasdk.googleapis.com",
+  "https://hypergameplay.top/",
 ];
