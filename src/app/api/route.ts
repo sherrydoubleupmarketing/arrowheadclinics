@@ -2,7 +2,7 @@ import { Resend } from "resend";
 import { NextRequest, NextResponse } from "next/server";
 import EmailTemplate from "../emails/EmailTemplate";
 import dns2 from "dns2";
-const resend = new Resend("re_GLr1k5Rf_Bi4nYpVrGivRobHC4P6qVr6d");
+const resend = new Resend("re_PhX4M4mf_RDnUGWdEpUoeWP3YrGi98iKx");
 
 export async function POST(req: NextRequest) {
   const {
@@ -29,7 +29,7 @@ export async function POST(req: NextRequest) {
     const validity = response.answers.length > 0 ? "Valid" : "Spam";
     const data = await resend.emails.send({
       from: "Acme <onboarding@resend.dev>",
-      to: `newclients@thewilsonpc.com`,
+      to: `twpcintakes@aol.com`,
       subject: `${name} has a message!`,
       react: EmailTemplate({
         name,
