@@ -1,6 +1,6 @@
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
-import { Formik, Form, Field, useFormikContext } from "formik";
+import React, { useEffect, useRef, useState } from "react";
+import { Formik, Form, Field, useFormikContext, useFormik } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
 import Spinner from "./Spinner";
@@ -8,11 +8,13 @@ import { useTranslations } from "next-intl";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { FaCalendarAlt } from "react-icons/fa";
-import { INVALID_DOMAINS } from "../api/domain";
+import ReCAPTCHA from "react-google-recaptcha";
+import { isValid } from "date-fns";
 
 const Contact = () => {
   const t = useTranslations("Contact");
-  const [referer, setReferer] = useState<string>("");
+  const recaptchaRef = useRef<any>(null);
+  const [recaptchaValue, setRecaptchaValue] = useState<string | null>(null);
 
   const contactSchema = Yup.object().shape({
     fullName: Yup.string().required(`${t("NameReq")}`),
@@ -22,11 +24,18 @@ const Contact = () => {
       .required(`${t("EmailReq")}`),
     caseDetails: Yup.string().required(`${t("CaseReq")}`),
     typeOfAccident: Yup.string().required(`${t("AccidentType")}`),
-    date: Yup.date().required(`${t("AccidentHappened")}`),
+    date: Yup.date()
+      .required(`${t("PhoneReq")}`)
+      .min(
+        new Date(new Date().setFullYear(new Date().getFullYear() - 2)),
+        `${t("TwoyearsOld")}`
+      ),
     honeyPot: Yup.string(),
-    isChecked: Yup.string().required("Please select if you were at fault"),
+    isChecked: Yup.string()
+      .required("Please select if you were at fault")
+      .test("is-not-at-fault", `${t("YesFault")}`, (value) => value !== "Yes"),
+    recaptcha: Yup.string(),
   });
-
   const initialValues = {
     fullName: "",
     phoneNumber: "",
@@ -36,6 +45,7 @@ const Contact = () => {
     typeOfAccident: "",
     date: new Date(),
     isChecked: "No",
+    recaptcha: "",
   };
 
   interface FormValues {
@@ -47,6 +57,7 @@ const Contact = () => {
     typeOfAccident: string;
     date: Date;
     isChecked: string;
+    recaptcha: string;
   }
 
   interface FormErrorProps {
@@ -73,12 +84,6 @@ const Contact = () => {
       </div>
     );
   };
-
-  useEffect(() => {
-    const referer = document.referrer;
-    setReferer(referer);
-    console.log("Referer: ", referer);
-  }, []);
 
   return (
     <div id="contact-us" className="w-full bg-white pt-20">
@@ -121,13 +126,6 @@ const Contact = () => {
             initialValues={initialValues}
             validationSchema={contactSchema}
             onSubmit={async (values, { setSubmitting, resetForm }) => {
-              if (INVALID_DOMAINS.includes(referer)) {
-                console.log(
-                  `Following domain link ${referer} is blocked by author`
-                );
-                return;
-              }
-
               const body = {
                 name: values.fullName,
                 email: values.email,
@@ -141,9 +139,11 @@ const Contact = () => {
               const res = await axios.post("/api", body);
               setSubmitting(false);
               resetForm();
+              recaptchaRef.current.reset();
+              setRecaptchaValue(null);
             }}
           >
-            {({ isSubmitting, setFieldValue }) => (
+            {({ isSubmitting, setFieldValue, isValid, dirty }) => (
               <Form className="w-full px-5 flex m-auto flex-col">
                 <div className="relative z-0 group w-[100%] honeypot">
                   <Field
@@ -153,7 +153,6 @@ const Contact = () => {
                     placeholder="Leave this field empty"
                   />
                 </div>
-
                 <div
                   className="relative z-0 group w-[100%] md:w-[80%] mt-5"
                   id="Full Name"
@@ -250,7 +249,7 @@ const Contact = () => {
                 </div>
                 <div
                   id="date"
-                  className="relative z-50 group w-[100%] md:w-[80%] mt-5"
+                  className="relative z-50 group w-[100%] md:w-[80%] mt-5 border-0 border-b-0.5 border-[#999999]"
                 >
                   <Field name="date">
                     {({ field }: any) => (
@@ -259,7 +258,7 @@ const Contact = () => {
                           {...field}
                           selected={field.value}
                           onChange={(date) => setFieldValue("date", date)}
-                          className="block py-2.5 px-10 w-full text-sm text-[#999999] bg-black border-0 border-b-0.5 border-[#999999] appearance-none focus:outline-none focus:ring-0 peer"
+                          className="block py-2.5 px-10 w-[80%] text-sm text-[#999999] bg-black  appearance-none focus:outline-none focus:ring-0 peer"
                           aria-label="date"
                         />
                         <FaCalendarAlt className="absolute left-2 top-1/2 transform -translate-y-1/2 text-[#999999]" />
@@ -316,7 +315,7 @@ const Contact = () => {
                       htmlFor="atFaultYes"
                       className="text-sm text-[#999999] font-light cursor-pointer"
                     >
-                      {t("yes")}
+                      Yes
                     </label>
                     <Field
                       type="radio"
@@ -328,23 +327,35 @@ const Contact = () => {
                       htmlFor="atFaultNo"
                       className="text-sm text-[#999999] font-light cursor-pointer"
                     >
-                      {t("no")}
+                      No
                     </label>
                   </div>
                   <FormError name="isChecked" />
                 </div>
-                <div
-                  id="submit"
-                  className="relative z-0 group w-[100%] md:w-[80%] mt-5"
-                >
-                  <button
-                    type="submit"
-                    disabled={INVALID_DOMAINS.includes(referer) || isSubmitting}
-                    className="w-full py-2.5 text-center text-white bg-primary-red rounded-md text-sm work-sans-regular cursor-pointer duration-200 hover:opacity-80"
-                  >
-                    {isSubmitting ? <Spinner /> : `${t("submit")}`}
-                  </button>
+                <div className="mt-10">
+                  <ReCAPTCHA
+                    ref={recaptchaRef}
+                    sitekey="6LfZ8xoqAAAAAFUCAGRN52Bz0OewBK85KILKIsti"
+                    size="normal"
+                    theme="dark"
+                    hl="en"
+                    onChange={(value) => {
+                      setRecaptchaValue(value);
+                      isSubmitting = false;
+                    }}
+                  />
+                  <FormError name="recaptcha" />
                 </div>
+
+                <button
+                  type="submit"
+                  className={`px-5 py-2 bg-primary-red rounded-sm w-[80%] mt-6    ${
+                    recaptchaValue && "hover:!text-primary-red hover:bg-white"
+                  }  !text-white duration-300 ease-in-out disabled:!text-gray-600 disabled:bg-gray-400 flex items-center justify-center`}
+                  disabled={!recaptchaValue || !(isValid && dirty)}
+                >
+                  {isSubmitting ? <Spinner /> : t("submit")}
+                </button>
               </Form>
             )}
           </Formik>

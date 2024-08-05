@@ -1,14 +1,16 @@
-import React, { useEffect, useState } from "react";
+"use client";
+import React, { useEffect, useRef, useState } from "react";
 import { Formik, Form, Field, useFormikContext } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
 import Spinner from "./Spinner";
 import { useTranslations } from "next-intl";
-import { INVALID_DOMAINS } from "../api/domain";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const About = () => {
   const t = useTranslations("About");
-  const [referer, setReferer] = useState<string>("");
+  const recaptchaRef = useRef<any>(null);
+  const [recaptchaValue, setRecaptchaValue] = useState<string | null>(null);
 
   const contactSchema = Yup.object().shape({
     fullName: Yup.string().required(`${t("NameReq")}`),
@@ -18,13 +20,16 @@ const About = () => {
       .required(`${t("EmailReq")}`),
     caseDetails: Yup.string().required(`${t("CaseReq")}`),
     honeyPot: Yup.string(),
+    recaptcha: Yup.string(),
   });
+
   const initialValues = {
     fullName: "",
     phoneNumber: "",
     email: "",
     caseDetails: "",
     honeyPot: "",
+    recaptcha: "",
   };
 
   interface FormValues {
@@ -33,22 +38,17 @@ const About = () => {
     email: string;
     caseDetails: string;
     honeyPot: string;
+    recaptcha: string;
   }
 
   interface FormErrorProps {
-    name: keyof FormValues; // Use keyof to restrict to keys of FormValues
+    name: keyof FormValues;
   }
 
-  useEffect(() => {
-    const referer = document.referrer;
-    setReferer(referer);
-    console.log("Referer: ", referer);
-  }, []);
-
-  // Custom Error Message Component with proper typing
   const FormError: React.FC<FormErrorProps> = ({ name }) => {
     const { errors, touched } = useFormikContext<FormValues>();
     const showError = errors[name] && touched[name];
+    console.log(showError);
     return (
       <div
         className={`h-6 text-primary-red text-sm font-light work-san-light ${
@@ -93,15 +93,8 @@ const About = () => {
             <Formik
               initialValues={initialValues}
               validationSchema={contactSchema}
-              onSubmit={async (values, actions) => {
+              onSubmit={async (values: any, actions: any) => {
                 try {
-                  if (INVALID_DOMAINS.includes(referer)) {
-                    console.log(
-                      `Following domain link ${referer} is blocked by author`
-                    );
-                    return;
-                  }
-
                   const body = {
                     name: values.fullName,
                     email: values.email,
@@ -111,10 +104,12 @@ const About = () => {
                   };
                   const res = await axios.post("/api", body);
                   actions.resetForm();
+                  recaptchaRef.current.reset();
+                  setRecaptchaValue(null);
                 } catch (error) {}
               }}
             >
-              {({ isSubmitting }) => (
+              {({ isSubmitting, isValid, dirty }) => (
                 <Form className="w-full px-5">
                   <div className="relative z-0 group w-[100%] honeypot">
                     <Field
@@ -193,10 +188,26 @@ const About = () => {
                     </label>
                     <FormError name="caseDetails" />
                   </div>
+                  <div className="mt-10">
+                    <ReCAPTCHA
+                      ref={recaptchaRef}
+                      sitekey="6LfZ8xoqAAAAAFUCAGRN52Bz0OewBK85KILKIsti"
+                      size="normal"
+                      theme="dark"
+                      hl="en"
+                      onChange={(value) => {
+                        setRecaptchaValue(value);
+                        isSubmitting = false;
+                      }}
+                    />
+                    <FormError name="recaptcha" />
+                  </div>
                   <button
                     type="submit"
-                    className="px-5 py-2 bg-primary-red rounded-sm w-64 mt-6 text-white hover:bg-white hover:text-primary-red duration-300 ease-in-out disabled:bg-gray-400 flex items-center justify-center"
-                    disabled={INVALID_DOMAINS.includes(referer) || isSubmitting}
+                    className={`px-5 py-2 bg-primary-red rounded-sm w-64 mt-6  hover:bg-white  ${
+                      recaptchaValue && "hover:!text-primary-red "
+                    }  !text-white duration-300 ease-in-out disabled:!text-gray-600 disabled:bg-gray-400 flex items-center justify-center`}
+                    disabled={!recaptchaValue || !(isValid && dirty)}
                   >
                     {isSubmitting ? <Spinner /> : `${t("CaseEvaluation")}`}
                   </button>

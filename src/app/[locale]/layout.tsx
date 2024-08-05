@@ -7,8 +7,14 @@ import Head from "next/head";
 
 export const metadata: Metadata = {
   title: "Atlanta Car Accident Lawyer | Atlanta Happens",
-  description: "Atlanta Car Accident Lawyer | We specialize in car accidents & will ensure that you receive maximum compensation for your injuries.",
-  verification: {other : {"ahrefs-site-verification": "cdd50b40aa52a77450bf8d56e9b308a6f3ff9128653aded1396fd1eecbf62d67"}},
+  description:
+    "Atlanta Car Accident Lawyer | We specialize in car accidents & will ensure that you receive maximum compensation for your injuries.",
+  verification: {
+    other: {
+      "ahrefs-site-verification":
+        "cdd50b40aa52a77450bf8d56e9b308a6f3ff9128653aded1396fd1eecbf62d67",
+    },
+  },
   openGraph: {
     type: "website",
     url: "https://www.atlantahappens.com/",
