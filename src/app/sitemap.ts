@@ -14,5 +14,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "yearly",
       priority: 1,
     },
+    {
+      url: "https://www.atlantahappens.com/icon.ico",
+      lastModified: new Date(),
+      changeFrequency: "daily",
+      priority: 0.7,
+    }
   ];
 }
