@@ -1,4 +1,4 @@
-export const INVALID_DOMAINS = [
+const INVALID_DOMAINS = [
   "https://www.llss.website",
   "https://www.superherohype.com",
   "https://www.newsivae.in",
@@ -279,12 +279,12 @@ export const INVALID_DOMAINS = [
   "https://hypergameplay.top/",
 ];
 
-export const INVALID_TLDs = [
+const INVALID_TLDs = [
   ".xyz",
   ".top",
 ]
 
-export function extractTLD(domain: string) {
+function extractTLD(domain: string) {
   const parts = domain.split('.');
   return `.${parts[parts.length - 1]}`;
 }
