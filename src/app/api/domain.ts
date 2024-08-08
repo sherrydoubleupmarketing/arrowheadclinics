@@ -278,3 +278,22 @@ export const INVALID_DOMAINS = [
   "https://imasdk.googleapis.com",
   "https://hypergameplay.top/",
 ];
+
+export const INVALID_TLDs = [
+  ".xyz",
+  ".top",
+]
+
+export function extractTLD(domain: string) {
+  const parts = domain.split('.');
+  return `.${parts[parts.length - 1]}`;
+}
+
+function removeTrailingSlash(url: string) {
+  return url.replace(/\/$/, '');
+}
+
+export function verifyDomain(domain: string) { 
+  const domain_without_trailing_slash = removeTrailingSlash(domain);
+  return (INVALID_DOMAINS.includes(domain_without_trailing_slash) || INVALID_TLDs.includes(extractTLD(domain_without_trailing_slash)))
+}
