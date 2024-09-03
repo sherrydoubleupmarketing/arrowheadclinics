@@ -281,11 +281,15 @@ const INVALID_DOMAINS = [
   "https://57012ef56c1dffb3ad99f4c36bede7bd.safeframe.googlesyndication.com",
   "https://paper.bravoguy.com",
   "https://newsstip.com",
+  "https://news.bravoguy.com",
+  "https://appfreegame.com",
+  "https://news.anyselected.com",
 ];
 
 const INVALID_TLDs = [
   ".xyz",
   ".top",
+  ".fun",
 ]
 
 function extractTLD(domain: string) {
