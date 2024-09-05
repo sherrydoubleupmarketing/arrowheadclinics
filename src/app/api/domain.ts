@@ -282,6 +282,7 @@ const INVALID_DOMAINS = [
   "https://24e97725433d1a3e8682e8ccb1953de0.safeframe.googlesyndication.com",
   "https://a53ea55c1558f48d789275bb54d6023f.safeframe.googlesyndication.com",
   "https://57012ef56c1dffb3ad99f4c36bede7bd.safeframe.googlesyndication.com",
+  "https://ad03b81a33a23a9d7ddfb3911feefb07.safeframe.googlesyndication.com",
   "https://paper.bravoguy.com",
   "https://newsstip.com",
   "https://news.bravoguy.com",
