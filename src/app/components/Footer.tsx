@@ -37,7 +37,7 @@ const Footer = () => {
           loading="lazy"
         ></iframe>
 
-        <a href="https://darriusg3.sg-host.com/">
+        <a href="https://www.thewilsonpc.com/">
           <div className="flex items-center justify-center m-4">
             <Image width={120} height={120} src="/Maskgroup.svg" alt="Logo" />
           </div>
