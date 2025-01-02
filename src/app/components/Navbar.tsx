@@ -3,7 +3,7 @@ import React from "react";
 import { useTranslations } from "next-intl";
 import logoimaage from "../../../public/Logo.png";
 import callimage from "../../../public/CallIcon.png";
-import LanguageSwitcher from "./LanguageSwitcher";
+// import LanguageSwitcher from "./LanguageSwitcher";
 const Navbar = () => {
   const t = useTranslations("Navbar");
 
@@ -20,7 +20,7 @@ const Navbar = () => {
           </a>
         </button>
       </div>
-      <LanguageSwitcher />
+      {/* <LanguageSwitcher /> */}
     </div>
   );
 };
