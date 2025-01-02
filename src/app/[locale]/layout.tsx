@@ -39,7 +39,7 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
-      <GoogleTagManager gtmId="GTM-W6HWDQJT" />
+      {/* <GoogleTagManager gtmId="GTM-W6HWDQJT" /> */}
       <body>
         {/* Google Tag Manager (noscript)
         <noscript>

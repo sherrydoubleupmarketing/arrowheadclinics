@@ -16,10 +16,10 @@ const FAQAccordionWithImage: React.FC = () => {
     <div className="max-w-7xl mx-auto px-6 py-12 flex flex-row">
       <div className="flex flex-col w-full md:w-2/3 p-0 md:p-8">
         <div className="mb-8">
-          <h2 className="red-text-color work-sans-medium text-2xl uppercase">
+          <h2 className="red-text-color work-sans-medium text-xl uppercase">
             Frequently Asked Questions
           </h2>
-          <h3 className="text-4xl work-sans-bold">Your Questions, Answered</h3>
+          <h3 className="text-4xl work-sans-bold mb-8">Your Questions, Answered</h3>
           <p className="text-gray-700">
             Everything you need to know about Arrowhead Clinic. Can’t find the
             answer you’re looking for?{" "}

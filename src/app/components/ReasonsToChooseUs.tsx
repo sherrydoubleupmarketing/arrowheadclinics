@@ -9,15 +9,15 @@ const ReasonsToChooseUs: React.FC = () => {
   
 
   return (
-    <div className="flex flex-col md:flex-row gap-6 p-8 bg-white md:wrap md:justify-center md:items-center">
-      <div className="w-full md:w-2/5">
-        <Image src={featuredImage} alt="Chiropractor working on a patient" className="rounded-lg shadow-md" />
+    <div className="flex flex-col md:flex-row gap-6 px-8 md:py-8 md:pr-8 md:pl-0 bg-white md:wrap md:justify-center md:items-center w-full">
+      <div className="hidden md:block md:w-1/5">
+        <Image src={featuredImage} height={720} alt="Chiropractor working on a patient" className="shadow-md" />
       </div>
-      <div className="md:w-3/5">
-        <h2 className="red-text-color font-semibold text-sm uppercase mb-2">
+      <div className="md:w-4/5">
+        <h2 className="red-text-color font-semibold text-xl uppercase mb-2">
           Why Choose Us
         </h2>
-        <h3 className="text-2xl font-bold mb-4">Reasons For Choosing Us</h3>
+        <h3 className="text-4xl font-bold mb-4">Reasons For Choosing Us</h3>
         <p className="text-gray-700 mb-6">
           At Arrowhead Clinic, we provide expert care tailored to your needs.
           With decades of experience, advanced tools, and a dedicated team, we
@@ -31,7 +31,7 @@ const ReasonsToChooseUs: React.FC = () => {
                 {reason.id}
               </div>
               <div>
-                <h4 className="font-bold text-lg">{reason.title}</h4>
+                <h4 className="font-bold text-2xl work-sans-bold">{reason.title}</h4>
                 <p className="text-gray-600">{reason.description}</p>
               </div>
             </div>

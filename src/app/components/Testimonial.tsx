@@ -54,10 +54,10 @@ const Testimonial = () => {
       id="testimonials"
       className="w-[100%] bg-[#FFE4E4] sm:bg-transparent flex flex-col px-8 py-12 wrap justify-evenly items-center"
     >
-      <div className="w-[100%] md:w-[96%] py-24 sm:px-48 px-0 rounded-xl sm:bg-[#FFE4E4]">
+      <div className="w-[100%] md:w-[96%] pt-24 sm:py-24 sm:px-48 px-0 rounded-xl sm:bg-[#FFE4E4]">
         <div className="w-[100%] px-4 flex flex-col py-5">
           <div className="text-start">
-            <h2 className="red-text-color work-sans-medium text-2xl">
+            <h2 className="red-text-color work-sans-medium text-xl uppercase">
               What Our Patients Say
             </h2>
             <h3 className="text-4xl work-sans-bold">Real Stories, Real Recoveries</h3>
@@ -65,7 +65,7 @@ const Testimonial = () => {
         </div>
         <div className="w-[100%] px-4 flex flex-col md:flex-row items-center justify-between gap-8 py-5">
           <div className="w-full md:w-1/2">
-            <div className="work-sans-medium text-2xl text-gray-700 mb-4 flex flex-col">
+            <div className="work-sans-medium text-3xl text-gray-700 mb-4 flex flex-col">
               <span className="text-red-600 text-9xl font-bold max-h-20">“</span>
               {GOOGLE_REVIEWS[0].review}
             </div>
