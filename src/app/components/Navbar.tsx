@@ -1,31 +1,26 @@
 import Image from "next/image";
 import React from "react";
 import { useTranslations } from "next-intl";
-// import "./global.css";
 import logoimaage from "../../../public/Logo.png";
+import callimage from "../../../public/CallIcon.png";
 import LanguageSwitcher from "./LanguageSwitcher";
 const Navbar = () => {
   const t = useTranslations("Navbar");
 
   return (
-    <div className="w-full px-12 mt-4 mb-5 sm:mb-3">
-      <div className="w-[80%] flex flex-wrap justify-center md:justify-between m-auto items-center">
-        <div className="mb-3">
-          <Image src={logoimaage} width={170} height={170} alt="Hero Image" />
+    <div className="w-full p-8 flex flex-row sm:items-center sm:justify-between">
+      <div className="flex flex-wrap gap-4 justify-center sm:justify-between m-auto items-center sm:w-[80%]">
+        <div>
+          <Image src={logoimaage} width={200} height={200} alt="Hero Image" />
         </div>
-        <div className="flex items-center gap-5">
-          <h3 className="font-bold work-sans-bold text-2xl text-black flex-col md:flex hidden">
-            <span>{t("Review")}</span> <span>{t("Case")}</span>
-          </h3>
-          <button className="flex rounded-[0px] w-[100vw] md:w-fit mb-[-20px] md:!mb-0 flex-col bg-primary-red h-fit md:rounded-xl text-white work-sans-bold font-bold text-xl py-4 px-8 items-center justify-center">
-            <a href="tel:+4705756130">
-              <p>{t("Call")}</p>
-              <p>(470)-575-6130</p>
-            </a>
-          </button>
-        </div>
-        <LanguageSwitcher />
+        <button className="rounded-xl red-background-color h-fit md:rounded-xl p-4">
+          <a href="tel:+8009613130" className="flex items-center justify-center md:w-fit md:!mb-0 text-white work-sans-bold font-bold text-xl gap-2">
+            <Image src={callimage} width={40} height={40} alt="Call us" />
+            <p>(800)-961-3130</p>
+          </a>
+        </button>
       </div>
+      <LanguageSwitcher />
     </div>
   );
 };

@@ -1,175 +1,230 @@
-import Bike from "../../public/svg/BikeIcon";
-import Bycycle from "../../public/svg/Bycycle";
-import CarIcon from "../../public/svg/CarIcon";
-import Padestrian from "../../public/svg/Padestrian";
-import TickIcon from "../../public/svg/TickIcon";
-import Truck from "../../public/svg/Truck";
-import WrongDeath from "../../public/svg/WrongDeath";
-
-export const FOOTER_LINKS = [
-  {
-    id: 1,
-    name: "About",
-    path: "#about-us",
-  },
-  {
-    id: 2,
-    name: "Practice",
-    path: "#practice-area",
-  },
-  {
-    id: 3,
-    name: "Testimonials",
-    path: "#testimonials",
-  },
-  {
-    id: 4,
-    name: "Contact",
-    path: "#contact-us",
-  },
-  {
-    id: 5,
-    name: "Youtube",
-    path: "#youtubeSection",
-  },
-];
-
-export const PRACTICE_CARD = [
-  {
-    id: 1,
-    name: "CarAccidents",
-    desc: "RepresentClients",
-    Icon: CarIcon,
-  },
-  {
-    id: 2,
-    name: "BicycleAccidents",
-    desc: "Specialize",
-    Icon: Bycycle,
-  },
-  {
-    id: 3,
-    name: "MotorcyleAccidents",
-    desc: "Motorcycle",
-    Icon: Bike,
-  },
-  {
-    id: 4,
-    name: "PedestrianAccidents",
-    desc: "WilsonPC",
-    Icon: Padestrian,
-  },
-  {
-    id: 5,
-    name: "TruckCrashes",
-    desc: "Dedicated",
-    Icon: Truck,
-  },
-  {
-    id: 6,
-    name: "WrongfulDeath",
-    desc: "SkilledAtlanta",
-    Icon: WrongDeath,
-  },
-];
-
-export const IMPORTANT_STEPS = [
-  {
-    id: 1,
-    text: "CallThePolice",
-    Icon: TickIcon,
-  },
-  {
-    id: 2,
-    text: "TakePhotographs",
-    Icon: TickIcon,
-  },
-  {
-    id: 3,
-    text: "PayAttention",
-    Icon: TickIcon,
-  },
-  {
-    id: 4,
-    text: "SeekMedical",
-    Icon: TickIcon,
-  },
-  {
-    id: 5,
-    text: "BePatient",
-    Icon: TickIcon,
-  },
-];
-
-export const FOOTER_ADDRESSES = [
-  {
-    id: 1,
-    name: "Atlanta: 101 Marietta Street NW, Suite 3100, Atlanta, GA 30303 | (855) 247-WILSON",
-    link: "https://maps.app.goo.gl/RBg6JfxVDJwgsrtH6",
-  },
-  {
-    id: 2,
-    name: "Macon: 500a Northside Crossing, Macon, GA 31210 | (478) 606-9818",
-    link: "https://maps.app.goo.gl/LmcsQx2TDyvJhBQN9",
-  },
-  {
-    id: 3,
-    name: "Savannah: 2 E Bryan St Suite 504, Savannah, GA 31401 | (912) 378-1807",
-    link: "https://maps.app.goo.gl/rhjwhFEUuuFxs3K78",
-  },
-  {
-    id: 4,
-    name: "Decatur: 1 W Ct Square Suite 750, Decatur, GA 30030 | (470) 299-9867",
-    link: "https://maps.app.goo.gl/uBqWpnXWSBhVX1na9",
-  },
-];
+import martinmaller from '../../public/MartinMaller.svg'
+import martinmallerimage from '../../public/MartinMallerImage.svg'
+import DRWILLIAM from '../../../public/DRCHANTELLEWILLIAMSDC.svg'
 
 export const GOOGLE_REVIEWS = [
   {
     id: 1,
-    name: "AngelKisses",
-    review: "IncrediblySweet",
+    name: "Martin Maller",
+    review: "Arrowhead Clinic was amazing! After my car accident, their tailored treatment relieved my back pain quickly. The team was supportive and even helped with my legal case. Highly recommend!",
+    image: martinmaller,
+    original_image: martinmallerimage,
   },
   {
     id: 2,
-    name: "Chelsea",
-    review: "GreatExperience",
+    name: "Martin Maller",
+    review: "Arrowhead Clinic was amazing! After my car accident, their tailored treatment relieved my back pain quickly. The team was supportive and even helped with my legal case. Highly recommend!",
+    image: martinmaller,
+    original_image: martinmallerimage,
   },
   {
     id: 3,
-    name: "MichaelThompson",
-    review: "handled",
+    name: "Martin Maller",
+    review: "Arrowhead Clinic was amazing! After my car accident, their tailored treatment relieved my back pain quickly. The team was supportive and even helped with my legal case. Highly recommend!",
+    image: martinmaller,
+    original_image: martinmallerimage,
   },
   {
     id: 4,
-    name: "JessicaWilliams",
-    review: "Responsive",
+    name: "Martin Maller",
+    review: "Arrowhead Clinic was amazing! After my car accident, their tailored treatment relieved my back pain quickly. The team was supportive and even helped with my legal case. Highly recommend!",
+    image: martinmaller,
+    original_image: martinmallerimage,
   },
 ];
 
-export const CTAS = [
+export const chiropractors = [
+  {
+    location: "Atlanta-Midtown",
+    name: "Dr. James Toney Jr., DC",
+    title: "Chiropractor",
+    description:
+      "Dr. Toney graduated from Life University, where he received a Master's in Exercise Science/Sports Chiropractic with an emphasis in Sports Injury and a Doctorate in Chiropractic Medicine.",
+    image: "/DRJAMESTONEYJRDC.svg",
+  },
+  {
+    location: "Atlanta",
+    name: "Dr. Summer Turner, DC",
+    title: "Chiropractor",
+    description:
+      "Dr. Turner is well versed in Chiropractic care with an emphasis on sports-related therapies. She had the opportunity to train under the Chiropractor for the Carolina Panthers while completing her Master's in Sports rehabilitation.",
+    image: "/DRSUMMERTURNERDC.svg",
+  },
+  {
+    location: "Albany",
+    name: "Dr. Chantelle Williams, DC",
+    title: "Chiropractor",
+    description:
+      "Dr. Chantelle Williams was born in Hempstead, New York, and moved to Kissimmee, Florida, at the age of 12. She completed her bachelor's degree in German Language while in the Pre-Medicine program at the University of South Florida in 2012. Dr. Williams then went on to attend one of the best Chiropractic schools in the world, Life University, where she completed her doctorate degree.",
+    image: "/DRCHANTELLEWILLIAMSDC.svg",
+  },
+  {
+    location: "Marietta",
+    name: "Dr. Douglas Mills, DC",
+    title: "Chiropractor",
+    description:
+      "Dr. Douglas Mills provides expert chiropractic care for accident recovery and overall health improvement, serving patients in Marietta with dedication.",
+    image: "/DRDOUGLASMILLSDC.svg",
+  },
+  {
+    location: "McDonough",
+    name: "Dr. Robbyn Keating, DC",
+    title: "Chiropractor",
+    description:
+      "Dr. Keating moved to St. Louis, Missouri, from Alberta, Canada, in 2005 to earn her Bachelors of Science Degree at Lindenwood University while on an ice hockey scholarship. She then furthered her education by earning her Doctorate of Chiropractic at Logan College of Chiropractic in 2014.",
+    image: "/DRROBBYNKEATINGDC.svg",
+  },
+  {
+    location: "Riverdale",
+    name: "Dr. Calvin Erhabor, DC",
+    title: "Chiropractor",
+    description:
+      "Dr. Calvin Erhabor received his Doctorate of Chiropractic Degree from Life University in 2012. He is board certified by the National Board of Chiropractors Association and is a member of the Mississippi Chiropractic Association and Georgia Chiropractic Association.",
+    image: "/DRCALVINERHABORDC.svg",
+  },
+  {
+    location: "Newnan",
+    name: "Dr. Traci Autera, DC",
+    title: "Chiropractor",
+    description:
+      "Dr. Traci Autera has been treating patients for over 25 years since graduating with her Doctor of Chiropractic degree from Life University in 1993. Dr. Autera is board certified in Georgia to practice chiropractic and physiological therapeutics.",
+    image: "/DRTRACIAUTERADC.svg",
+  },
+  {
+    location: "Savannah",
+    name: "Dr. Laurie Plasiane, DC",
+    title: "Chiropractor",
+    description:
+      "Dr. Laurie Plasiane provides comprehensive chiropractic care for accident recovery, serving patients in Savannah with expert techniques.",
+    image: "/DRLAURIEPLASIANCEDC.svg",
+  },
+  {
+    location: "Hinesville",
+    name: "Dr. Branden Race, DC",
+    title: "Chiropractor",
+    description:
+      "Dr. Branden Race, a chiropractor based in Southeast Georgia, is passionate about helping patients achieve optimal health and wellness through a holistic approach to care.",
+    image: "/DRBRANDENRACEDC.svg",
+  },
+  {
+    location: "Decatur",
+    name: "Dr. Roy Vogel, DC",
+    title: "Chiropractor",
+    description:
+      "Dr. Vogel has been a chiropractor with Arrowhead Clinic in Decatur, Georgia, since 1992.  He offers 26 years of outstanding care, often working with patients who have work or auto-related injuries.",
+    image: "/DRROYVOGELDC.svg",
+  },
+  {
+    location: "Lithia Spring",
+    name: "Dr. Kris Rainge-Campbell, DC",
+    title: "Chiropractor",
+    description:
+      "Dr. Rainge-Campbell received her Bachelor of Arts from the University of Florida in 2013. She then attended Life University, one of the top chiropractic schools, in 2015, where she served as the Vice President of the Student Council. After completing her doctorate studies in 2018, she studied herbalism.",
+    image: "/DRKRISRAINGECAMPBELLDC.svg",
+  },
+  {
+    location: "Garden City",
+    name: "Dr. NiAmber Harris, DC",
+    title: "Chiropractor",
+    description:
+      "If you are in chronic pain or injured in an accident, it is critical to schedule your visit with Dr. NiAmber Harris as soon as possible. Correcting misalignments and injuries in the musculoskeletal system will restore your body's natural mobility and flexibility.",
+    image: "/DRNIAMBERHARRISDC.svg",
+  },
+  {
+    location: "Brunswick",
+    name: "Dr. Victoria White, DC",
+    title: "Chiropractor",
+    description:
+      "Dr. White is a chiropractor who has dedicated her life to the health and well-being of her patients. With over a decade of experience in the field of chiropractic care, she graduated in 2011 from the prestigious Life University, where she honed her skills and developed a passion for helping others.",
+    image: "/DRVICTORIAWHITEDC.svg",
+  },
+  {
+    location: "Duluth",
+    name: "Dr. Darris Gentry, DC",
+    title: "Chiropractor",
+    description:
+      "Dr. Darris Gentry has been a practicing Duluth chiropractor for over 20 years. He graduated from the University of Tennessee at Chattanooga and Life University and enjoys treating patients in pain from all types of accidents.",
+    image: "/DRDARRISGENTRYDC.svg",
+  },
+];
+
+export const faqs = [
+  {
+    question: "What types of injuries does Arrowhead Clinic treat?",
+    answer:
+      "We specialize in treating injuries from car accidents, workplace incidents, slips, and falls, focusing on pain relief and recovery.",
+  },
+  {
+    question: "Do I need a referral to visit Arrowhead Clinic?",
+    answer:
+      "No, you don’t need a referral to visit Arrowhead Clinic. You can directly schedule an appointment with us.",
+  },
+  {
+    question: "How can Arrowhead Clinic help with my legal case?",
+    answer:
+      "Arrowhead Clinic works closely with attorneys to provide documentation and support for your legal case.",
+  },
+  {
+    question: "Does Arrowhead Clinic accept insurance?",
+    answer:
+      "Yes, Arrowhead Clinic accepts most insurance plans. Contact us for more details about your specific coverage.",
+  },
+];
+
+export const locations = [
+  ["Albany", "Hinesville", "Lithia Spring", "Newnan"],
+  ["Atlanta", "Marietta", "Brunswick", "Riverdale"],
+  ["Atlanta - Midtown", "McDonough", "Decatur", "Savannah"],
+  ["Duluth", "Garden City"],
+];
+
+export const reasons = [
   {
     id: 1,
-    name: "TruckAccident",
-    tag: "TruckAccidenttag",
-    text: "Improper",
+    title: "Specialized in Personal Injury Care",
+    description:
+      "Decades of experience treating accident injuries, including auto accidents, workplace injuries, and slips and falls.",
   },
   {
     id: 2,
-    name: "CarAccident",
-    tag: "CarAccidenttag",
-    text: "RearEnded",
+    title: "Free Consultation",
+    description:
+      "Initial consultation at no cost to evaluate your condition and recommend the best treatment options.",
   },
   {
     id: 3,
-    name: "CarTwo",
-    tag: "CarTwotag",
-    text: "HeadOn",
+    title: "Team of Experienced Chiropractors",
+    description:
+      "Skilled professionals specializing in personalized chiropractic care tailored to each patient’s unique needs.",
   },
   {
     id: 4,
-    name: "SemiTruckAccident",
-    tag: "SemiTruckAccidenttag",
-    text: "Slowing",
+    title: "Assistance with Legal Claims",
+    description:
+      "Collaboration with personal injury attorneys to document injuries and assist in securing maximum compensation.",
+  },
+  {
+    id: 5,
+    title: "Convenient Locations",
+    description:
+      "Multiple clinic locations for easy access across different areas.",
+  },
+  {
+    id: 6,
+    title: "Same-Day Appointments",
+    description:
+      "Flexible scheduling, including same-day appointments, to provide timely care when you need it.",
+  },
+  {
+    id: 7,
+    title: "Focus on Pain Relief and Recovery",
+    description:
+      "Expertise in reducing pain, improving mobility, and accelerating recovery through targeted chiropractic care.",
+  },
+  {
+    id: 8,
+    title: "Comprehensive Diagnostic Tools",
+    description:
+      "Access to advanced diagnostic equipment, including X-rays, for accurate injury evaluation and treatment planning.",
   },
 ];

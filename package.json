@@ -1,5 +1,5 @@
 {
-  "name": "atlanta-happens-client",
+  "name": "arrowhead-clinics-client",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -17,6 +17,7 @@
     "dgram": "^1.0.1",
     "dns2": "^2.1.0",
     "formik": "^2.4.6",
+    "html-react-parser": "^5.2.2",
     "net": "^1.0.2",
     "next": "14.2.3",
     "next-intl": "^3.17.1",

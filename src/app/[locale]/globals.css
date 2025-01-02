@@ -126,3 +126,11 @@ html {
 body {
   overflow-x: hidden;
 }
+
+.red-background-color {
+  background-color: #C3110F;
+}
+
+.red-text-color {
+  color: #C3110F;
+}
