@@ -23,10 +23,10 @@ const HeroSection = () => {
             {t("HeroSubHeading")}
           </h2>
           <h2 className="md:text-2xl text-xl sm:text-left text-center work-sans-medium">{t("Covered")}</h2>
-          <button className="w-[80%] min-w-fit cursor-pointer md:w-[36%] p-3 bg-white red-text-color border border-1 border-solid rounded-xl border-[#C3110F] flex items-center justify-center text-xl font-normal work-sans-medium">
+          <a href="tel:800-961-3130" className="w-[80%] min-w-fit cursor-pointer md:w-[36%] p-3 bg-white red-text-color border border-1 border-solid rounded-xl border-[#C3110F] flex items-center justify-center text-xl font-normal work-sans-medium">
             <Image src={callimage} width={40} height={40} alt="Call us" />
             {t("CaseEvaluation")}
-          </button>
+          </a>
         </div>
       </div>
     </div>

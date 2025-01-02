@@ -2,6 +2,7 @@
 
 import React from "react";
 import { locations } from "../constant";
+import Link from "next/link";
 
 const LocationsList: React.FC = () => {
   return (
@@ -16,12 +17,13 @@ const LocationsList: React.FC = () => {
       </div>
       <div className="grid grid-cols-2 md:grid-cols-4 md:w-4/5">
         {locations.flat().map((location, index) => (
-          <div
+          <Link
+            href="#cta"
             key={index}
             className="text-center red-text-color p-8 border-0 md:border border-[#C3110F] border-solid work-sans-regular text-2xl hover:underline"
           >
             {location}
-          </div>
+          </Link>
         ))}
       </div>
     </div>

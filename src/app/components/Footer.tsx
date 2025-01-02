@@ -7,12 +7,11 @@ import logoimaage from "../../../public/Logo.png";
 const Footer: React.FC = () => {
   return (
     <footer className="bg-gray-900 text-white py-8">
-      {/* Links Section */}
       <div className="text-center mb-4">
         <ul className="flex justify-center space-x-6 text-sm">
           <li>
             <a
-              href="/privacy-policy"
+              href="tel:800-961-3130"
               className="hover:text-gray-400 transition"
             >
               Privacy Policy
@@ -20,7 +19,7 @@ const Footer: React.FC = () => {
           </li>
           <li>
             <a
-              href="/disclaimer"
+              href="tel:800-961-3130"
               className="hover:text-gray-400 transition"
             >
               Disclaimer
@@ -28,7 +27,7 @@ const Footer: React.FC = () => {
           </li>
           <li>
             <a
-              href="/terms-and-conditions"
+              href="tel:800-961-3130"
               className="hover:text-gray-400 transition"
             >
               Terms & Conditions
@@ -37,12 +36,10 @@ const Footer: React.FC = () => {
         </ul>
       </div>
 
-      {/* Logo Section */}
       <div className="flex justify-center mb-4">
         <Image src={logoimaage} width={200} height={200} alt="Hero Image" />
       </div>
 
-      {/* Copyright Section */}
       <div className="text-center text-sm text-gray-400">
         © 2024. All rights reserved. Arrowhead.
       </div>

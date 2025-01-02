@@ -23,7 +23,7 @@ const FAQAccordionWithImage: React.FC = () => {
           <p className="text-gray-700">
             Everything you need to know about Arrowhead Clinic. Can’t find the
             answer you’re looking for?{" "}
-            <a href="#contact" className="text-red-600 font-medium underline">
+            <a href="tel:800-961-3130" className="text-red-600 font-medium underline">
               Contact Us Now!
             </a>
           </p>
