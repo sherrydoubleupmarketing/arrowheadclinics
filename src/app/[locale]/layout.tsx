@@ -17,17 +17,17 @@ export const metadata: Metadata = {
   // },
   openGraph: {
     type: "website",
-    url: "https://www.atlantahappens.com/",
-    title: "Atlanta Car Accident Lawyer | Atlanta Happens",
-    description: "Atlanta Car Accident Lawyer | Atlanta Happens",
-    // images: [
-    //   {
-    //     url: "https://www.atlantahappens.com/Bannerthree.webp",
-    //     width: 800,
-    //     height: 600,
-    //     alt: "Featured Image",
-    //   },
-    // ],
+    url: "https://www.arrowheadclinics.com/",
+    title: "Arrowhead Cinics",
+    description: "Injured in an accident? Get the compensation you deserve by getting a referral to the top rated Personal Injury Attorneys. Get your injuries treated and maximize your compensation today with Arrowhead Clinic.",
+    images: [
+      {
+        url: "https://darriusg4.sg-host.com/wp-content/uploads/2024/11/Group-1410088705-1.png",
+        width: 800,
+        height: 600,
+        alt: "Featured Image",
+      },
+    ],
   },
 };
 
