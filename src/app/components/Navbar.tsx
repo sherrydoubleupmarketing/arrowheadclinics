@@ -13,7 +13,7 @@ const Navbar = () => {
         <div>
           <Image src={logoimaage} width={200} height={200} alt="Hero Image" />
         </div>
-        <button className="rounded-xl red-background-color h-fit md:rounded-xl p-4">
+        <button className="rounded-xl red-background-color text-white h-fit md:rounded-xl p-4">
           <a href="tel:800-961-3130" className="flex items-center justify-center md:w-fit md:!mb-0 text-white work-sans-bold font-bold text-xl gap-2">
             <Image src={callimage} width={40} height={40} alt="Call us" />
             <p>(800)-961-3130</p>

@@ -47,7 +47,7 @@ const ChiropractorTeam: React.FC = () => {
               Meet Our {selectedChiropractor.location} Chiropractor
             </h4>
             <p className="text-gray-700 text-center mb-6">{selectedChiropractor.description}</p>
-            <a href="tel:800-961-3130" className="py-2 px-4 red-background-color text-white rounded-lg text-center work-sans-bold hover:red-background-color">
+            <a href="tel:800-961-3130" className="py-2 px-4 red-background-color text-white border-[#C3110F] border border-1 border-solid rounded-lg text-center work-sans-bold hover:bg-white hover:text-[#C3110F]">
               Book Your Free Consultation
             </a>
           </div>

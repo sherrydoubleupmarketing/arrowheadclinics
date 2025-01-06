@@ -6,9 +6,9 @@ import { GoogleTagManager } from "@next/third-parties/google";
 import Head from "next/head";
 
 export const metadata: Metadata = {
-  title: "Arrowhead Clinics",
+  title: "Same Day Chiropractor | Car Accident Doctors | Arrowhead Injury Clinic",
   description:
-    "Arrowhead Clinics",
+    "Chiropractic Personal Injury Clinics in Georgia and South Carolina with over 40 years of experience. Car Crash Doctors and Chiropractors on-site. Call now.",
   // verification: {
   //   other: {
   //     "ahrefs-site-verification":
@@ -17,9 +17,9 @@ export const metadata: Metadata = {
   // },
   openGraph: {
     type: "website",
-    url: "https://www.arrowheadclinics.com/",
-    title: "Arrowhead Cinics",
-    description: "Injured in an accident? Get the compensation you deserve by getting a referral to the top rated Personal Injury Attorneys. Get your injuries treated and maximize your compensation today with Arrowhead Clinic.",
+    url: "https://www.arrowhead-clinics.com/",
+    title: "Same Day Chiropractor | Car Accident Doctors | Arrowhead Injury Clinic",
+    description: "Chiropractic Personal Injury Clinics in Georgia and South Carolina with over 40 years of experience. Car Crash Doctors and Chiropractors on-site. Call now.",
     images: [
       {
         url: "https://darriusg4.sg-host.com/wp-content/uploads/2024/11/Group-1410088705-1.png",

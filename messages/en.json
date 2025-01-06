@@ -11,23 +11,6 @@
       "Case":"Case Today",
       "Call":"Call Now "
     },
-    "About":{
-      "AboutUs":"ABOUT US",
-      "HighlyQualified":"Highly Qualified & Experienced in Personal Injury Law",
-      "Expertise":"We have expertise in many aspects of personal injury law. We fight to ensure our clients and their families receive the compensation, care and support they deserve. We proudly act as your advocate and trusted advisor through the complex legal, medical and insurance issues related to your recovery.",
-      "WilsonPC":"The Wilson PC",
-      "Request":"Request A Free Consultation",
-      "GetFree":"Get A Free 30 - 60 Minute Consultation",
-      "FullName":"Full Name",
-      "Phone":"Phone Number",
-      "Email":"Email Address",
-      "Tell":"Tell Us About Your Case",
-      "CaseEvaluation":"Get A Free Consultation",
-      "NameReq":"Full name is required",
-      "PhoneReq":"Phone number is required",
-      "EmailReq":"Email is required",
-      "CaseReq":"Please tell us about your case"
-    },
     "ImportantSteps":{
       "imp":"Important Steps to Take When in a",
       "Car":"Car Accident",

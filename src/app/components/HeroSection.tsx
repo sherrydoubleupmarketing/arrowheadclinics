@@ -47,10 +47,10 @@ const HeroSection = () => {
           <h2 className="md:text-2xl text-xl sm:text-left text-center work-sans-medium">{t("Covered")}</h2>
           <a
             href="tel:800-961-3130"
-            className="w-[80%] min-w-fit cursor-pointer md:w-[30%] p-3 bg-white red-text-color border border-1 border-solid rounded-xl border-[#C3110F] flex items-center justify-center text-2xl work-sans-medium"
+            className="w-[80%] gap-8 min-w-fit cursor-pointer md:w-[30%] p-3 bg-white red-text-color border border-1 border-solid hover:text-white hover:!bg-[#C3110F] rounded-xl border-[#C3110F] flex items-center justify-center text-2xl work-sans-medium"
           >
             <Image src={callimage} width={50} height={50} alt="Call us" />
-            {t("CaseEvaluation")}
+            <p>(800)-961-3130</p>
           </a>
         </div>
       </div>
