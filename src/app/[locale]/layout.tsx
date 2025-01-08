@@ -65,6 +65,8 @@ export default async function LocaleLayout({
           }}
         /> */}
         {/* End Google Analytics */}
+        
+        <meta name="google-site-verification" content="DZnDQNeUk82nJUbnxeZW5YUJJRCvN_nkkUGEUJmUtT4" />
 
         {/* Google tag (gtag.js) */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-0N75F9K5GD"
