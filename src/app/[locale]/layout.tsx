@@ -65,6 +65,19 @@ export default async function LocaleLayout({
           }}
         /> */}
         {/* End Google Analytics */}
+
+        {/* Google tag (gtag.js) */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-0N75F9K5GD"
+        ></script>
+        <script
+        dangerouslySetInnerHTML={{
+          __html: `window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-0N75F9K5GD');`,
+        }}
+        />
+
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>
