@@ -9,52 +9,52 @@
 }
 
 @font-face {
-  font-family: "Work sans light";
-  src: url("../fonts/work-sans.light.ttf");
+  font-family: "Poppins light";
+  src: url("../fonts/Poppins-Light.ttf");
   font-display: swap;
 }
-.work-sans-light {
-  font-family: "Work sans light";
+.poppins-light {
+  font-family: "Poppins light";
 }
 
 /* Bold */
 @font-face {
-  font-family: "Work sans bold";
-  src: url("../fonts/work-sans.bold.ttf");
+  font-family: "Poppins bold";
+  src: url("../fonts/Poppins-Bold.ttf");
   font-display: swap;
 }
-.work-sans-bold {
-  font-family: "Work sans bold";
+.poppins-bold {
+  font-family: "Poppins bold";
 }
 
-/* Medium*/
+/* Semi Bold*/
 @font-face {
-  font-family: "Work sans medium";
-  src: url("../fonts/work-sans.medium.ttf");
+  font-family: "Poppins semi-bold";
+  src: url("../fonts/Poppins-SemiBold.ttf");
   font-display: swap;
 }
-.work-sans-medium {
-  font-family: "Work sans medium";
+.poppins-semi-bold {
+  font-family: "Poppins semi-bold";
+}
+
+/* Medium */
+@font-face {
+  font-family: "Poppins medium";;
+  src: url(../fonts/Poppins-Medium.ttf);
+  font-display: swap;
+}
+.poppins-medium {
+  font-family: "Poppins medium";
 }
 
 /* Regular*/
 @font-face {
-  font-family: "Work sans regular";
-  src: url("../fonts/work-sans.regular.ttf");
+  font-family: "Poppins regular";
+  src: url("../fonts/Poppins-Regular.ttf");
   font-display: swap;
 }
-.work-sans-regular {
-  font-family: "Work sans regular";
-}
-
-/* DK Dirrrty */
-@font-face {
-  font-family: "DK Dirrrty";
-  src: url("../fonts/DK\ Dirrrty.ttf");
-  font-display: swap;
-}
-.dk-dirrrty {
-  font-family: "DK Dirrrty";
+.poppins-regular {
+  font-family: "Poppins regular";
 }
 
 @media (prefers-color-scheme: dark) {

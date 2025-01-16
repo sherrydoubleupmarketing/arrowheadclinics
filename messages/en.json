@@ -11,32 +11,6 @@
       "Case":"Case Today",
       "Call":"Call Now "
     },
-    "ImportantSteps":{
-      "imp":"Important Steps to Take When in a",
-      "Car":"Car Accident",
-      "CallThePolice":"Call The Police - It’s important to file a police report. This helps build the foundation of your case.",
-      "TakePhotographs":"Take Photographs Of The Scene - This enables the attorneys to effectively negotiate your case.",
-      "PayAttention":"Pay Attention - Listen for details from the at-fault party. Any admittance or what they believe caused the accident. Their answers can be used in court.",
-      "SeekMedical":"Seek Medical Attention - Work with law enforcement and medical professionals on the scene. Medical care will aid your recovery and create an official record of your injury - providing evidence for your case.",
-      "BePatient":"Be Patient - Your health is what’s most important. If you decide to let us fight your case, we’ll worry about the legalities while you focus on your recovery treatment plan."
-    },
-    "PracticeArea":{
-      "PracticeArea":"PRACTICE AREA",
-      "PracticeAreas":"Practice Areas",
-      "CarAccidents":"Car Accidents",
-      "RepresentClients":"We represent clients who have suffered injuries in automobile accidents.",
-      "BicycleAccidents":"Bicycle Accidents",
-      "Specialize":"We specialize in representing clients in Atlanta who have suffered injuries due to bicycle accidents.",
-      "MotorcyleAccidents":"Motorcyle Accidents",
-      "Motorcycle":"Motorcycle accidents may result in serious injuries. Our motorcycle injury lawyers are ready to help.",
-      "PedestrianAccidents":"Pedestrian Accidents",
-      "WilsonPC":"At The Wilson PC, we work tirelessly to ensure that our clients receive the compensation they deserve for the damages they have suffered.",
-      "TruckCrashes":"Truck Crashes",
-      "Dedicated":"We are dedicated to representing clients who have experienced injuries in accidents involving trucks.",
-      "WrongfulDeath":"Wrongful Death",
-      "SkilledAtlanta":"A skilled Atlanta wrongful death attorney can improve your chances to win a civil suit and get the compensation you need to support your family."
-
-    },
     "CallToAction":{
       "ALTANTAHAPPENS":"ATLANTA HAPPENS",
       "GetFree":"Get A Free Case Review",
@@ -107,10 +81,6 @@
       "TwoyearsOld":"Sorry but due to the state laws we would not be able to represent you in your case",
       "YesFault":"Sorry we cannot represent at-fault parties. If you were at-fault and believe it is incorrect please contact the officer on your police report to have the incident reevaluated"
 
-    },
-    "YOUTUBE":{
-      "ATLANTAYOUTUBE":"ATLANTA HAPPENS ON YOUTUBE",
-      "NeedHelp":"Need help? Contact our team of experienced car accident lawyers today (470) 300-1797"
     },
     "Footer":{
       "Quicklinks":"Quick links",

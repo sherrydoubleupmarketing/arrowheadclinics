@@ -57,15 +57,15 @@ const Testimonial = () => {
       <div className="w-[100%] md:w-[96%] pt-24 sm:py-24 sm:px-48 px-0 rounded-xl sm:bg-[#FFE4E4]">
         <div className="w-[100%] px-4 flex flex-col py-5">
           <div className="text-start">
-            <h2 className="red-text-color work-sans-medium text-xl uppercase">
+            <h2 className="red-text-color poppins-semi-bold text-xl uppercase">
               What Our Patients Say
             </h2>
-            <h3 className="text-4xl work-sans-bold">Real Stories, Real Recoveries</h3>
+            <h3 className="text-4xl poppins-semi-bold">Real Stories, Real Recoveries</h3>
           </div>
         </div>
         <div className="w-[100%] px-4 flex flex-col md:flex-row items-center justify-between gap-8 py-5">
           <div className="w-full md:w-1/2">
-            <div className="work-sans-medium text-3xl text-gray-700 mb-4 flex flex-col">
+            <div className="poppins-medium text-3xl text-gray-700 mb-4 flex flex-col">
               <span className="text-red-600 text-9xl font-bold max-h-20">“</span>
               {GOOGLE_REVIEWS[0].review}
             </div>
@@ -77,7 +77,7 @@ const Testimonial = () => {
                 alt="Google image"
                 className="w-12 h-12 rounded-full"
             />
-              <p className="work-sans-medium text-xl text-gray-800">
+              <p className="poppins-medium text-xl text-gray-800">
                 {GOOGLE_REVIEWS[0].name}
               </p>
             </div>
@@ -105,11 +105,11 @@ const Testimonial = () => {
                         alt="Google image"
                         className="w-12 h-12 rounded-full"
                     />
-                    <h2 className="font-bold text-md work-sans-medium mt-6">
+                    <h2 className="font-bold text-md poppins-medium mt-6">
                       {item.name}
                     </h2>
                   </div>
-                  <p className="font-light text-md m-auto work-sans-regular leading-relaxed">
+                  <p className="font-light text-md m-auto poppins-regular leading-relaxed">
                     {item.review}
                   </p>
                   <Image

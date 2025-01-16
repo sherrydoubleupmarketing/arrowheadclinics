@@ -9,8 +9,8 @@ const CallToActionBanner: React.FC = () => {
   return (
     <div id="cta" className="w-full px-6 my-12 text-white bg-[url('/CallUsBanner.svg')] bg-center md:bg-none relative overflow-hidden flex items-center justify-center">
       <div className="md:w-[80%] w-full relative z-10 md:bg-[url('/CallUsBanner.svg')] bg-cover rounded-3xl md:bg-center p-12 text-center">
-        <h2 className="text-4xl work-sans-bold mb-4">Ready to Start Your Recovery?</h2>
-        <p className="text-lg work-sans-regular mb-6">
+        <h2 className="text-4xl poppins-bold mb-4">Ready to Start Your Recovery?</h2>
+        <p className="text-lg poppins-regular mb-6">
           Don&lsquo;t wait to get the care you deserve. Call now for a free
           consultation and take the first step toward a pain-free life!
         </p>
