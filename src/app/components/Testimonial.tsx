@@ -64,31 +64,31 @@ const Testimonial = () => {
           </div>
         </div>
         <div className="w-[100%] px-4 flex flex-col md:flex-row items-center justify-between gap-8 py-5">
-          <div className="w-full md:w-1/2">
+          <div className="w-full md:w-5/8">
             <div className="poppins-medium text-3xl text-gray-700 mb-4 flex flex-col">
               <span className="text-red-600 text-9xl font-bold max-h-20">“</span>
-              {GOOGLE_REVIEWS[0].review}
+              {GOOGLE_REVIEWS[5].review}
             </div>
             <div className="flex items-center gap-4">
-            <Image
-                src={GOOGLE_REVIEWS[0].image}
-                width={300}
-                height={400}
-                alt="Google image"
-                className="w-12 h-12 rounded-full"
-            />
+              <Image
+                  src={GOOGLE_REVIEWS[5].image}
+                  width={300}
+                  height={400}
+                  alt="Google image"
+                  className="w-12 h-12 rounded-full"
+              />
               <p className="poppins-medium text-xl text-gray-800">
-                {GOOGLE_REVIEWS[0].name}
+                {GOOGLE_REVIEWS[5].name}
               </p>
             </div>
           </div>
-          <div className="w-full md:w-1/2">
+          <div className="w-full md:w-3/8">
             <Image
-                src={GOOGLE_REVIEWS[0].original_image}
+                src={GOOGLE_REVIEWS[5].original_image}
                 width={400}
                 height={600}
                 alt="Google image"
-                className="pointer-events-none select-none"
+                className="pointer-events-none select-none rounded-md"
             />
           </div>
         </div>
@@ -99,7 +99,7 @@ const Testimonial = () => {
                 <div key={index} className="sm:!w-[96%] w-[100%] gap-8 p-8 bg-white">
                   <div className="flex flex-row items-start gap-8">
                     <Image
-                        src={GOOGLE_REVIEWS[0].image}
+                        src={item.image}
                         width={300}
                         height={400}
                         alt="Google image"

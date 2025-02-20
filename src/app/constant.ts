@@ -1,35 +1,49 @@
-import martinmaller from '../../public/MartinMaller.svg'
-import martinmallerimage from '../../public/MartinMallerImage.svg'
+import patientprofile from '../../public/patientprofile.png'
+import PatientImage from '../../public/KitaRedd.png'
 import DRWILLIAM from '../../../public/DRCHANTELLEWILLIAMSDC.svg'
 
 export const GOOGLE_REVIEWS = [
   {
     id: 1,
-    name: "Martin Maller",
-    review: "Arrowhead Clinic was amazing! After my car accident, their tailored treatment relieved my back pain quickly. The team was supportive and even helped with my legal case. Highly recommend!",
-    image: martinmaller,
-    original_image: martinmallerimage,
+    name: "Mike Rothlis",
+    review: "I have been coming here about a week now and all I have to say is the customer service and treatment has been outstanding. They really made me feel great and welcomed since my car incident! Definitely would recommend them!",
+    image: patientprofile,
+    original_image: PatientImage,
   },
   {
     id: 2,
-    name: "Martin Maller",
-    review: "Arrowhead Clinic was amazing! After my car accident, their tailored treatment relieved my back pain quickly. The team was supportive and even helped with my legal case. Highly recommend!",
-    image: martinmaller,
-    original_image: martinmallerimage,
+    name: "Stephanie Beecher",
+    review: "I found Arrowhead Clinic looking for a car accident clinic near me and came to their site. I am happy that I did because my accident doctor at their Cascade Rd location has been excellent. My bad back is 90% better in only 3 visits!",
+    image: patientprofile,
+    original_image: PatientImage,
   },
   {
     id: 3,
-    name: "Martin Maller",
-    review: "Arrowhead Clinic was amazing! After my car accident, their tailored treatment relieved my back pain quickly. The team was supportive and even helped with my legal case. Highly recommend!",
-    image: martinmaller,
-    original_image: martinmallerimage,
+    name: "Harriet Smith",
+    review: "As a patient of Arrowhead Clinic in the past, I knew I was going to get excellent treatment. I looked up a local accident doctor near me and got to their Riverdale location. Dr. Walton was very thorough with my exam and got me treated the same-day.",
+    image: patientprofile,
+    original_image: PatientImage,
   },
   {
     id: 4,
-    name: "Martin Maller",
-    review: "Arrowhead Clinic was amazing! After my car accident, their tailored treatment relieved my back pain quickly. The team was supportive and even helped with my legal case. Highly recommend!",
-    image: martinmaller,
-    original_image: martinmallerimage,
+    name: "Anthony Pittman",
+    review: "I was looking for a personal injury chiropractor near me and found Arrowhead Clinic. The Service was Excellent. The staff was professional and friendly. Go check this place out",
+    image: patientprofile,
+    original_image: PatientImage,
+  },
+  {
+    id: 5,
+    name: "Jessie Weber",
+    review: "Arrowhead clinic has taken care of me since my car accident in December. Their commitment to getting me well after my accident has been amazing. The front staff and Dr have awesome personalities and I look forward to seeing them on my many visits. If you're hurt in an accident, or need any type of chiropractic care, don't hesitate to call them.",
+    image: patientprofile,
+    original_image: PatientImage,
+  },
+  {
+    id: 6,
+    name: "Kita Redd",
+    review: "I love the ladies at this office. As well as the doctors. It always feels like you’re walking into a family home when you enter. Front office knows and greets you by name. They are all always so pleasant. The young ladies in the back as well. They never hesitate to ask if you need anything. I was in my first accident ever at 53 a little over a month ago, and I’m glad I chose this place for treatment.",
+    image: PatientImage,
+    original_image: PatientImage,
   },
 ];
 
