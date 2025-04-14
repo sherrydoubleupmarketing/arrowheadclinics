@@ -178,11 +178,6 @@ export const faqs = [
     answer:
       "Arrowhead Clinic works closely with attorneys to provide documentation and support for your legal case.",
   },
-  {
-    question: "Does Arrowhead Clinic accept insurance?",
-    answer:
-      "Yes, Arrowhead Clinic accepts most insurance plans. Contact us for more details about your specific coverage.",
-  },
 ];
 
 export const locations = [
