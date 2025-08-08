@@ -39,54 +39,10 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
-      {/* <GoogleTagManager gtmId="GTM-W6HWDQJT" /> */}
       <body>
-        {/* Google Tag Manager (noscript)
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-W6HWDQJT"
-            height="0"
-            width="0"
-            style={{ display: "none", visibility: "hidden" }}
-          ></iframe>
-        </noscript>
-        {/* End Google Tag Manager (noscript) */}
-        {/* Google Analytics */}
-        {/* <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-88B4D9LTQ2"
-        ></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-88B4D9LTQ2');`,
-          }}
-        /> */}
-        {/* End Google Analytics */}
-        
-        <meta name="google-site-verification" content="DZnDQNeUk82nJUbnxeZW5YUJJRCvN_nkkUGEUJmUtT4" />
-
-        {/* Google tag (gtag.js) */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-0N75F9K5GD"
-        ></script>
-        <script
-        dangerouslySetInnerHTML={{
-          __html: `window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-0N75F9K5GD');`,
-        }}
-        />
-
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>
-        {/* <Script
-          src="//cdn.callrail.com/companies/542677903/715a9313af9e0701b31e/12/swap.js"
-          strategy="lazyOnload"
-        /> */}
       </body>
     </html>
   );
